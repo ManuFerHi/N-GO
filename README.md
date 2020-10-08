@@ -3,4 +3,4 @@ N-Go is a clone of ZX SPECTRUM NEXT board (Issue 2B) with approval of ZX NEXT te
 
 ![alt text](https://i.postimg.cc/fLmswx5p/Captura.png)
 
-Release date December 20.
+Release date December 2020.
