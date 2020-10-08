@@ -1,0 +1,137 @@
+# Clocks & debug
+NET "clk50mhz"        LOC="T8"  | IOSTANDARD = LVCMOS33;
+NET "flashled"                    IOSTANDARD = LVCMOS33;
+NET "sdled"                       IOSTANDARD = LVCMOS33;
+
+
+# Video output
+
+NET "r<2>"            LOC="H5"  | IOSTANDARD = LVCMOS33;
+NET "r<1>"            LOC="H3"  | IOSTANDARD = LVCMOS33;
+NET "r<0>"            LOC="H4"  | IOSTANDARD = LVCMOS33;
+
+NET "g<2>"            LOC="G3"  | IOSTANDARD = LVCMOS33;
+NET "g<1>"            LOC="F3"  | IOSTANDARD = LVCMOS33;
+NET "g<0>"            LOC="F4"  | IOSTANDARD = LVCMOS33;
+
+NET "b<2>"            LOC="H1"  | IOSTANDARD = LVCMOS33;
+NET "b<1>"            LOC="C2"  | IOSTANDARD = LVCMOS33;
+NET "b<0>"            LOC="B1"  | IOSTANDARD = LVCMOS33;
+
+
+NET "hsync"           LOC="B10"  | IOSTANDARD = LVCMOS33;
+NET "vsync"           LOC="A11"  | IOSTANDARD = LVCMOS33;
+#NET "csync_o"         LOC="D6"   | IOSTANDARD = LVCMOS33; 
+#NET "stdnb"                        IOSTANDARD = LVCMOS33;
+
+# Sound input/output
+NET "audio_out_left"  LOC="B2"  | IOSTANDARD = LVCMOS33;
+NET "audio_out_right" LOC="A2"  | IOSTANDARD = LVCMOS33;
+NET "ear"             LOC="A3"  | IOSTANDARD = LVCMOS33;
+
+# Keyboard and mouse
+NET "clkps2"          LOC="K3"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "dataps2"         LOC="J3"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "mouseclk"        LOC="K6"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "mousedata"       LOC="J4"  | IOSTANDARD = LVCMOS33 | PULLUP;
+
+NET 'keyb_row_o<3>'     LOC='H13'   | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;          # 1
+NET 'keyb_row_o<2>'     LOC='L12'   | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;          # 2
+NET 'keyb_row_o<1>'     LOC='K11'   | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;          # 3
+NET 'keyb_row_o<4>'     LOC='J12'   | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;          # 4
+NET 'keyb_row_o<5>'     LOC='K12'   | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;          # 5
+NET 'keyb_row_o<0>'     LOC='H11'   | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;          # 6
+NET 'keyb_row_o<6>'     LOC='J11'   | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;          # 7
+NET 'keyb_row_o<7>'     LOC='G12'   | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8;          # 8
+
+NET 'keyb_col_i<6>'     LOC='M16'   | IOSTANDARD = LVTTL | PULLUP;
+NET 'keyb_col_i<5>'     LOC='M15'   | IOSTANDARD = LVTTL | PULLUP;
+NET 'keyb_col_i<4>'     LOC='T5'    | IOSTANDARD = LVTTL | PULLUP;   # 1
+NET 'keyb_col_i<3>'     LOC='P7'    | IOSTANDARD = LVTTL | PULLUP;   # 2
+NET 'keyb_col_i<2>'     LOC='N8'    | IOSTANDARD = LVTTL | PULLUP;   # 3 
+NET 'keyb_col_i<1>'     LOC='P8'    | IOSTANDARD = LVTTL | PULLUP;   # 4
+NET 'keyb_col_i<0>'     LOC='L7'    | IOSTANDARD = LVTTL | PULLUP;   # 5
+
+
+
+# SRAM
+NET "sram_addr<0>"    LOC="M2"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<1>"    LOC="M1"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<2>"    LOC="N1"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<3>"    LOC="P2"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<4>"    LOC="P1"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<5>"    LOC="L3"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<6>"    LOC="M4"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<7>"    LOC="M3"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<8>"    LOC="N4"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<9>"    LOC="N3"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<10>"   LOC="H2"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<11>"   LOC="C3"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<12>"   LOC="D3"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<13>"   LOC="E4"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<14>"   LOC="E3"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<15>"   LOC="F2"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<16>"   LOC="F1"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<17>"   LOC="G1"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_addr<18>"   LOC="C4"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+
+
+NET "sram_data<0>"    LOC="J6"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_data<1>"    LOC="L5"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_data<2>"    LOC="K5"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_data<3>"    LOC="M6"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_data<4>"    LOC="P4"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_data<5>"    LOC="R3"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_data<6>"    LOC="T4"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "sram_data<7>"    LOC="N6"  | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+
+NET "sram_we_n"       LOC="M5"  | IOSTANDARD = LVCMOS33;
+
+NET "ram_ce_n_o<0>"     LOC="R2"    | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "ram_ce_n_o<1>"     LOC="R1"    | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "ram_ce_n_o<2>"     LOC="M10"   | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY;
+NET "ram_ce_n_o<3>"     LOC="B3"    | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = "FAST" | NODELAY; 
+
+# SPI Flash
+NET "flash_cs_n"      LOC="T3"   | IOSTANDARD = LVCMOS33;
+NET "flash_clk"       LOC="R11"  | IOSTANDARD = LVCMOS33;
+NET "flash_mosi"      LOC="T10"  | IOSTANDARD = LVCMOS33;
+NET "flash_miso"      LOC="P10"  | IOSTANDARD = LVCMOS33 | PULLUP;
+
+
+
+# SD/MMC
+NET "sd_cs_n"         LOC="L1"   | IOSTANDARD = LVCMOS33;
+NET "sd_clk"          LOC="K1"   | IOSTANDARD = LVCMOS33;
+NET "sd_mosi"         LOC="K2"   | IOSTANDARD = LVCMOS33;
+NET "sd_miso"         LOC="J1"   | IOSTANDARD = LVCMOS33 | PULLUP;
+
+# JOYSTICK
+#NET "joy_clk"         LOC="R12"  | IOSTANDARD = LVCMOS33; 
+#NET "joy_load_n"      LOC="T12"  | IOSTANDARD = LVCMOS33;
+#NET "joy_data"        LOC="T13"  | IOSTANDARD = LVCMOS33;
+
+NET "joyup"           LOC='R14'   | IOSTANDARD = LVTTL; #| PULLUP;
+NET "joydown"         LOC='T14'   | IOSTANDARD = LVTTL; #| PULLUP;
+NET "joyleft"         LOC='R15'   | IOSTANDARD = LVTTL; #| PULLUP;
+NET "joyright"        LOC='P16'   | IOSTANDARD = LVTTL; #| PULLUP;
+NET "joyfire"         LOC='P11'   | IOSTANDARD = LVTTL; #| PULLUP;
+NET "joyp7_o"         LOC='T15'   | IOSTANDARD = LVTTL;
+NET "joyfire2"        LOC='P15'   | IOSTANDARD = LVTTL; #| PULLUP;
+NET "joysel_o"        LOC='P9'    | IOSTANDARD = LVTTL; 
+
+
+# MIDI
+#NET "midi_out"                     IOSTANDARD = LVCMOS33 | DRIVE=12;  # MIDI_OUT del addon MIDI
+#NET "clkbd"                        IOSTANDARD = LVCMOS33 | PULLUP;
+#NET "wsbd"                         IOSTANDARD = LVCMOS33 | PULLUP;
+#NET "dabd"                         IOSTANDARD = LVCMOS33 | PULLUP;
+
+# UART
+#NET "uart_tx"         LOC="N9"    | IOSTANDARD = LVCMOS33;
+#NET "uart_rx"         LOC="T12"   | IOSTANDARD = LVCMOS33 | PULLUP;
+#NET "uart_rts"                     IOSTANDARD = LVCMOS33;
+#NET "uart_reset"                   IOSTANDARD = LVCMOS33 | PULLUP;
+
+NET "clk50mhz" TNM_NET = clk50mhz;
+TIMESPEC TS_clk50mhz = PERIOD "clk50mhz" 20 ns HIGH 50%;

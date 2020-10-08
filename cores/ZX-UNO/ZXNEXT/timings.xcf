@@ -1,0 +1,6 @@
+# Timing constraints
+NET "clk50mhz" TNM_NET = "clk50mhz";
+NET "sysclk" TNM_NET = "sysclk";
+
+TIMESPEC TS_clk50 = PERIOD "clk50mhz" 20ns HIGH 50%;
+TIMESPEC TS_clk28 = PERIOD "sysclk" 29ns HIGH 50%;  #pongo en realidad la frecuencia más alta que tendrá este enable
