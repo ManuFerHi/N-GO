@@ -8,7 +8,7 @@ Only compatible with external PS / 2 keyboard.
 
 Only VGA and RGB 15khz.
 
-All.
+TO-DO.
 
 Support for membrane keyboard.
 
