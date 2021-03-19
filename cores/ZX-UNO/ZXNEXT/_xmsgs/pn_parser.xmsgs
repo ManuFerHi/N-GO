@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/joydecoder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/multiboot_spartan6.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/multiboot_spartan6.v</arg>&quot; Line <arg fmt="%d" index="2">36</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/../common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/multiboot_spartan6.v&quot; line 36
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/pll_drp.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/pll_drp.v</arg>&quot; Line <arg fmt="%d" index="2">589</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/pll_drp_func.h&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/pll_drp.v&quot; line 589
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/pll_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/relojes.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/ZXNEXT/tld_zxuno_lx16.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/T80.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/T80_ALU.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/T80_MCode.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/T80_Reg.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/T80a.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/audio_management.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/audio_management.v</arg>&quot; Line <arg fmt="%d" index="2">112</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/audio_management.v&quot; line 112
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ay_3_8192.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/clk_enables.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/clk_enables.v</arg>&quot; Line <arg fmt="%d" index="2">39</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/clk_enables.v&quot; line 39
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/control_enable_options.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/control_enable_options.v</arg>&quot; Line <arg fmt="%d" index="2">50</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/control_enable_options.v&quot; line 50
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/control_rasterint.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/control_rasterint.v</arg>&quot; Line <arg fmt="%d" index="2">41</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/control_rasterint.v&quot; line 41
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/coreid.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/coreid.v</arg>&quot; Line <arg fmt="%d" index="2">36</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/coreid.v&quot; line 36
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/cpu_and_dma.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/cpu_and_dma.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/cpu_and_dma.v&quot; line 55
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ctrl_ad724.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ctrl_ad724.v</arg>&quot; Line <arg fmt="%d" index="2">40</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ctrl_ad724.v&quot; line 40
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/debug.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/disk_drive.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/dma.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/dma.v</arg>&quot; Line <arg fmt="%d" index="2">49</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/dma.v&quot; line 49
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/flash_spi.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/flash_spi.v</arg>&quot; Line <arg fmt="%d" index="2">53</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/flash_spi.v&quot; line 53
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/i2s_decoder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/joystick_protocols.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/joystick_protocols.v</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/joystick_protocols.v&quot; line 48
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/lut.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/new_memory.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/new_memory.v</arg>&quot; Line <arg fmt="%d" index="2">88</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/new_memory.v&quot; line 88
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/nmievents.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/nmievents.v</arg>&quot; Line <arg fmt="%d" index="2">45</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/nmievents.v&quot; line 45
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/pal_sync_generator.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/pal_sync_generator.v</arg>&quot; Line <arg fmt="%d" index="2">62</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/pal_sync_generator.v&quot; line 62
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ps2_keyb.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ps2_keyb.v</arg>&quot; Line <arg fmt="%d" index="2">53</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ps2_keyb.v&quot; line 53
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ps2_mouse_kempston.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ps2_mouse_kempston.v</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ps2_mouse_kempston.v&quot; line 48
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ps2_port.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ps2mouse_to_kmouse.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/pzx_player.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/pzx_player.v</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/pzx_player.v&quot; line 61
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/rom.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/rom.v</arg>&quot; Line <arg fmt="%d" index="2">31</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/rom.v&quot; line 31
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/scancode_to_speccy.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/scandoubler_ctrl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/scandoubler_ctrl.v</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/scandoubler_ctrl.v&quot; line 48
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/scratch_register.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/scratch_register.v</arg>&quot; Line <arg fmt="%d" index="2">37</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/scratch_register.v&quot; line 37
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/specdrum.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/spi_protocol.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/total_memory_register.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/total_memory_register.v</arg>&quot; Line <arg fmt="%d" index="2">40</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/total_memory_register.v&quot; line 40
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/turbosound.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/tv80_to_t80_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/uart.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ula_radas.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ula_radas.v</arg>&quot; Line <arg fmt="%d" index="2">95</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/ula_radas.v&quot; line 95
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/vga_scandoubler.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/zxuno.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/zxuno.v</arg>&quot; Line <arg fmt="%d" index="2">103</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/zxuno.v&quot; line 103
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/zxunoregs.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/zxunoregs.v</arg>&quot; Line <arg fmt="%d" index="2">42</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/zxunoregs.v&quot; line 42
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/zxunouart.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/zxunouart.v</arg>&quot; Line <arg fmt="%d" index="2">39</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/config.vh&apos; in file &quot;E:/G/Electronica/ZX Next/Repo/trunk/cores/ZX-UNO/common/zxunouart.v&quot; line 39
+</arg>
+</msg>
+
+</messages>
+
