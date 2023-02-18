@@ -1,0 +1,14 @@
+xst -intstyle ise -filter "/home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter" -ifn "/home/ise/Sources/amstrad-cpc/v4/tld_cpc.xst" -ofn "/home/ise/Sources/amstrad-cpc/v4/tld_cpc.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc pines_zxuno_v4.ucf -p xc6slx9-tqg144-2 tld_cpc.ngc tld_cpc.ngd  
+map -filter "/home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter" -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tld_cpc_map.ncd tld_cpc.ngd tld_cpc.pcf 
+par -filter "/home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off tld_cpc_map.ncd tld_cpc.ncd tld_cpc.pcf 
+trce -filter /home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml tld_cpc.twx tld_cpc.ncd -o tld_cpc.twr tld_cpc.pcf -ucf pines_zxuno_v4.ucf 
+xst -intstyle ise -filter "/home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter" -ifn "/home/ise/Sources/amstrad-cpc/v4/tld_cpc.xst" -ofn "/home/ise/Sources/amstrad-cpc/v4/tld_cpc.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc pines_zxuno_v4.ucf -p xc6slx9-tqg144-2 tld_cpc.ngc tld_cpc.ngd  
+map -filter "/home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter" -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tld_cpc_map.ncd tld_cpc.ngd tld_cpc.pcf 
+xst -intstyle ise -filter "/home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter" -ifn "/home/ise/Sources/amstrad-cpc/v4/tld_cpc.xst" -ofn "/home/ise/Sources/amstrad-cpc/v4/tld_cpc.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc pines_zxuno_v4.ucf -p xc6slx16-ftg256-2 tld_cpc.ngc tld_cpc.ngd  
+map -filter "/home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter" -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o tld_cpc_map.ncd tld_cpc.ngd tld_cpc.pcf 
+par -filter "/home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off tld_cpc_map.ncd tld_cpc.ncd tld_cpc.pcf 
+trce -filter /home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml tld_cpc.twx tld_cpc.ncd -o tld_cpc.twr tld_cpc.pcf -ucf pines_zxuno_v4.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f tld_cpc.ut tld_cpc.ncd 

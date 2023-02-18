@@ -1,0 +1,45 @@
+Release 14.7 - par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sat Feb 18 19:12:15 2023
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 33 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   la_maquina/fdc/fifo_in/Mram_mem10_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem11_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem12_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem13_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem14_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem15_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem16_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem1_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem2_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem3_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem4_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem5_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem6_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem7_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem8_RAMD_O
+   la_maquina/fdc/fifo_in/Mram_mem9_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem10_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem11_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem12_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem13_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem14_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem15_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem16_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem1_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem2_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem3_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem4_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem5_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem6_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem7_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem8_RAMD_O
+   la_maquina/fdc/fifo_out/Mram_mem9_RAMD_O
+   la_maquina/gate_array/Mram_inkr_RAMD_D1_O
+
+

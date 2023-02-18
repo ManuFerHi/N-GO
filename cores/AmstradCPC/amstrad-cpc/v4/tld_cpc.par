@@ -1,0 +1,274 @@
+Release 14.7 par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+localhost.localdomain::  Sat Feb 18 19:11:49 2023
+
+par -filter /home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter -w
+-intstyle ise -ol high -mt off tld_cpc_map.ncd tld_cpc.ncd tld_cpc.pcf 
+
+
+Constraints file: tld_cpc.pcf.
+Loading device for application Rf_Device from file '6slx16.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+   "tld_cpc" is an NCD, version 3.2, device xc6slx16, package ftg256, speed -2
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,259 out of  18,224   12%
+    Number used as Flip Flops:               2,231
+    Number used as Latches:                     13
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               15
+  Number of Slice LUTs:                      4,556 out of   9,112   50%
+    Number used as logic:                    4,318 out of   9,112   47%
+      Number using O6 output only:           3,355
+      Number using O5 output only:             188
+      Number using O5 and O6:                  775
+      Number used as ROM:                        0
+    Number used as Memory:                     200 out of   2,176    9%
+      Number used as Dual Port RAM:            196
+        Number using O6 output only:           192
+        Number using O5 output only:             1
+        Number using O5 and O6:                  3
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             4
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     38
+      Number with same-slice register load:     19
+      Number with same-slice carry load:        19
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,530 out of   2,278   67%
+  Number of MUXCYs used:                       720 out of   4,556   15%
+  Number of LUT Flip Flop pairs used:        5,070
+    Number with an unused Flip Flop:         2,929 out of   5,070   57%
+    Number with an unused LUT:                 514 out of   5,070   10%
+    Number of fully used LUT-FF pairs:       1,627 out of   5,070   32%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        61 out of     186   32%
+    Number of LOCed IOBs:                       61 out of      61  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        27 out of      32   84%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       5 out of      16   31%
+    Number used as BUFGs:                        5
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            3 out of      32    9%
+  Number of ICAPs:                               1 out of       1  100%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
+
+WARNING:Par:288 - The signal la_maquina/gate_array/Mram_inkr_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem3_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem5_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem2_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem7_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem13_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem1_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem8_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem10_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem9_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem7_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem5_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem4_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem15_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem11_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem12_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem15_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem11_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem10_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem16_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem3_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem8_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem9_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem16_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem12_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem4_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem2_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem6_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_in/Mram_mem1_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem13_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal la_maquina/fdc/fifo_out/Mram_mem6_RAMD_O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 28810 unrouted;      REAL time: 4 secs 
+
+Phase  2  : 26273 unrouted;      REAL time: 5 secs 
+
+Phase  3  : 13538 unrouted;      REAL time: 11 secs 
+
+Phase  4  : 13538 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 12 secs 
+
+Updating file: tld_cpc.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 23 secs 
+Total REAL time to Router completion: 23 secs 
+Total CPU time to Router completion: 22 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|                ck16 | BUFGMUX_X3Y13| No   |  632 |  0.121     |  1.194      |
++---------------------+--------------+------+------+------------+-------------+
+|  la_maquina/clk_cpu |  BUFGMUX_X2Y1| No   |  171 |  0.059     |  1.131      |
++---------------------+--------------+------+------+------------+-------------+
+|                ck50 |  BUFGMUX_X2Y3| No   |   44 |  0.036     |  1.130      |
++---------------------+--------------+------+------+------------+-------------+
+|la_maquina/clk_for_c |              |      |      |            |             |
+|                 rtc |  BUFGMUX_X2Y4| No   |   80 |  0.063     |  1.137      |
++---------------------+--------------+------+------+------------+-------------+
+|                ck32 |  BUFGMUX_X2Y2| No   |   13 |  0.005     |  1.133      |
++---------------------+--------------+------+------+------------+-------------+
+|la_maquina/memory/Mr |              |      |      |            |             |
+|          am__n01161 |         Local|      |    1 |  0.000     |  0.791      |
++---------------------+--------------+------+------+------------+-------------+
+|la_maquina/gate_arra |              |      |      |            |             |
+|             y/ready |         Local|      |    3 |  0.257     |  1.073      |
++---------------------+--------------+------+------+------------+-------------+
+|la_maquina/sonido_ay |              |      |      |            |             |
+|_3/env_reset_GND_371 |              |      |      |            |             |
+|      _o_AND_14762_o |         Local|      |    7 |  0.000     |  1.314      |
++---------------------+--------------+------+------+------------+-------------+
+|la_maquina/sonido_ay |              |      |      |            |             |
+|_3/env_reset_GND_371 |              |      |      |            |             |
+|      _o_AND_14761_o |         Local|      |    7 |  0.000     |  1.847      |
++---------------------+--------------+------+------+------------+-------------+
+|la_maquina/teclado/k |              |      |      |            |             |
+|              bd_nmi |         Local|      |    1 |  0.000     |  0.580      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  NET "ck16" PERIOD = 62.5 ns HIGH 50%      | SETUP       |    41.966ns|    20.534ns|       0|           0
+                                            | HOLD        |     0.287ns|            |       0|           0
+                                            | MINPERIOD   |    12.500ns|    50.000ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  NET "ck32" PERIOD = 31.25 ns HIGH 50%     | SETUP       |    26.037ns|     5.213ns|       0|           0
+                                            | HOLD        |     0.287ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  NET "la_maquina/clk_cpu" PERIOD = 250 ns  | SETUP       |    80.253ns|    89.494ns|       0|           0
+  HIGH 50%                                  | HOLD        |     0.427ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  NET "la_maquina/clk_for_crtc" PERIOD = 10 | SETUP       |   992.006ns|     7.994ns|       0|           0
+  00 ns HIGH 50%                            | HOLD        |     0.414ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 33 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 25 secs 
+Total CPU time to PAR completion: 24 secs 
+
+Peak Memory Usage:  651 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 35
+Number of info messages: 0
+
+Writing design to file tld_cpc.ncd
+
+
+
+PAR done!

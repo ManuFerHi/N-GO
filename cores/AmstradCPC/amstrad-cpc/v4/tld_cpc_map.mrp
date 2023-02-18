@@ -1,0 +1,408 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'tld_cpc'
+
+Design Information
+------------------
+Command Line   : map -filter
+/home/ise/Sources/amstrad-cpc/v4/iseconfig/filter.filter -intstyle ise -p
+xc6slx16-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication
+off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o
+tld_cpc_map.ncd tld_cpc.ngd tld_cpc.pcf 
+Target Device  : xc6slx16
+Target Package : ftg256
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sat Feb 18 19:11:07 2023
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   36
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,259 out of  18,224   12%
+    Number used as Flip Flops:               2,231
+    Number used as Latches:                     13
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               15
+  Number of Slice LUTs:                      4,556 out of   9,112   50%
+    Number used as logic:                    4,318 out of   9,112   47%
+      Number using O6 output only:           3,355
+      Number using O5 output only:             188
+      Number using O5 and O6:                  775
+      Number used as ROM:                        0
+    Number used as Memory:                     200 out of   2,176    9%
+      Number used as Dual Port RAM:            196
+        Number using O6 output only:           192
+        Number using O5 output only:             1
+        Number using O5 and O6:                  3
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             4
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     38
+      Number with same-slice register load:     19
+      Number with same-slice carry load:        19
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,530 out of   2,278   67%
+  Number of MUXCYs used:                       720 out of   4,556   15%
+  Number of LUT Flip Flop pairs used:        5,070
+    Number with an unused Flip Flop:         2,929 out of   5,070   57%
+    Number with an unused LUT:                 514 out of   5,070   10%
+    Number of fully used LUT-FF pairs:       1,627 out of   5,070   32%
+    Number of unique control sets:             300
+    Number of slice register sites lost
+      to control set restrictions:           1,177 out of  18,224    6%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        61 out of     186   32%
+    Number of LOCed IOBs:                       61 out of      61  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        27 out of      32   84%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       5 out of      16   31%
+    Number used as BUFGs:                        5
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            3 out of      32    9%
+  Number of ICAPs:                               1 out of       1  100%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.39
+
+Peak Memory Usage:  880 MB
+Total REAL time to MAP completion:  40 secs 
+Total CPU time to MAP completion:   39 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   la_maquina/memory/Mram__n01161 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   la_maquina/sonido_ay_3/env_reset_GND_371_o_AND_14762_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   la_maquina/sonido_ay_3/env_reset_GND_371_o_AND_14761_o is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/gate_array/Mram_inkr_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem3_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem5_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem2_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem7_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem13_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem1_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem8_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem10_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem9_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem14_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem7_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem5_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem4_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem15_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem11_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem12_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem15_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem11_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem10_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem16_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem3_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem8_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem9_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem16_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem12_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem4_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem2_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem6_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_in/Mram_mem1_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem13_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem14_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <la_maquina/fdc/fifo_out/Mram_mem6_RAMD_O> is incomplete. The signal does not
+   drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+INFO:LIT:243 - Logical network la_maquina/fdc/fifo_in/Mram_mem241/SPO has no
+   load.
+INFO:LIT:395 - The above info message is repeated 31 more times for the
+   following (max. 5 shown):
+   la_maquina/fdc/fifo_in/Mram_mem232/SPO,
+   la_maquina/fdc/fifo_in/Mram_mem242/SPO,
+   la_maquina/fdc/fifo_in/Mram_mem231/SPO,
+   la_maquina/fdc/fifo_in/Mram_mem222/SPO,
+   la_maquina/fdc/fifo_in/Mram_mem221/SPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   1 block(s) removed
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "MyCtrlModule/zpu/Madd_memARead[31]_GND_383_o_add_180_OUT15"
+(ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| audio_out_left                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| audio_out_right                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| b<0>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| b<1>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| b<2>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| clk50mhz                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| clkps2                             | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| dataps2                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| ear                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| g<0>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| g<1>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| g<2>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| hsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| joydown                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| joyfire1                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| joyfire2                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| joyleft                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| joyright                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| joyup                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| led                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| r<0>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| r<1>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| r<2>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ram_ce_n_o0                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ram_ce_n_o1                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ram_ce_n_o2                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ram_ce_n_o3                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ram_oe_n                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sd_clk                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sd_cs_n                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sd_miso                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sd_mosi                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<0>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<1>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<2>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<3>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<4>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<5>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<6>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<7>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<8>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<9>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<10>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<11>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<12>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<13>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<14>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<15>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<16>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<17>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<18>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<0>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<1>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<2>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<3>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<4>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<5>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<6>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<7>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_we_n                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

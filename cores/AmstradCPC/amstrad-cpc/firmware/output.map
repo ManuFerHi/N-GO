@@ -1,0 +1,739 @@
+Archive member included because of file (symbol)
+
+/home/ise/Sources/opt/zpu/bin/../lib/gcc/zpu-elf/3.4.2/small/libgcc.a(_mulsi3.o)
+                              zpu_obj/minfat.o (__mulsi3)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD zpu_obj/mincrt0.o
+LOAD zpu_obj/premain.o
+LOAD zpu_obj/osd.hwo
+LOAD zpu_obj/main.o
+LOAD zpu_obj/interrupts.o
+LOAD zpu_obj/keyboard.o
+LOAD zpu_obj/ps2.o
+LOAD zpu_obj/menu.o
+LOAD zpu_obj/spi.o
+LOAD zpu_obj/minfat.o
+LOAD zpu_obj/swap.o
+LOAD zpu_obj/fileselector.o
+LOAD zpu_obj/storage.o
+LOAD zpu_obj/tape.o
+LOAD zpu_obj/misc.o
+LOAD zpu_obj/disk.o
+LOAD zpu_obj/diskecpc.o
+LOAD zpu_obj/diskraw.o
+LOAD zpu_obj/uart.o
+LOAD zpu_obj/machinemenu.o
+LOAD /home/ise/Sources/opt/zpu/bin/../lib/gcc/zpu-elf/3.4.2/small/libgcc.a
+                0x0000000000000000                . = 0x0
+
+.fixed_vectors  0x0000000000000000       0x60
+ *(.fixed_vectors)
+ .fixed_vectors
+                0x0000000000000000       0x60 zpu_obj/mincrt0.o
+                0x0000000000000012                _boot
+                0x0000000000000000                _start
+                0x0000000000000020                _zpu_interrupt_vector
+                0x0000000000000018                _inthandler_fptr
+                0x000000000000000c                _break
+                0x0000000000000060                . = ALIGN (0x4)
+
+.text           0x0000000000000060     0x3267
+ *(.text)
+ .text          0x0000000000000060       0x80 zpu_obj/mincrt0.o
+                0x0000000000000075                _loadb
+                0x000000000000008a                _storeh
+                0x0000000000000060                _loadh
+                0x00000000000000b7                _storeb
+ .text          0x00000000000000e0       0x19 zpu_obj/premain.o
+                                         0x2b (size before relaxing)
+                0x00000000000000e0                _premain
+ *(.text.*)
+ .text.OSD_Init
+                0x00000000000000f9       0x1b zpu_obj/osd.hwo
+                                         0x21 (size before relaxing)
+                0x00000000000000f9                OSD_Init
+ .text.OSD_Clear
+                0x0000000000000114       0x4f zpu_obj/osd.hwo
+                                         0x6b (size before relaxing)
+                0x0000000000000114                OSD_Clear
+ .text.OSD_Scroll
+                0x0000000000000163       0x3c zpu_obj/osd.hwo
+                                         0x44 (size before relaxing)
+                0x0000000000000163                OSD_Scroll
+ .text.OSD_Putchar
+                0x000000000000019f       0xa4 zpu_obj/osd.hwo
+                                         0xe5 (size before relaxing)
+                0x000000000000019f                OSD_Putchar
+ .text.OSD_ProgressBar
+                0x0000000000000243       0x65 zpu_obj/osd.hwo
+                                         0x79 (size before relaxing)
+                0x0000000000000243                OSD_ProgressBar
+ .text.OSD_Show
+                0x00000000000002a8       0x71 zpu_obj/osd.hwo
+                                         0x87 (size before relaxing)
+                0x00000000000002a8                OSD_Show
+ .text.OSD_Puts
+                0x0000000000000319       0x27 zpu_obj/main.o
+                                         0x36 (size before relaxing)
+                0x0000000000000319                OSD_Puts
+ .text.LoadInitialRom
+                0x0000000000000340       0x39 zpu_obj/main.o
+                                         0x59 (size before relaxing)
+                0x0000000000000340                LoadInitialRom
+ .text.diskstatus_LoadDiskReal
+                0x0000000000000379       0x39 zpu_obj/main.o
+                                         0x54 (size before relaxing)
+ .text.diskstatus_LoadDisk0
+                0x00000000000003b2       0x1f zpu_obj/main.o
+                                         0x2b (size before relaxing)
+                0x00000000000003b2                diskstatus_LoadDisk0
+ .text.diskstatus_LoadDisk1
+                0x00000000000003d1       0x1f zpu_obj/main.o
+                                         0x2b (size before relaxing)
+                0x00000000000003d1                diskstatus_LoadDisk1
+ .text.diskstatus_CreateBlank
+                0x00000000000003f0       0x7a zpu_obj/main.o
+                                         0xb1 (size before relaxing)
+                0x00000000000003f0                diskstatus_CreateBlank
+ .text.main     0x000000000000046a       0xa9 zpu_obj/main.o
+                                        0x103 (size before relaxing)
+                0x000000000000046a                main
+ .text.DisableInterrupts
+                0x0000000000000513        0x6 zpu_obj/interrupts.o
+                0x0000000000000513                DisableInterrupts
+ .text.GetInterrupts
+                0x0000000000000519        0x8 zpu_obj/interrupts.o
+                                          0xa (size before relaxing)
+                0x0000000000000519                GetInterrupts
+ .text.EnableInterrupts
+                0x0000000000000521        0x6 zpu_obj/interrupts.o
+                0x0000000000000521                EnableInterrupts
+ .text.IrqHandler
+                0x0000000000000527       0x55 zpu_obj/interrupts.o
+                                         0x7c (size before relaxing)
+ .text.InitInterrupts
+                0x000000000000057c       0x17 zpu_obj/interrupts.o
+                                         0x19 (size before relaxing)
+                0x000000000000057c                InitInterrupts
+ .text.SetIntHandler
+                0x0000000000000593       0x20 zpu_obj/interrupts.o
+                                         0x2d (size before relaxing)
+                0x0000000000000593                SetIntHandler
+ .text.HandlePS2RawCodes
+                0x00000000000005b3       0xbf zpu_obj/keyboard.o
+                                        0x10b (size before relaxing)
+                0x00000000000005b3                HandlePS2RawCodes
+ .text.ClearKeyboard
+                0x0000000000000672       0x1e zpu_obj/keyboard.o
+                                         0x24 (size before relaxing)
+                0x0000000000000672                ClearKeyboard
+ .text.TestKey  0x0000000000000690       0x31 zpu_obj/keyboard.o
+                                         0x35 (size before relaxing)
+                0x0000000000000690                TestKey
+ .text.ps2_ringbuffer_init
+                0x00000000000006c1       0x13 zpu_obj/ps2.o
+                0x00000000000006c1                ps2_ringbuffer_init
+ .text.ps2_ringbuffer_read
+                0x00000000000006d4       0x45 zpu_obj/ps2.o
+                                         0x51 (size before relaxing)
+                0x00000000000006d4                ps2_ringbuffer_read
+ .text.ps2_ringbuffer_count
+                0x0000000000000719       0x37 zpu_obj/ps2.o
+                                         0x40 (size before relaxing)
+                0x0000000000000719                ps2_ringbuffer_count
+ .text.PS2Handler
+                0x0000000000000750       0x3f zpu_obj/ps2.o
+                                         0x4d (size before relaxing)
+                0x0000000000000750                PS2Handler
+ .text.PS2Init  0x000000000000078f       0x1b zpu_obj/ps2.o
+                                         0x29 (size before relaxing)
+                0x000000000000078f                PS2Init
+ .text.Menu_Init
+                0x00000000000007aa        0xe zpu_obj/menu.o
+                                         0x12 (size before relaxing)
+                0x00000000000007aa                Menu_Init
+ .text.Menu_Get
+                0x00000000000007b8        0x9 zpu_obj/menu.o
+                                          0xd (size before relaxing)
+                0x00000000000007b8                Menu_Get
+ .text.Menu_Hide
+                0x00000000000007c1       0x36 zpu_obj/menu.o
+                                         0x57 (size before relaxing)
+                0x00000000000007c1                Menu_Hide
+ .text.Menu_Draw
+                0x00000000000007f7       0x6e zpu_obj/menu.o
+                                         0x9c (size before relaxing)
+                0x00000000000007f7                Menu_Draw
+ .text.Menu_Set
+                0x0000000000000865       0x13 zpu_obj/menu.o
+                                         0x1c (size before relaxing)
+                0x0000000000000865                Menu_Set
+ .text.Menu_Run
+                0x0000000000000878      0x2b2 zpu_obj/menu.o
+                                        0x3d2 (size before relaxing)
+                0x0000000000000878                Menu_Run
+ .text.SPI_PUMP
+                0x0000000000000b2a       0x4f zpu_obj/spi.o
+                                         0x51 (size before relaxing)
+ .text.cmd_write
+                0x0000000000000b79       0x73 zpu_obj/spi.o
+                                         0x83 (size before relaxing)
+ .text.spi_spin
+                0x0000000000000bec       0x19 zpu_obj/spi.o
+                                         0x1d (size before relaxing)
+ .text.wait_init
+                0x0000000000000c05       0x38 zpu_obj/spi.o
+                                         0x4d (size before relaxing)
+ .text.sd_init  0x0000000000000c3d      0x182 zpu_obj/spi.o
+                                        0x21d (size before relaxing)
+                0x0000000000000c3d                sd_init
+ .text.sd_write_sector
+                0x0000000000000dbf       0xc3 zpu_obj/spi.o
+                                         0xea (size before relaxing)
+                0x0000000000000dbf                sd_write_sector
+ .text.sd_read_sector
+                0x0000000000000e82       0xa4 zpu_obj/spi.o
+                                         0xd3 (size before relaxing)
+                0x0000000000000e82                sd_read_sector
+ .text.FatInit  0x0000000000000f26       0x82 zpu_obj/minfat.o
+                                         0xaf (size before relaxing)
+                0x0000000000000f26                FatInit
+ .text.ClusterFat
+                0x0000000000000fa8       0x37 zpu_obj/minfat.o
+                                         0x4d (size before relaxing)
+ .text.ChangeDirectory
+                0x0000000000000fdf       0xae zpu_obj/minfat.o
+                                         0xfc (size before relaxing)
+                0x0000000000000fdf                ChangeDirectory
+ .text.FindDrive
+                0x000000000000108d      0x3de zpu_obj/minfat.o
+                                        0x5af (size before relaxing)
+                0x000000000000108d                FindDrive
+ .text.CommitFat
+                0x000000000000146b       0x5a zpu_obj/minfat.o
+                                         0x7e (size before relaxing)
+ .text.GetClusterTable
+                0x00000000000014c5       0x4f zpu_obj/minfat.o
+                                         0x71 (size before relaxing)
+ .text.GetCluster
+                0x0000000000001514       0x2c zpu_obj/minfat.o
+                                         0x3e (size before relaxing)
+                0x0000000000001514                GetCluster
+ .text.GetFreeCluster
+                0x0000000000001540       0x36 zpu_obj/minfat.o
+                                         0x52 (size before relaxing)
+ .text.IsLastCluster
+                0x0000000000001576       0x43 zpu_obj/minfat.o
+                                         0x56 (size before relaxing)
+ .text.LinkClusters
+                0x00000000000015b9       0x60 zpu_obj/minfat.o
+                                         0x86 (size before relaxing)
+ .text.ReserveSpaceFat
+                0x0000000000001619      0x13f zpu_obj/minfat.o
+                                        0x1cc (size before relaxing)
+ .text.NextDirEntryIsValid
+                0x0000000000001758       0x44 zpu_obj/minfat.o
+                                         0x5c (size before relaxing)
+ .text.NextDirEntryEx
+                0x000000000000179c      0x132 zpu_obj/minfat.o
+                                        0x1ba (size before relaxing)
+                0x000000000000179c                NextDirEntryEx
+ .text.FilenameNormalise
+                0x00000000000018ce       0x8b zpu_obj/minfat.o
+                                         0xbe (size before relaxing)
+                0x00000000000018ce                FilenameNormalise
+ .text.FileOpenDirEntry
+                0x0000000000001959       0x62 zpu_obj/minfat.o
+                                         0x83 (size before relaxing)
+                0x0000000000001959                FileOpenDirEntry
+ .text.FileNextSector
+                0x00000000000019bb       0x30 zpu_obj/minfat.o
+                                         0x3d (size before relaxing)
+                0x00000000000019bb                FileNextSector
+ .text.FileGetLba
+                0x00000000000019eb       0x26 zpu_obj/minfat.o
+                                         0x2e (size before relaxing)
+                0x00000000000019eb                FileGetLba
+ .text.FileRead
+                0x0000000000001a11       0x18 zpu_obj/minfat.o
+                                         0x20 (size before relaxing)
+                0x0000000000001a11                FileRead
+ .text.FileWrite
+                0x0000000000001a29       0x29 zpu_obj/minfat.o
+                                         0x32 (size before relaxing)
+                0x0000000000001a29                FileWrite
+ .text.DirEnumOther
+                0x0000000000001a52      0x10a zpu_obj/minfat.o
+                                        0x186 (size before relaxing)
+                0x0000000000001a52                DirEnumOther
+ .text.DirEnum  0x0000000000001b5c       0x1c zpu_obj/minfat.o
+                                         0x23 (size before relaxing)
+                0x0000000000001b5c                DirEnum
+ .text.DirCd_Callback
+                0x0000000000001b78       0x58 zpu_obj/minfat.o
+                                         0x71 (size before relaxing)
+ .text.DirCd    0x0000000000001bd0       0x33 zpu_obj/minfat.o
+                                         0x45 (size before relaxing)
+                0x0000000000001bd0                DirCd
+ .text.FileOpen
+                0x0000000000001c03       0x3e zpu_obj/minfat.o
+                                         0x52 (size before relaxing)
+                0x0000000000001c03                FileOpen
+ .text.FileExistsEx
+                0x0000000000001c41       0x55 zpu_obj/minfat.o
+                                         0x74 (size before relaxing)
+                0x0000000000001c41                FileExistsEx
+ .text.FileExists
+                0x0000000000001c96       0x10 zpu_obj/minfat.o
+                                         0x13 (size before relaxing)
+                0x0000000000001c96                FileExists
+ .text.FileCreateSurvey_cb
+                0x0000000000001ca6       0x3b zpu_obj/minfat.o
+                                         0x48 (size before relaxing)
+ .text.FileCreateAction_cb
+                0x0000000000001ce1       0xc5 zpu_obj/minfat.o
+                                        0x10e (size before relaxing)
+ .text.FileCreate
+                0x0000000000001da6      0x10b zpu_obj/minfat.o
+                                        0x185 (size before relaxing)
+                0x0000000000001da6                FileCreate
+ .text.MaxLba   0x0000000000001eb1       0x1d zpu_obj/minfat.o
+                                         0x25 (size before relaxing)
+                0x0000000000001eb1                MaxLba
+ .text.SwapBBBB
+                0x0000000000001ece       0x2b zpu_obj/swap.o
+                                         0x2d (size before relaxing)
+                0x0000000000001ece                SwapBBBB
+ .text.SwapBB   0x0000000000001ef9       0x1d zpu_obj/swap.o
+                                         0x22 (size before relaxing)
+                0x0000000000001ef9                SwapBB
+ .text.copyname
+                0x0000000000001f16       0x2f zpu_obj/fileselector.o
+                                         0x40 (size before relaxing)
+ .text.listroms_cb
+                0x0000000000001f45       0xf7 zpu_obj/fileselector.o
+                                        0x139 (size before relaxing)
+ .text.nthfile  0x000000000000203c       0x21 zpu_obj/fileselector.o
+                                         0x28 (size before relaxing)
+ .text.selectrom
+                0x000000000000205d       0x40 zpu_obj/fileselector.o
+                                         0x5b (size before relaxing)
+ .text.listroms
+                0x000000000000209d       0x46 zpu_obj/fileselector.o
+                                         0x5b (size before relaxing)
+ .text.scrollroms
+                0x00000000000020e3       0x7b zpu_obj/fileselector.o
+                                         0xb4 (size before relaxing)
+ .text.selectdir
+                0x000000000000215e       0x30 zpu_obj/fileselector.o
+                                         0x46 (size before relaxing)
+ .text.nthfile_cb
+                0x000000000000218e       0x28 zpu_obj/fileselector.o
+                                         0x30 (size before relaxing)
+ .text.FileSelector_Show
+                0x00000000000021b6       0x25 zpu_obj/fileselector.o
+                                         0x35 (size before relaxing)
+                0x00000000000021b6                FileSelector_Show
+ .text.FileSelector_SetLoadFunction
+                0x00000000000021db        0x6 zpu_obj/fileselector.o
+                                          0x8 (size before relaxing)
+                0x00000000000021db                FileSelector_SetLoadFunction
+ .text.GetBits  0x00000000000021e1       0x23 zpu_obj/storage.o
+                                         0x2d (size before relaxing)
+                0x00000000000021e1                GetBits
+ .text.LoadROM  0x0000000000002204       0xa5 zpu_obj/storage.o
+                                         0xe1 (size before relaxing)
+                0x0000000000002204                LoadROM
+ .text.SaveFile
+                0x00000000000022a9       0xb2 zpu_obj/storage.o
+                                         0xf6 (size before relaxing)
+                0x00000000000022a9                SaveFile
+ .text.Open     0x000000000000235b       0x83 zpu_obj/storage.o
+                                         0xb3 (size before relaxing)
+                0x000000000000235b                Open
+ .text._memcpy  0x00000000000023de       0x2b zpu_obj/misc.o
+                                         0x37 (size before relaxing)
+                0x00000000000023de                _memcpy
+ .text._memset  0x0000000000002409       0x2c zpu_obj/misc.o
+                                         0x38 (size before relaxing)
+                0x0000000000002409                _memset
+ .text._strcpy  0x0000000000002435       0x22 zpu_obj/misc.o
+                                         0x2c (size before relaxing)
+                0x0000000000002435                _strcpy
+ .text._strcat  0x0000000000002457       0x31 zpu_obj/misc.o
+                                         0x42 (size before relaxing)
+                0x0000000000002457                _strcat
+ .text.MutateFilename
+                0x0000000000002488       0x7e zpu_obj/misc.o
+                                         0xa9 (size before relaxing)
+                0x0000000000002488                MutateFilename
+ .text.compare  0x0000000000002506       0x41 zpu_obj/misc.o
+                                         0x55 (size before relaxing)
+                0x0000000000002506                compare
+ .text.DiskReadSectorNone
+                0x0000000000002547        0x7 zpu_obj/disk.o
+                                          0x9 (size before relaxing)
+                0x0000000000002547                DiskReadSectorNone
+ .text.DiskWriteSectorNone
+                0x000000000000254e        0x7 zpu_obj/disk.o
+                                          0x9 (size before relaxing)
+                0x000000000000254e                DiskWriteSectorNone
+ .text.DiskGetSectorIdNone
+                0x0000000000002555        0x7 zpu_obj/disk.o
+                                          0x9 (size before relaxing)
+                0x0000000000002555                DiskGetSectorIdNone
+ .text.DiskSeekNone
+                0x000000000000255c        0x7 zpu_obj/disk.o
+                                          0x9 (size before relaxing)
+                0x000000000000255c                DiskSeekNone
+ .text.DiskNextSectorId
+                0x0000000000002563       0x9c zpu_obj/disk.o
+                                         0xcf (size before relaxing)
+ .text.DiskSignalsHandler
+                0x00000000000025ff      0x195 zpu_obj/disk.o
+                                        0x216 (size before relaxing)
+                0x00000000000025ff                DiskSignalsHandler
+ .text.DiskHandlerSingle
+                0x0000000000002794      0x144 zpu_obj/disk.o
+                                        0x1a1 (size before relaxing)
+                0x0000000000002794                DiskHandlerSingle
+ .text.DiskHandler
+                0x00000000000028d8       0x20 zpu_obj/disk.o
+                                         0x28 (size before relaxing)
+                0x00000000000028d8                DiskHandler
+ .text.LbaCallback
+                0x00000000000028f8       0x2b zpu_obj/disk.o
+                                         0x35 (size before relaxing)
+ .text.DiskSetWp
+                0x0000000000002923       0x18 zpu_obj/disk.o
+                                         0x20 (size before relaxing)
+                0x0000000000002923                DiskSetWp
+ .text.DiskClose
+                0x000000000000293b       0x3e zpu_obj/disk.o
+                                         0x53 (size before relaxing)
+                0x000000000000293b                DiskClose
+ .text.DiskOpen
+                0x0000000000002979      0x13c zpu_obj/disk.o
+                                        0x1bc (size before relaxing)
+                0x0000000000002979                DiskOpen
+ .text.DiskInit
+                0x0000000000002ab5       0x8f zpu_obj/disk.o
+                                         0xbc (size before relaxing)
+                0x0000000000002ab5                DiskInit
+ .text.DiskSeekECPC
+                0x0000000000002b44      0x15b zpu_obj/diskecpc.o
+                                        0x1c3 (size before relaxing)
+                0x0000000000002b44                DiskSeekECPC
+ .text.DiskGetSectorIdECPC
+                0x0000000000002c9f       0x59 zpu_obj/diskecpc.o
+                                         0x71 (size before relaxing)
+                0x0000000000002c9f                DiskGetSectorIdECPC
+ .text.DiskReadWriteSectorECPC
+                0x0000000000002cf8      0x192 zpu_obj/diskecpc.o
+                                        0x213 (size before relaxing)
+ .text.DiskReadSectorECPC
+                0x0000000000002e8a       0x22 zpu_obj/diskecpc.o
+                                         0x27 (size before relaxing)
+                0x0000000000002e8a                DiskReadSectorECPC
+ .text.DiskWriteSectorECPC
+                0x0000000000002eac       0x22 zpu_obj/diskecpc.o
+                                         0x27 (size before relaxing)
+                0x0000000000002eac                DiskWriteSectorECPC
+ .text.DiskTryECPC
+                0x0000000000002ece      0x14d zpu_obj/diskecpc.o
+                                        0x1d7 (size before relaxing)
+                0x0000000000002ece                DiskTryECPC
+ .text.DiskCreateBlankTrackRecord
+                0x000000000000301b       0x77 zpu_obj/diskecpc.o
+                                         0xa5 (size before relaxing)
+ .text.DiskCreateBlankCallback
+                0x0000000000003092       0xc0 zpu_obj/diskecpc.o
+                                         0xfc (size before relaxing)
+ .text.DiskCreateBlank
+                0x0000000000003152       0x1d zpu_obj/diskecpc.o
+                                         0x23 (size before relaxing)
+                0x0000000000003152                DiskCreateBlank
+ .text.DTStoBlock
+                0x000000000000316f       0x1f zpu_obj/diskraw.o
+                                         0x21 (size before relaxing)
+                0x000000000000316f                DTStoBlock
+ .text.DiskWriteSectorRAW
+                0x000000000000318e       0x6a zpu_obj/diskraw.o
+                                         0x96 (size before relaxing)
+                0x000000000000318e                DiskWriteSectorRAW
+ .text.DiskReadSectorRAW
+                0x00000000000031f8       0x89 zpu_obj/diskraw.o
+                                         0xb9 (size before relaxing)
+                0x00000000000031f8                DiskReadSectorRAW
+ .text.DiskTryRAW
+                0x0000000000003281       0x1d zpu_obj/diskraw.o
+                                         0x1f (size before relaxing)
+                0x0000000000003281                DiskTryRAW
+ .text.DiskGetSectorIdRAW
+                0x000000000000329e       0x22 zpu_obj/diskraw.o
+                                         0x2c (size before relaxing)
+                0x000000000000329e                DiskGetSectorIdRAW
+ .text.DiskSeekRAW
+                0x00000000000032c0        0x7 zpu_obj/diskraw.o
+                                          0x9 (size before relaxing)
+                0x00000000000032c0                DiskSeekRAW
+                0x00000000000032c8                . = ALIGN (0x4)
+
+.rodata         0x00000000000032c8      0x290
+ *(.rodata)
+ .rodata        0x00000000000032c8       0x10 zpu_obj/mincrt0.o
+ .rodata        0x00000000000032d8        0x8 zpu_obj/minfat.o
+ *(.rodata.*)
+ .rodata.str1.4
+                0x00000000000032e0      0x152 zpu_obj/main.o
+                                        0x15c (size before relaxing)
+ *fill*         0x0000000000003432        0x2 00
+ .rodata.str1.4
+                0x0000000000003434        0x7 zpu_obj/menu.o
+                                          0x8 (size before relaxing)
+ *fill*         0x000000000000343b        0x1 00
+ .rodata.str1.4
+                0x000000000000343c       0x51 zpu_obj/spi.o
+                                         0x54 (size before relaxing)
+ *fill*         0x000000000000348d        0x3 00
+ .rodata.str1.4
+                0x0000000000003490       0x4a zpu_obj/minfat.o
+                                         0x4c (size before relaxing)
+ *fill*         0x00000000000034da        0x2 00
+ .rodata.hex    0x00000000000034dc       0x14 zpu_obj/misc.o
+                0x00000000000034dc                hex
+ .rodata.trackInfoId
+                0x00000000000034f0        0xc zpu_obj/diskecpc.o
+                0x00000000000034f0                trackInfoId
+ .rodata.diskCreateBlankText1
+                0x00000000000034fc       0x28 zpu_obj/diskecpc.o
+ .rodata.sectorIdLut
+                0x0000000000003524        0xc zpu_obj/diskecpc.o
+ .rodata.diskCreateBlankText2
+                0x0000000000003530       0x10 zpu_obj/diskecpc.o
+ .rodata.cpcemuDiskID
+                0x0000000000003540        0xc zpu_obj/diskecpc.o
+ .rodata.ecpcDiskID
+                0x000000000000354c        0xc zpu_obj/diskecpc.o
+                0x0000000000003558                . = ALIGN (0x4)
+                0x0000000000003558                . = ALIGN (0x4)
+
+.data           0x0000000000003558      0x260
+                0x0000000000003558                _data = .
+ *(.data)
+ *(.data.*)
+ .data.pixelclock
+                0x0000000000003558        0x4 zpu_obj/osd.hwo
+ .data.topmenu  0x000000000000355c       0x24 zpu_obj/main.o
+                0x000000000000355c                topmenu
+ .data.diskstatus
+                0x0000000000003580       0x78 zpu_obj/main.o
+ .data.loadfailed
+                0x00000000000035f8       0x24 zpu_obj/main.o
+ .data.diskNr   0x000000000000361c        0x4 zpu_obj/main.o
+ .data.handler  0x0000000000003620        0x8 zpu_obj/interrupts.o
+ .data.keytable
+                0x0000000000003628       0x40 zpu_obj/keyboard.o
+                0x0000000000003628                keytable
+ .data.keyup.0  0x0000000000003668        0x4 zpu_obj/keyboard.o
+ .data.extkey.1
+                0x000000000000366c        0x4 zpu_obj/keyboard.o
+ .data.menu_toggle_bits
+                0x0000000000003670        0x4 zpu_obj/menu.o
+                0x0000000000003670                menu_toggle_bits
+ .data.menu_visible
+                0x0000000000003674        0x4 zpu_obj/menu.o
+ .data.prevlfn  0x0000000000003678        0x4 zpu_obj/minfat.o
+                0x0000000000003678                prevlfn
+ .data.currentFatLba
+                0x000000000000367c        0x4 zpu_obj/minfat.o
+ .data.first_free_cluster
+                0x0000000000003680        0x4 zpu_obj/minfat.o
+ .data.rommenu  0x0000000000003684       0xb4 zpu_obj/fileselector.o
+ .data.romindex
+                0x0000000000003738        0x4 zpu_obj/fileselector.o
+ .data.lastTrack
+                0x000000000000373c        0x4 zpu_obj/disk.o
+                0x000000000000373c                lastTrack
+ .data.lastSr   0x0000000000003740        0x4 zpu_obj/disk.o
+                0x0000000000003740                lastSr
+ .data.sectorNr
+                0x0000000000003744        0x4 zpu_obj/disk.o
+                0x0000000000003744                sectorNr
+ .data.nrReads  0x0000000000003748        0x4 zpu_obj/disk.o
+                0x0000000000003748                nrReads
+ .data.pseek    0x000000000000374c        0x8 zpu_obj/disk.o
+                0x000000000000374c                pseek
+ .data.pgetSectorId
+                0x0000000000003754        0x8 zpu_obj/disk.o
+                0x0000000000003754                pgetSectorId
+ .data.pwriteSector
+                0x000000000000375c        0x8 zpu_obj/disk.o
+                0x000000000000375c                pwriteSector
+ .data.preadSector
+                0x0000000000003764        0x8 zpu_obj/disk.o
+                0x0000000000003764                preadSector
+ .data.laststs  0x000000000000376c        0x4 zpu_obj/disk.o
+                0x000000000000376c                laststs
+ .data.disk_cr  0x0000000000003770        0x4 zpu_obj/disk.o
+                0x0000000000003770                disk_cr
+ .data.disk     0x0000000000003774        0x4 zpu_obj/disk.o
+ .data.mem      0x0000000000003778        0x4 zpu_obj/disk.o
+ .data.diskCreateBlankTracks
+                0x000000000000377c        0x4 zpu_obj/diskecpc.o
+                0x000000000000377c                diskCreateBlankTracks
+ .data.diskCreateBlankBlocks
+                0x0000000000003780        0x4 zpu_obj/diskecpc.o
+                0x0000000000003780                diskCreateBlankBlocks
+ .data.ecpcCurrTrack
+                0x0000000000003784        0x8 zpu_obj/diskecpc.o
+ .data.ecpcSides
+                0x000000000000378c        0x4 zpu_obj/diskecpc.o
+ .data.ecpcTrackNr
+                0x0000000000003790        0x8 zpu_obj/diskecpc.o
+ .data.ecpcExtended
+                0x0000000000003798        0x8 zpu_obj/diskecpc.o
+ .data.ecpcTrackOffset
+                0x00000000000037a0       0x10 zpu_obj/diskecpc.o
+ .data.ecpcSectorNr
+                0x00000000000037b0        0x8 zpu_obj/diskecpc.o
+                0x00000000000037b8                . = ALIGN (0x4)
+                0x00000000000037b8                _romend = .
+                0x00000000000037b8                . = ALIGN (0x4)
+
+.bss            0x00000000000037b8     0x4050
+                0x00000000000037b8                __bss_start = .
+                0x00000000000037b8                __bss_start__ = .
+ *(.bss)
+ .bss           0x00000000000037b8       0x10 zpu_obj/mincrt0.o
+                0x00000000000037b8                _memreg
+ *(.bss.*)
+ .bss.osd_cursory
+                0x00000000000037c8        0x4 zpu_obj/osd.hwo
+                0x00000000000037c8                osd_cursory
+ .bss.osd_cursorx
+                0x00000000000037cc        0x4 zpu_obj/osd.hwo
+                0x00000000000037cc                osd_cursorx
+ .bss.osd_syncpolarity
+                0x00000000000037d0        0x4 zpu_obj/osd.hwo
+ .bss.isrdbg    0x00000000000037d4        0x4 zpu_obj/interrupts.o
+                0x00000000000037d4                isrdbg
+ .bss.kbbuffer  0x00000000000037d8       0x28 zpu_obj/ps2.o
+                0x00000000000037d8                kbbuffer
+ .bss.intflag   0x0000000000003800        0x4 zpu_obj/ps2.o
+ .bss.menu      0x0000000000003804        0x4 zpu_obj/menu.o
+ .bss.menurows  0x0000000000003808        0x4 zpu_obj/menu.o
+ .bss.currentrow
+                0x000000000000380c        0x4 zpu_obj/menu.o
+ .bss.hotkeys   0x0000000000003810        0x4 zpu_obj/menu.o
+ .bss.SDHCtype  0x0000000000003814        0x4 zpu_obj/spi.o
+                0x0000000000003814                SDHCtype
+ .bss.sector_buffer
+                0x0000000000003818      0x200 zpu_obj/minfat.o
+                0x0000000000003818                sector_buffer
+ .bss.longfilename
+                0x0000000000003a18      0x104 zpu_obj/minfat.o
+                0x0000000000003a18                longfilename
+ .bss.cluster_size
+                0x0000000000003b1c        0x4 zpu_obj/minfat.o
+                0x0000000000003b1c                cluster_size
+ .bss.cluster_mask
+                0x0000000000003b20        0x4 zpu_obj/minfat.o
+                0x0000000000003b20                cluster_mask
+ .bss.fat32     0x0000000000003b24        0x4 zpu_obj/minfat.o
+                0x0000000000003b24                fat32
+ .bss.dir_entries
+                0x0000000000003b28        0x4 zpu_obj/minfat.o
+                0x0000000000003b28                dir_entries
+ .bss.directory_cluster
+                0x0000000000003b2c        0x4 zpu_obj/minfat.o
+ .bss.entries_per_cluster
+                0x0000000000003b30        0x4 zpu_obj/minfat.o
+ .bss.fat_start
+                0x0000000000003b34        0x4 zpu_obj/minfat.o
+ .bss.data_start
+                0x0000000000003b38        0x4 zpu_obj/minfat.o
+ .bss.root_directory_cluster
+                0x0000000000003b3c        0x4 zpu_obj/minfat.o
+ .bss.root_directory_start
+                0x0000000000003b40        0x4 zpu_obj/minfat.o
+ .bss.root_directory_size
+                0x0000000000003b44        0x4 zpu_obj/minfat.o
+ .bss.fat_number
+                0x0000000000003b48        0x4 zpu_obj/minfat.o
+ .bss.cluster_size_p2
+                0x0000000000003b4c        0x4 zpu_obj/minfat.o
+                0x0000000000003b4c                cluster_size_p2
+ .bss.fat_size  0x0000000000003b50        0x4 zpu_obj/minfat.o
+ .bss.fs_info_sector
+                0x0000000000003b54        0x4 zpu_obj/minfat.o
+ .bss.boot_sector
+                0x0000000000003b58        0x4 zpu_obj/minfat.o
+ .bss.current_directory_cluster
+                0x0000000000003b5c        0x4 zpu_obj/minfat.o
+ .bss.current_directory_start
+                0x0000000000003b60        0x4 zpu_obj/minfat.o
+ .bss.partitioncount
+                0x0000000000003b64        0x4 zpu_obj/minfat.o
+ .bss.fat_sector_buffer
+                0x0000000000003b68      0x200 zpu_obj/minfat.o
+                0x0000000000003b68                fat_sector_buffer
+ .bss.loadfunction
+                0x0000000000003d68        0x4 zpu_obj/fileselector.o
+                0x0000000000003d68                loadfunction
+ .bss.romfilenames
+                0x0000000000003d6c      0x188 zpu_obj/fileselector.o
+ .bss.file      0x0000000000003ef4        0xc zpu_obj/storage.o
+ .bss.diskLba   0x0000000000003f00     0x3478 zpu_obj/disk.o
+                0x0000000000003f00                diskLba
+ .bss.diskIsInserted
+                0x0000000000007378        0x4 zpu_obj/disk.o
+ .bss.diskReadBlock
+                0x000000000000737c        0x8 zpu_obj/disk.o
+ .bss.diskwp    0x0000000000007384        0x4 zpu_obj/disk.o
+                0x0000000000007384                diskwp
+ .bss.disk_sector
+                0x0000000000007388      0x200 zpu_obj/disk.o
+                0x0000000000007388                disk_sector
+ .bss.ecpcTrackSize
+                0x0000000000007588      0x140 zpu_obj/diskecpc.o
+ .bss.ecpcStatus
+                0x00000000000076c8      0x140 zpu_obj/diskecpc.o
+ *(COMMON)
+                0x0000000000007808                __bss_end__ = .
+                0x0000000000007808                _end = .
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_str
+ *(.debug_str)
+
+.debug_info
+ *(.debug_info)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.comment
+ *(.comment)
+OUTPUT(CtrlROM.elf elf32-zpu)

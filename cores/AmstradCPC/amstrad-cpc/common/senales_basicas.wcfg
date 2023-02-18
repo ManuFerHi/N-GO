@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Users/rodriguj/Documents/zxspectrum/zxuno/repositorio/cores/amstrad_cpc/ga40010/tb_ga_simple_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_ga_simple" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/tb_ga_simple/ck16" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ck16</obj_property>
+      <obj_property name="ObjectShortName">ck16</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_simple/phi_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">phi_n</obj_property>
+      <obj_property name="ObjectShortName">phi_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_simple/cclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cclk</obj_property>
+      <obj_property name="ObjectShortName">cclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_simple/ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_simple/ras_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ras_n</obj_property>
+      <obj_property name="ObjectShortName">ras_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_simple/cas_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cas_n</obj_property>
+      <obj_property name="ObjectShortName">cas_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_simple/casad_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">casad_n</obj_property>
+      <obj_property name="ObjectShortName">casad_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_simple/mwe_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mwe_n</obj_property>
+      <obj_property name="ObjectShortName">mwe_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_simple/cpu_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cpu_n</obj_property>
+      <obj_property name="ObjectShortName">cpu_n</obj_property>
+   </wvobject>
+</wave_config>

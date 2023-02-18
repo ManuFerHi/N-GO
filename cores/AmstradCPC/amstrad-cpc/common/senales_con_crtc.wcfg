@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Users/rodriguj/Documents/zxspectrum/zxuno/repositorio/cores/amstrad_cpc/test0/tb_ga_con_crtc_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_ga_con_crtc" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="34" />
+   <wvobject fp_name="/tb_ga_con_crtc/ck16" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ck16</obj_property>
+      <obj_property name="ObjectShortName">ck16</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/phi_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">phi_n</obj_property>
+      <obj_property name="ObjectShortName">phi_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/cclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cclk</obj_property>
+      <obj_property name="ObjectShortName">cclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/en224_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en224_n</obj_property>
+      <obj_property name="ObjectShortName">en224_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/cpu_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cpu_n</obj_property>
+      <obj_property name="ObjectShortName">cpu_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/romen_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">romen_n</obj_property>
+      <obj_property name="ObjectShortName">romen_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ramrd_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramrd_n</obj_property>
+      <obj_property name="ObjectShortName">ramrd_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/dispen" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dispen</obj_property>
+      <obj_property name="ObjectShortName">dispen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ram_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_addr[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/d" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d[7:0]</obj_property>
+      <obj_property name="ObjectShortName">d[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ras_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ras_n</obj_property>
+      <obj_property name="ObjectShortName">ras_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/cas_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cas_n</obj_property>
+      <obj_property name="ObjectShortName">cas_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/casad_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">casad_n</obj_property>
+      <obj_property name="ObjectShortName">casad_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/mwe_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mwe_n</obj_property>
+      <obj_property name="ObjectShortName">mwe_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/hsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hsync</obj_property>
+      <obj_property name="ObjectShortName">hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/vsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync</obj_property>
+      <obj_property name="ObjectShortName">vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/int_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">int_n</obj_property>
+      <obj_property name="ObjectShortName">int_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider28" type="divider">
+      <obj_property name="label">Video RGB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/red" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">red</obj_property>
+      <obj_property name="ObjectShortName">red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/red_oe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">red_oe</obj_property>
+      <obj_property name="ObjectShortName">red_oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/green" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">green</obj_property>
+      <obj_property name="ObjectShortName">green</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/green_oe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">green_oe</obj_property>
+      <obj_property name="ObjectShortName">green_oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/blue" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">blue</obj_property>
+      <obj_property name="ObjectShortName">blue</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/blue_oe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">blue_oe</obj_property>
+      <obj_property name="ObjectShortName">blue_oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/sync_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sync_n</obj_property>
+      <obj_property name="ObjectShortName">sync_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider24" type="divider">
+      <obj_property name="label">Internas</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ga/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ga/intcnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">intcnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">intcnt[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ga/border_time" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">border_time</obj_property>
+      <obj_property name="ObjectShortName">border_time</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ga/vsync_count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync_count[1:0]</obj_property>
+      <obj_property name="ObjectShortName">vsync_count[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ga/shiftreg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">shiftreg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">shiftreg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ga/palentry" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">palentry[3:0]</obj_property>
+      <obj_property name="ObjectShortName">palentry[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ga_con_crtc/ga/color" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">color[4:0]</obj_property>
+      <obj_property name="ObjectShortName">color[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

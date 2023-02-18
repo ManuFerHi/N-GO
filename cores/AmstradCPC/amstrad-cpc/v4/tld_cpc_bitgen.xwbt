@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/Sources/amstrad-cpc/v4/tld_cpc.ncd
+OUTFILE=/home/ise/Sources/amstrad-cpc/v4/tld_cpc.bit
+FAMILY=Spartan6
+PART=xc6slx16-2ftg256
+WORKINGDIR=/home/ise/Sources/amstrad-cpc/v4
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

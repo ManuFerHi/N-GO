@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Users/rodriguj/Documents/zxspectrum/zxuno/repositorio/cores/amstrad_cpc/test2/v4/tb_cpc_simple_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="tb_cpc_simple" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="51" />
+   <wvobject fp_name="/tb_cpc_simple/ck16" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ck16</obj_property>
+      <obj_property name="ObjectShortName">ck16</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/reset_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider15" type="divider">
+      <obj_property name="label">CPU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/clk_cpu" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_cpu</obj_property>
+      <obj_property name="ObjectShortName">clk_cpu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[15:0]</obj_property>
+      <obj_property name="ObjectShortName">a[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/mreq_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mreq_n</obj_property>
+      <obj_property name="ObjectShortName">mreq_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/iorq_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">iorq_n</obj_property>
+      <obj_property name="ObjectShortName">iorq_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/m1_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">m1_n</obj_property>
+      <obj_property name="ObjectShortName">m1_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/rd_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_n</obj_property>
+      <obj_property name="ObjectShortName">rd_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/wr_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wr_n</obj_property>
+      <obj_property name="ObjectShortName">wr_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/rfsh_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rfsh_n</obj_property>
+      <obj_property name="ObjectShortName">rfsh_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/int_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">int_n</obj_property>
+      <obj_property name="ObjectShortName">int_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/cpu_din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cpu_din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_din[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/cpu_dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cpu_dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_dout[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider45" type="divider">
+      <obj_property name="label">PSG</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/sonido_ay_3/i_bdir" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_bdir</obj_property>
+      <obj_property name="ObjectShortName">i_bdir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/sonido_ay_3/i_bc1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_bc1</obj_property>
+      <obj_property name="ObjectShortName">i_bc1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/sonido_ay_3/i_da" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_da[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_da[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider26" type="divider">
+      <obj_property name="label">Gate Array</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/cpu_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cpu_n</obj_property>
+      <obj_property name="ObjectShortName">cpu_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/romen_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">romen_n</obj_property>
+      <obj_property name="ObjectShortName">romen_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/ramrd_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramrd_n</obj_property>
+      <obj_property name="ObjectShortName">ramrd_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/en224_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en224_n</obj_property>
+      <obj_property name="ObjectShortName">en224_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/gate_array/habilitacion_escritura" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">habilitacion_escritura</obj_property>
+      <obj_property name="ObjectShortName">habilitacion_escritura</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus43" type="vbus" db_ref_id="1">
+      <obj_property name="label">ROM Selection</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_cpc_simple/amstrad/gate_array/upper_rom" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">upper_rom</obj_property>
+         <obj_property name="ObjectShortName">upper_rom</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_cpc_simple/amstrad/gate_array/lower_rom" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">lower_rom</obj_property>
+         <obj_property name="ObjectShortName">lower_rom</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider36" type="divider">
+      <obj_property name="label">ROM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/memory/romcpc/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[14:0]</obj_property>
+      <obj_property name="ObjectShortName">a[14:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/memory/romcpc/dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">RAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/memory/dram/a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">a[20:0]</obj_property>
+      <obj_property name="ObjectShortName">a[20:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/ras_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ras_n</obj_property>
+      <obj_property name="ObjectShortName">ras_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/cas_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cas_n</obj_property>
+      <obj_property name="ObjectShortName">cas_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/memory/dram/we_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">we_n</obj_property>
+      <obj_property name="ObjectShortName">we_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/memory/dram/din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">din[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/amstrad/memory/dram/dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider48" type="divider">
+      <obj_property name="label">VGA</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/salida_vga/hsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hsync</obj_property>
+      <obj_property name="ObjectShortName">hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/salida_vga/vsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync</obj_property>
+      <obj_property name="ObjectShortName">vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/csync_pal" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">csync_pal</obj_property>
+      <obj_property name="ObjectShortName">csync_pal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/salida_vga/rout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rout[2:0]</obj_property>
+      <obj_property name="ObjectShortName">rout[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/salida_vga/gout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">gout[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gout[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/salida_vga/bout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bout[2:0]</obj_property>
+      <obj_property name="ObjectShortName">bout[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider23" type="divider">
+      <obj_property name="label">Video</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/red" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">red</obj_property>
+      <obj_property name="ObjectShortName">red</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/red_oe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">red_oe</obj_property>
+      <obj_property name="ObjectShortName">red_oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/green" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">green</obj_property>
+      <obj_property name="ObjectShortName">green</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/green_oe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">green_oe</obj_property>
+      <obj_property name="ObjectShortName">green_oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/blue" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">blue</obj_property>
+      <obj_property name="ObjectShortName">blue</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/blue_oe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">blue_oe</obj_property>
+      <obj_property name="ObjectShortName">blue_oe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpc_simple/sram_we_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sram_we_n</obj_property>
+      <obj_property name="ObjectShortName">sram_we_n</obj_property>
+   </wvobject>
+</wave_config>

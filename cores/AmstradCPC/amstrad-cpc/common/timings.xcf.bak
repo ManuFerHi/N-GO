@@ -1,0 +1,5 @@
+# Timing constraints
+NET "ck16" KEEP | S | PERIOD=62.5 ns;
+NET "ck32" KEEP | S | PERIOD=31.25 ns;
+NET "la_maquina/clk_for_crtc" KEEP | S | PERIOD=1000 ns;
+#NET "la_maquina/clk_cpu" KEEP | S | PERIOD=250 ns;
