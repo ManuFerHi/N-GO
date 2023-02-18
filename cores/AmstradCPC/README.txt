@@ -50,6 +50,15 @@ Known non-working Games
 I add the ZPU flex compiled files, so any user can synthesize without having to have linux and install
  the entire GCC toolchain, when sharing sources you have to try to make it easier for others.
 
+Instructions
+------------
+Copy core into your SD machines/Amstrad and rename it core.bit
+You need roms in root folder Amstrad/
+BASIC1-1.ROM
+AMSDOS.ROM
+
+You can download all necessary here
+https://mega.nz/file/IlNykYyD#CFl1NbacMc1Uo6Y3qrR8YJWZk6U0sqRa-DajpwyM3fM
 
 
 ChangeLog
