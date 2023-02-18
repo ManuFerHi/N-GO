@@ -47,7 +47,8 @@ Known non-working Games
 - R-Type
 - Total Recall
 
-I add the ZPU flex compiled files, so any user can synthesize without having to have linux and install the entire GCC toolchain, when sharing sources you have to try to make it easier for others.
+I add the ZPU flex compiled files, so any user can synthesize without having to have linux and install
+ the entire GCC toolchain, when sharing sources you have to try to make it easier for others.
 
 
 
