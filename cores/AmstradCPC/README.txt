@@ -60,6 +60,8 @@ AMSDOS.ROM
 You can download all necessary here
 https://mega.nz/file/IlNykYyD#CFl1NbacMc1Uo6Y3qrR8YJWZk6U0sqRa-DajpwyM3fM
 
+Attention! - If your monitor does not give a signal, press the Scroll - Lock key, this key switches between 15 and 31khz.
+
 
 ChangeLog
 ---------
