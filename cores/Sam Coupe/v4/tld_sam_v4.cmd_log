@@ -1,0 +1,14 @@
+xst -intstyle ise -filter "/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter" -ifn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.xst" -ofn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc pines_zxuno_v4.ucf -p xc6slx16-ftg256-2 tld_sam_v4.ngc tld_sam_v4.ngd  
+xst -intstyle ise -filter "/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter" -ifn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.xst" -ofn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.syr" 
+xst -intstyle ise -filter "/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter" -ifn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.xst" -ofn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc pines_zxuno_v4.ucf -p xc6slx16-ftg256-2 tld_sam_v4.ngc tld_sam_v4.ngd  
+map -filter "/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter" -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -xe n -t 10 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2 -ir off -pr off -lc off -power off -o tld_sam_v4_map.ncd tld_sam_v4.ngd tld_sam_v4.pcf 
+xst -intstyle ise -filter "/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter" -ifn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.xst" -ofn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.syr" 
+xst -intstyle ise -filter "/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter" -ifn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.xst" -ofn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.syr" 
+xst -intstyle ise -filter "/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter" -ifn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.xst" -ofn "/home/ise/Sources/sam-coupe/v4/tld_sam_v4.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc pines_zxuno_v4.ucf -p xc6slx16-ftg256-2 tld_sam_v4.ngc tld_sam_v4.ngd  
+map -filter "/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter" -intstyle ise -p xc6slx16-ftg256-2 -w -logic_opt off -ol high -xe n -t 10 -xt 0 -register_duplication off -r 4 -global_opt off -mt 2 -ir off -pr off -lc off -power off -o tld_sam_v4_map.ncd tld_sam_v4.ngd tld_sam_v4.pcf 
+par -filter "/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter" -w -intstyle ise -ol high -xe n -mt 4 tld_sam_v4_map.ncd tld_sam_v4.ncd tld_sam_v4.pcf 
+trce -filter /home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml tld_sam_v4.twx tld_sam_v4.ncd -o tld_sam_v4.twr tld_sam_v4.pcf -ucf pines_zxuno_v4.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f tld_sam_v4.ut tld_sam_v4.ncd 

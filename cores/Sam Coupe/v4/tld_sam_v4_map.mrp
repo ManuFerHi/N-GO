@@ -1,0 +1,1183 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'tld_sam_v4'
+
+Design Information
+------------------
+Command Line   : map -filter
+/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter -intstyle ise -p
+xc6slx16-ftg256-2 -w -logic_opt off -ol high -xe n -t 10 -xt 0
+-register_duplication off -r 4 -global_opt off -mt 2 -ir off -pr off -lc off
+-power off -o tld_sam_v4_map.ncd tld_sam_v4.ngd tld_sam_v4.pcf 
+Target Device  : xc6slx16
+Target Package : ftg256
+Target Speed   : -2
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sun Feb 19 20:50:37 2023
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:  165
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,096 out of  18,224   11%
+    Number used as Flip Flops:               2,043
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               53
+  Number of Slice LUTs:                      5,232 out of   9,112   57%
+    Number used as logic:                    4,411 out of   9,112   48%
+      Number using O6 output only:           3,352
+      Number using O5 output only:             264
+      Number using O5 and O6:                  795
+      Number used as ROM:                        0
+    Number used as Memory:                     783 out of   2,176   35%
+      Number used as Dual Port RAM:            776
+        Number using O6 output only:           748
+        Number using O5 output only:             0
+        Number using O5 and O6:                 28
+      Number used as Single Port RAM:            4
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+      Number used as Shift Register:             3
+        Number using O6 output only:             3
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     38
+      Number with same-slice register load:      9
+      Number with same-slice carry load:        29
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,869 out of   2,278   82%
+  Number of MUXCYs used:                     1,064 out of   4,556   23%
+  Number of LUT Flip Flop pairs used:        5,600
+    Number with an unused Flip Flop:         3,588 out of   5,600   64%
+    Number with an unused LUT:                 368 out of   5,600    6%
+    Number of fully used LUT-FF pairs:       1,644 out of   5,600   29%
+    Number of unique control sets:             351
+    Number of slice register sites lost
+      to control set restrictions:           1,666 out of  18,224    9%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        62 out of     186   33%
+    Number of LOCed IOBs:                       62 out of      62  100%
+    IOB Flip Flops:                              1
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        32 out of      32  100%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       8 out of      16   50%
+    Number used as BUFGs:                        8
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   1 out of     248    1%
+    Number used as OLOGIC2s:                     1
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            3 out of      32    9%
+  Number of ICAPs:                               1 out of       1  100%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.53
+
+Peak Memory Usage:  778 MB
+Total REAL time to MAP completion:  33 secs 
+Total CPU time to MAP completion (all processors):   32 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:Pack:1653 - At least one timing constraint is impossible to meet because component delays alone exceed the constraint. A timing
+   constraint summary below shows the failing constraints (preceded with an Asterisk (*)). Please use the Timing Analyzer (GUI) or TRCE
+   (command line) with the Mapped NCD and PCF files to identify which constraints and paths are failing because of the component delays
+   alone. If the failing path(s) is mapped to Xilinx components as expected, consider relaxing the constraint. If it is not mapped to
+   components as expected, re-evaluate your HDL and how synthesis is optimizing the path. To allow the tools to bypass this error, set the
+   environment variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
+
+
+   For more information about the Timing Analyzer, consult the Xilinx Timing Analyzer Reference manual; for more information on TRCE,
+   consult the Xilinx Command Line Tools User Guide "TRACE" chapter.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem16_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan26_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan7_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan16_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan10_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan58_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan59_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan57_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan46_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan47_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan45_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan44_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan42_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan38_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan37_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem22_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem10_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem15_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan28_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/la_ula_del_sam/Mram_clut1_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan25_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan27_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan1_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan29_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan15_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan9_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan36_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan49_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan48_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan34_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan41_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan43_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan40_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan39_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem24_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem14_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem11_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem9_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem13_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan17_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan18_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan30_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan32_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan5_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan6_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan13_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan11_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan91_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan50_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem12_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem8_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan22_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan23_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan4_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan20_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan19_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan2_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan31_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan8_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan14_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan95_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan93_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan12_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan89_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan92_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan78_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan63_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan60_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan52_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan35_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan51_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan33_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem5_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem6_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem3_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem2_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan21_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan24_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan3_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan65_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan67_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan90_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan77_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan80_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan61_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan62_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem116_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem8_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem25_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem23_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem5_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem1_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem4_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem8_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan69_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan82_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan81_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan68_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan85_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan94_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan96_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan79_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan64_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan56_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem3_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem9_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem10_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem20_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem7_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem5_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem2_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem6_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem3_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem13_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan70_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan71_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan83_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan87_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan88_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan55_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan54_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan53_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem111_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem13_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem18_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem2_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem4_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem21_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem4_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/el_z80/i_tv80_core/i_reg/Mram_RegsL11_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem1_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem7_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem10_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem15_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan72_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan66_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan84_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan86_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan75_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan76_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan74_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem114_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem16_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem6_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem125_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/el_z80/i_tv80_core/i_reg/Mram_RegsH11_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem12_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem11_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem9_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem16_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem14_RAMD_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <salida_vga/memscan/Mram_scan73_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/UART.uartrxfifo/Mram_mem32_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem113_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem112_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem115_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem19_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem110_RAMD_O> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem11_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem15_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem14_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem12_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem17_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <MyCtrlModule/myosd/charram/Mram_mem7_RAMD_O> is incomplete. The signal does
+   not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:Map:284 - Map is running with the multi-threading option on. Map currently
+   supports the use of up to 2 processors. Based on the the user options and
+   machine load, Map will use 2 processors during this run.
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+INFO:LIT:243 - Logical network MyCtrlModule/myosd/charram/Mram_mem33/SPO has no
+   load.
+INFO:LIT:395 - The above info message is repeated 53 more times for the
+   following (max. 5 shown):
+   MyCtrlModule/myosd/charram/Mram_mem32/SPO,
+   MyCtrlModule/myosd/charram/Mram_mem30/SPO,
+   MyCtrlModule/myosd/charram/Mram_mem29/SPO,
+   MyCtrlModule/myosd/charram/Mram_mem31/SPO,
+   MyCtrlModule/myosd/charram/Mram_mem27/SPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:841 - Changing COMPENSATION attribute from SYSTEM_SYNCHRONOUS to
+   INTERNAL for PLL_ADV los_relojes/pll_base_inst/PLL_ADV.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
+   Command Line Tools User Guide for information on generating a TSI report.
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 133 block(s) removed
+  22 block(s) optimized away
+  56 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "MyCtrlModule/zpu/Madd_memARead[31]_GND_85_o_add_180_OUT15" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd28" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>1"
+(ROM) removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>2"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd21" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd21" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>3"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd22" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd22" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>4"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd23" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd23" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>5"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd24" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd24" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>6"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd25" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd25" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>7"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd26" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd26" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>8"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd27" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd27" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd58" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>1"
+(ROM) removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>2"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd51" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd51" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>3"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd52" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd52" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>4"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd53" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd53" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>5"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd54" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd54" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>6"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd55" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd55" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>7"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd56" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd56" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>8"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd57" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp0/ADDERTREE_INTERNAL_Madd57" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd28" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>1"
+(ROM) removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>2"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd21" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd21" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>3"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd22" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd22" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>4"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd23" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd23" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>5"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd24" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd24" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>6"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd25" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd25" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>7"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd26" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd26" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>8"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd27" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd27" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd58" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>1"
+(ROM) removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>2"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd51" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd51" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>3"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd52" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd52" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>4"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd53" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd53" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>5"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd54" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd54" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>6"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd55" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd55" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>7"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd56" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd56" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>8"
+(ROM) removed.
+ The signal "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd57" is loadless
+and has been removed.
+  Loadless block "maquina/el_saa/bottom/amp1/ADDERTREE_INTERNAL_Madd57" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp2/ADDERTREE_INTERNAL_Madd28" (ROM)
+removed.
+Loadless block "maquina/el_saa/bottom/amp2/ADDERTREE_INTERNAL_Madd58" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd28" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>1" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>2" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd21" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd21" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>3" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd22" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd22" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>4" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd23" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd23" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>5" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd24" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd24" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>6" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd25" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd25" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>7" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd26" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd26" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd2_lut<0>8" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd27" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd27" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd58" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>1" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>2" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd51" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd51" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>3" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd52" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd52" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>4" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd53" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd53" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>5" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd54" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd54" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>6" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd55" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd55" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>7" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd56" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd56" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd5_lut<0>8" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd57" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp0/ADDERTREE_INTERNAL_Madd57" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd28" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>1" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>2" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd21" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd21" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>3" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd22" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd22" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>4" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd23" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd23" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>5" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd24" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd24" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>6" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd25" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd25" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>7" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd26" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd26" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd2_lut<0>8" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd27" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd27" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd58" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>1" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>2" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd51" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd51" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>3" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd52" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd52" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>4" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd53" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd53" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>5" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd54" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd54" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>6" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd55" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd55" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>7" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd56" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd56" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd5_lut<0>8" (ROM)
+removed.
+ The signal "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd57" is loadless and
+has been removed.
+  Loadless block "maquina/el_saa/top/amp1/ADDERTREE_INTERNAL_Madd57" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd28" (ROM)
+removed.
+Loadless block "maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd58" (ROM)
+removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd11
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd12
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd13
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd31
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd32
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd33
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd61
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd62
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd63
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd81
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd82
+   optimized to 0
+LUT3 		maquina/el_saa/ADDERTREE_INTERNAL_Madd83
+   optimized to 0
+LUT3 		maquina/el_saa/bottom/amp2/ADDERTREE_INTERNAL_Madd26
+   optimized to 0
+LUT3 		maquina/el_saa/bottom/amp2/ADDERTREE_INTERNAL_Madd27
+   optimized to 0
+LUT3 		maquina/el_saa/bottom/amp2/ADDERTREE_INTERNAL_Madd56
+   optimized to 0
+LUT3 		maquina/el_saa/bottom/amp2/ADDERTREE_INTERNAL_Madd57
+   optimized to 0
+LUT3 		maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd26
+   optimized to 0
+LUT3 		maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd27
+   optimized to 0
+LUT3 		maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd56
+   optimized to 0
+LUT3 		maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd57
+   optimized to 0
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 11 - Timing Report
+--------------------------
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+Number of Timing Constraints that were not applied: 1
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_los_relojes_clkout0 = PERIOD TIMEGRP " | SETUP       |    -3.238ns|    40.229ns|     116|      306520
+  los_relojes_clkout0" TS_clk50mhz / 0.9615 | HOLD        |    -0.067ns|            |      16|         768
+  38462 HIGH 50%                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* TS_los_relojes_clk8 = PERIOD TIMEGRP "los | SETUP       |    -0.762ns|     4.228ns|      74|       36750
+  _relojes/clk8" TS_los_relojes_clkout0 / 6 | HOLD        |     0.073ns|            |       0|           0
+   HIGH 50%                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk50mhz = PERIOD TIMEGRP "clk50mhz" 2 | MINLOWPULSE |    15.000ns|     5.000ns|       0|           0
+  0 ns HIGH 50%                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_clk50mhz
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk50mhz                    |     20.000ns|      5.000ns|     38.682ns|            0|          206|            0|    318266082|
+| TS_los_relojes_clkout0        |     20.800ns|     40.229ns|     25.368ns|          132|           74|    318253407|        12675|
+|  TS_los_relojes_clk8          |      3.467ns|      4.228ns|          N/A|           74|            0|        12675|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+2 constraints not met.
+
+
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| audio_out_left                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| audio_out_right                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| b<0>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| b<1>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| b<2>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| clk50mhz                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| clkps2                             | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| dataps2                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| ear                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| g<0>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| g<1>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| g<2>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| hsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| joydown                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| joyfire                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| joyleft                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| joyright                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| joyup                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
+| led                                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| mouseclk                           | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              | PULLUP   |          |
+| mousedata                          | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              | PULLUP   |          |
+| r<0>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| r<1>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| r<2>                               | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ram_ce_n_o0                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ram_ce_n_o1                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ram_ce_n_o2                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ram_ce_n_o3                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ram_oe_n                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sd_clk                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sd_cs_n                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sd_miso                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sd_mosi                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<0>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<1>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<2>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<3>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<4>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<5>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<6>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<7>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<8>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<9>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<10>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<11>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<12>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<13>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<14>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<15>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<16>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<17>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_addr<18>                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<0>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<1>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<2>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<3>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<4>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<5>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<6>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_data<7>                       | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sram_we_n                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| vsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

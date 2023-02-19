@@ -1,0 +1,106 @@
+# Clocks & debug
+NET "clk50mhz" LOC='T8' |IOSTANDARD = LVCMOS33;
+NET "led" LOC='H14' | IOSTANDARD = LVCMOS33;
+# Video output
+NET "b<2>" LOC='H1' |IOSTANDARD = LVCMOS33;
+NET "b<1>" LOC='C2' |IOSTANDARD = LVCMOS33;
+NET "b<0>" LOC='B1' |IOSTANDARD = LVCMOS33;
+NET "g<2>" LOC='G3' |IOSTANDARD = LVCMOS33;
+NET "g<1>" LOC='F3' |IOSTANDARD = LVCMOS33;
+NET "g<0>" LOC='F4' |IOSTANDARD = LVCMOS33;
+NET "r<2>" LOC='H5' |IOSTANDARD = LVCMOS33;
+NET "r<1>" LOC='H3' |IOSTANDARD = LVCMOS33;
+NET "r<0>" LOC='H4' |IOSTANDARD = LVCMOS33;
+NET "hsync" LOC='B10' |IOSTANDARD = LVCMOS33; #87
+NET "vsync" LOC='A11' |IOSTANDARD = LVCMOS33;
+
+
+# Sound input/output
+NET "audio_out_left" LOC='B2' |IOSTANDARD = LVCMOS33;
+NET "audio_out_right" LOC='A2' |IOSTANDARD = LVCMOS33;
+NET "ear" LOC='A3' |IOSTANDARD = LVCMOS33;
+
+# Keyboard and mouse
+NET "clkps2" LOC='K3'    |IOSTANDARD = LVCMOS33 |PULLUP;  # pin 1 DIN
+NET "dataps2" LOC='J3'   |IOSTANDARD = LVCMOS33 |PULLUP;  # pin 5 DIN
+NET "mouseclk" LOC='K6'  |IOSTANDARD = LVCMOS33 |PULLUP;  # pin 6 DIN
+NET "mousedata" LOC='J4' |IOSTANDARD = LVCMOS33 |PULLUP;  # pin 2 DIN
+# SRAM
+NET "sram_addr<0>"  LOC='M2' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<1>"  LOC='M1' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<2>"  LOC='N1' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<3>"  LOC='P2' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<4>"  LOC='P1' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<5>"  LOC='L3' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<6>"  LOC='M4' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<7>"  LOC='M3' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<8>"  LOC='N4' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<9>"  LOC='N3'  |IOSTANDARD = LVCMOS33;
+NET "sram_addr<10>" LOC='C4' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<11>" LOC='C3' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<12>" LOC='D3' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<13>" LOC='E4' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<14>" LOC='E3' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<15>" LOC='F2' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<16>" LOC='F1' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<17>" LOC='G1' |IOSTANDARD = LVCMOS33;
+NET "sram_addr<18>" LOC='H2' |IOSTANDARD = LVCMOS33;
+
+
+NET "sram_data<0>" LOC='J6' |IOSTANDARD = LVCMOS33;
+NET "sram_data<1>" LOC='L5' |IOSTANDARD = LVCMOS33;
+NET "sram_data<2>" LOC='K5' |IOSTANDARD = LVCMOS33;
+NET "sram_data<3>" LOC='M6' |IOSTANDARD = LVCMOS33;
+NET "sram_data<4>" LOC='P4' |IOSTANDARD = LVCMOS33;
+NET "sram_data<5>" LOC='R3' |IOSTANDARD = LVCMOS33;
+NET "sram_data<6>" LOC='T4' |IOSTANDARD = LVCMOS33;
+NET "sram_data<7>" LOC='N6' |IOSTANDARD = LVCMOS33;
+
+NET "sram_we_n" 	 LOC='M5' |IOSTANDARD = LVCMOS33;
+NET "ram_ce_n_o0"     LOC='R2'    | IOSTANDARD = LVCMOS33;
+NET "ram_ce_n_o1"     LOC='R1'    | IOSTANDARD = LVCMOS33; 
+NET "ram_ce_n_o2"     LOC='M10'   | IOSTANDARD = LVCMOS33; 
+NET "ram_ce_n_o3"     LOC='B3'    | IOSTANDARD = LVCMOS33; 
+NET "ram_oe_n"     LOC='E1'    | IOSTANDARD = LVCMOS33; 
+
+## SPI Flash
+#NET "flash_cs_n" LOC='T3' | IOSTANDARD = LVCMOS33;
+#NET "flash_clk"  LOC='R11' | IOSTANDARD = LVCMOS33;
+#NET "flash_mosi" LOC='T10' | IOSTANDARD = LVCMOS33;
+#NET "flash_miso" LOC='P10' | IOSTANDARD = LVCMOS33;
+#
+## SD/MMC
+NET "sd_cs_n" LOC='L1' |IOSTANDARD = LVCMOS33;
+NET "sd_clk"  LOC='K1' |IOSTANDARD = LVCMOS33;
+NET "sd_mosi" LOC='K2' |IOSTANDARD = LVCMOS33;
+NET "sd_miso" LOC='J1' |IOSTANDARD = LVCMOS33;
+#
+## JOYSTICK
+NET "joyup"    LOC='R14' |IOSTANDARD = LVCMOS33 |PULLUP;  #JOY6
+NET "joydown"  LOC='T14'  |IOSTANDARD = LVCMOS33 |PULLUP;  #JOY4
+NET "joyleft"  LOC='R15'  |IOSTANDARD = LVCMOS33 |PULLUP;  #JOY3
+NET "joyright" LOC='P16'  |IOSTANDARD = LVCMOS33 |PULLUP;  #JOY2
+NET "joyfire"  LOC='P11'  |IOSTANDARD = LVCMOS33 |PULLUP;  #JOY7
+
+##--##
+##NET "btn2"    LOC="P8"  | IOSTANDARD = LVCMOS33 | PULLUP;  #JOY5
+#Created by Constraints Editor (xc6slx9-tqg144-2) - 2022/04/02
+#NET "clk50mhz" TNM_NET = clk50mhz;
+#TIMESPEC TS_clk50mhz = PERIOD "clk50mhz" 20 ns HIGH 50%;
+#PIN "los_relojes/pll_base_inst.CLKOUT3" TNM = DCM_output;
+#PIN "los_relojes/pll_base_inst.CLKOUT1" TNM = DCM_output;
+#PIN "los_relojes/pll_base_inst.CLKOUT0" TNM = DCM_output;
+#PIN "los_relojes/pll_base_inst.CLKOUT4" TNM = DCM_output;
+#PIN "los_relojes/pll_base_inst.CLKOUT2" TNM = DCM_output;
+#NET "clk6" TNM_NET = allclocks;
+#NET "clk8" TNM_NET = allclocks;
+#NET "clk12" TNM_NET = allclocks;
+#NET "clk24" TNM_NET = allclocks;
+#NET "clk50m" TNM_NET = allclocks;
+#Created by Constraints Editor (xc6slx9-tqg144-2) - 2022/04/12
+NET "clk50mhz" TNM_NET = clk50mhz;
+TIMESPEC TS_clk50mhz = PERIOD "clk50mhz" 20 ns HIGH 50%;
+#NET "count<0>" TNM_NET = count<0>;
+PIN "los_relojes/pll_base_inst.CLKOUT0" TNM = CLK48;
+NET "los_relojes/clk8" TNM_NET = los_relojes/clk8;
+TIMESPEC TS_los_relojes_clk8 = PERIOD "los_relojes/clk8" TS_los_relojes_clkout0 / 6 HIGH 50%;

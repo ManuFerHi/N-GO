@@ -1,0 +1,1408 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -filter
+/home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml tld_sam_v4.twx tld_sam_v4.ncd -o tld_sam_v4.twr
+tld_sam_v4.pcf -ucf pines_zxuno_v4.ucf
+
+Design file:              tld_sam_v4.ncd
+Physical constraint file: tld_sam_v4.pcf
+Device,package,speed:     xc6slx16,ftg256,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk50mhz = PERIOD TIMEGRP "clk50mhz" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   5.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk50mhz = PERIOD TIMEGRP "clk50mhz" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 12.630ns (max period limit - period)
+  Period: 40.000ns
+  Max period limit: 52.630ns (19.001MHz) (Tpllper_CLKFB)
+  Physical resource: los_relojes/pll_base_inst/PLL_ADV/CLKFBOUT
+  Logical resource: los_relojes/pll_base_inst/PLL_ADV/CLKFBOUT
+  Location pin: PLL_ADV_X0Y0.CLKFBOUT
+  Clock network: los_relojes/clkfbout
+--------------------------------------------------------------------------------
+Slack: 15.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 2.500ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: los_relojes/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: los_relojes/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN2
+  Clock network: los_relojes/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 15.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 2.500ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: los_relojes/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: los_relojes/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN2
+  Clock network: los_relojes/pll_base_inst/PLL_ADV_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_los_relojes_clkout0 = PERIOD TIMEGRP 
+"los_relojes_clkout0" TS_clk50mhz /         0.961538462 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 318253407 paths analyzed, 1118 endpoints analyzed, 117 failing endpoints
+ 117 timing errors detected. (117 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  92.239ns.
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/el_saa/outmix_l/out_7 (SLICE_X4Y43.CIN), 39357855 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.904ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/top/freq_gen2/out (FF)
+  Destination:          maquina/el_saa/outmix_l/out_7 (FF)
+  Requirement:          3.467ns
+  Data Path Delay:      15.226ns (Levels of Logic = 16)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.009ns (0.332 - 0.323)
+  Source Clock:         clk48 rising at 79.733ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/top/freq_gen2/out to maquina/el_saa/outmix_l/out_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y42.CQ      Tcko                  0.430   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B1      net (fanout=19)       0.771   maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Mmux_outmix11
+    SLICE_X11Y42.A5      net (fanout=18)       0.291   maquina/el_saa/top/amp2/outmix<0>
+    SLICE_X11Y42.A       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Sh51
+    SLICE_X13Y40.B5      net (fanout=5)        0.680   maquina/el_saa/top/amp2/Sh5
+    SLICE_X13Y40.B       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>1
+    SLICE_X13Y40.C4      net (fanout=3)        0.336   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>
+    SLICE_X13Y40.C       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_xor<4>11
+    SLICE_X14Y42.A4      net (fanout=1)        0.728   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_41
+    SLICE_X14Y42.AMUX    Tilo                  0.326   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.BX      net (fanout=2)        0.725   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.CMUX    Taxc                  0.376   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd2_cy<0>_6
+    SLICE_X12Y43.D3      net (fanout=1)        0.570   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_62
+    SLICE_X12Y43.DMUX    Tilo                  0.298   maquina/el_saa/top/out2<6>
+                                                       maquina/el_saa/top/amp2/out<12>1
+    SLICE_X8Y42.C3       net (fanout=1)        0.851   maquina/el_saa/top/out2<6>
+    SLICE_X8Y42.CMUX     Tilo                  0.298   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.D3       net (fanout=2)        0.373   maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.DQ       Tad_logic             0.920   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_lut<0>7
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_cy<0>_6
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_76_rt
+    SLICE_X2Y42.DX       net (fanout=2)        1.230   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+    SLICE_X2Y42.COUT     Tdxcy                 0.109   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.BMUX     Tcinb                 0.310   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+    SLICE_X0Y42.B3       net (fanout=5)        0.683   maquina/el_saa/ADDERTREE_INTERNAL_Madd_99
+    SLICE_X0Y42.CMUX     Topbc                 0.613   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_99_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+    SLICE_X6Y38.D6       net (fanout=2)        1.156   maquina/el_saa/outmix_l/Mmult_n0010_Madd_14
+    SLICE_X6Y38.COUT     Topcyd                0.312   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_lut<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.BMUX     Tcinb                 0.310   maquina/el_saa/bottom/out1<17>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_xor<17>
+    SLICE_X4Y42.D5       net (fanout=1)        0.955   maquina/el_saa/outmix_l/Mmult_n0010_Madd_162
+    SLICE_X4Y42.COUT     Topcyd                0.290   maquina/el_saa/outmix_l/out<6>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_162_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+    SLICE_X4Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+    SLICE_X4Y43.CLK      Tcinck                0.240   maquina/el_saa/outmix_l/out<7>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_xor<17>
+                                                       maquina/el_saa/outmix_l/out_7
+    -------------------------------------------------  ---------------------------
+    Total                                     15.226ns (5.868ns logic, 9.358ns route)
+                                                       (38.5% logic, 61.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.855ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/top/freq_gen2/out (FF)
+  Destination:          maquina/el_saa/outmix_l/out_7 (FF)
+  Requirement:          3.467ns
+  Data Path Delay:      15.177ns (Levels of Logic = 16)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.009ns (0.332 - 0.323)
+  Source Clock:         clk48 rising at 79.733ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/top/freq_gen2/out to maquina/el_saa/outmix_l/out_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y42.CQ      Tcko                  0.430   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B1      net (fanout=19)       0.771   maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Mmux_outmix11
+    SLICE_X11Y42.A5      net (fanout=18)       0.291   maquina/el_saa/top/amp2/outmix<0>
+    SLICE_X11Y42.A       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Sh51
+    SLICE_X13Y40.B5      net (fanout=5)        0.680   maquina/el_saa/top/amp2/Sh5
+    SLICE_X13Y40.B       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>1
+    SLICE_X13Y40.C4      net (fanout=3)        0.336   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>
+    SLICE_X13Y40.C       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_xor<4>11
+    SLICE_X14Y42.A4      net (fanout=1)        0.728   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_41
+    SLICE_X14Y42.AMUX    Tilo                  0.326   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.BX      net (fanout=2)        0.725   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.CMUX    Taxc                  0.376   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd2_cy<0>_6
+    SLICE_X12Y43.D3      net (fanout=1)        0.570   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_62
+    SLICE_X12Y43.DMUX    Tilo                  0.298   maquina/el_saa/top/out2<6>
+                                                       maquina/el_saa/top/amp2/out<12>1
+    SLICE_X8Y42.C3       net (fanout=1)        0.851   maquina/el_saa/top/out2<6>
+    SLICE_X8Y42.CMUX     Tilo                  0.298   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.D3       net (fanout=2)        0.373   maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.DQ       Tad_logic             0.920   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_lut<0>7
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_cy<0>_6
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_76_rt
+    SLICE_X2Y42.DX       net (fanout=2)        1.230   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+    SLICE_X2Y42.COUT     Tdxcy                 0.109   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.BMUX     Tcinb                 0.310   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+    SLICE_X0Y42.B3       net (fanout=5)        0.683   maquina/el_saa/ADDERTREE_INTERNAL_Madd_99
+    SLICE_X0Y42.CMUX     Topbc                 0.613   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_99_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+    SLICE_X6Y38.DX       net (fanout=2)        1.310   maquina/el_saa/outmix_l/Mmult_n0010_Madd_14
+    SLICE_X6Y38.COUT     Tdxcy                 0.109   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.BMUX     Tcinb                 0.310   maquina/el_saa/bottom/out1<17>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_xor<17>
+    SLICE_X4Y42.D5       net (fanout=1)        0.955   maquina/el_saa/outmix_l/Mmult_n0010_Madd_162
+    SLICE_X4Y42.COUT     Topcyd                0.290   maquina/el_saa/outmix_l/out<6>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_162_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+    SLICE_X4Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+    SLICE_X4Y43.CLK      Tcinck                0.240   maquina/el_saa/outmix_l/out<7>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_xor<17>
+                                                       maquina/el_saa/outmix_l/out_7
+    -------------------------------------------------  ---------------------------
+    Total                                     15.177ns (5.665ns logic, 9.512ns route)
+                                                       (37.3% logic, 62.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.851ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/top/freq_gen2/out (FF)
+  Destination:          maquina/el_saa/outmix_l/out_7 (FF)
+  Requirement:          3.467ns
+  Data Path Delay:      15.173ns (Levels of Logic = 16)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.009ns (0.332 - 0.323)
+  Source Clock:         clk48 rising at 79.733ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/top/freq_gen2/out to maquina/el_saa/outmix_l/out_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y42.CQ      Tcko                  0.430   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B1      net (fanout=19)       0.771   maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Mmux_outmix11
+    SLICE_X11Y42.A5      net (fanout=18)       0.291   maquina/el_saa/top/amp2/outmix<0>
+    SLICE_X11Y42.A       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Sh51
+    SLICE_X13Y40.B5      net (fanout=5)        0.680   maquina/el_saa/top/amp2/Sh5
+    SLICE_X13Y40.B       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>1
+    SLICE_X13Y40.C4      net (fanout=3)        0.336   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>
+    SLICE_X13Y40.C       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_xor<4>11
+    SLICE_X14Y42.A4      net (fanout=1)        0.728   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_41
+    SLICE_X14Y42.AMUX    Tilo                  0.326   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.BX      net (fanout=2)        0.725   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.CMUX    Taxc                  0.376   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd2_cy<0>_6
+    SLICE_X12Y43.D3      net (fanout=1)        0.570   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_62
+    SLICE_X12Y43.DMUX    Tilo                  0.298   maquina/el_saa/top/out2<6>
+                                                       maquina/el_saa/top/amp2/out<12>1
+    SLICE_X8Y42.C3       net (fanout=1)        0.851   maquina/el_saa/top/out2<6>
+    SLICE_X8Y42.CMUX     Tilo                  0.298   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.D3       net (fanout=2)        0.373   maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.DQ       Tad_logic             0.920   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_lut<0>7
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_cy<0>_6
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_76_rt
+    SLICE_X2Y42.DX       net (fanout=2)        1.230   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+    SLICE_X2Y42.COUT     Tdxcy                 0.109   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.BMUX     Tcinb                 0.310   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+    SLICE_X0Y42.A3       net (fanout=5)        0.607   maquina/el_saa/ADDERTREE_INTERNAL_Madd_99
+    SLICE_X0Y42.CMUX     Topac                 0.636   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_lut<12>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+    SLICE_X6Y38.D6       net (fanout=2)        1.156   maquina/el_saa/outmix_l/Mmult_n0010_Madd_14
+    SLICE_X6Y38.COUT     Topcyd                0.312   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_lut<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.BMUX     Tcinb                 0.310   maquina/el_saa/bottom/out1<17>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_xor<17>
+    SLICE_X4Y42.D5       net (fanout=1)        0.955   maquina/el_saa/outmix_l/Mmult_n0010_Madd_162
+    SLICE_X4Y42.COUT     Topcyd                0.290   maquina/el_saa/outmix_l/out<6>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_162_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+    SLICE_X4Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+    SLICE_X4Y43.CLK      Tcinck                0.240   maquina/el_saa/outmix_l/out<7>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_xor<17>
+                                                       maquina/el_saa/outmix_l/out_7
+    -------------------------------------------------  ---------------------------
+    Total                                     15.173ns (5.891ns logic, 9.282ns route)
+                                                       (38.8% logic, 61.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/el_saa/outmix_l/out_6 (SLICE_X4Y42.D5), 6455233 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.849ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/top/freq_gen2/out (FF)
+  Destination:          maquina/el_saa/outmix_l/out_6 (FF)
+  Requirement:          3.467ns
+  Data Path Delay:      15.169ns (Levels of Logic = 15)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.007ns (0.330 - 0.323)
+  Source Clock:         clk48 rising at 79.733ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/top/freq_gen2/out to maquina/el_saa/outmix_l/out_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y42.CQ      Tcko                  0.430   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B1      net (fanout=19)       0.771   maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Mmux_outmix11
+    SLICE_X11Y42.A5      net (fanout=18)       0.291   maquina/el_saa/top/amp2/outmix<0>
+    SLICE_X11Y42.A       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Sh51
+    SLICE_X13Y40.B5      net (fanout=5)        0.680   maquina/el_saa/top/amp2/Sh5
+    SLICE_X13Y40.B       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>1
+    SLICE_X13Y40.C4      net (fanout=3)        0.336   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>
+    SLICE_X13Y40.C       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_xor<4>11
+    SLICE_X14Y42.A4      net (fanout=1)        0.728   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_41
+    SLICE_X14Y42.AMUX    Tilo                  0.326   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.BX      net (fanout=2)        0.725   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.CMUX    Taxc                  0.376   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd2_cy<0>_6
+    SLICE_X12Y43.D3      net (fanout=1)        0.570   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_62
+    SLICE_X12Y43.DMUX    Tilo                  0.298   maquina/el_saa/top/out2<6>
+                                                       maquina/el_saa/top/amp2/out<12>1
+    SLICE_X8Y42.C3       net (fanout=1)        0.851   maquina/el_saa/top/out2<6>
+    SLICE_X8Y42.CMUX     Tilo                  0.298   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.D3       net (fanout=2)        0.373   maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.DQ       Tad_logic             0.920   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_lut<0>7
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_cy<0>_6
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_76_rt
+    SLICE_X2Y42.DX       net (fanout=2)        1.230   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+    SLICE_X2Y42.COUT     Tdxcy                 0.109   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.BMUX     Tcinb                 0.310   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+    SLICE_X0Y42.B3       net (fanout=5)        0.683   maquina/el_saa/ADDERTREE_INTERNAL_Madd_99
+    SLICE_X0Y42.CMUX     Topbc                 0.613   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_99_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+    SLICE_X6Y38.D6       net (fanout=2)        1.156   maquina/el_saa/outmix_l/Mmult_n0010_Madd_14
+    SLICE_X6Y38.COUT     Topcyd                0.312   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_lut<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.BMUX     Tcinb                 0.310   maquina/el_saa/bottom/out1<17>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_xor<17>
+    SLICE_X4Y42.D5       net (fanout=1)        0.955   maquina/el_saa/outmix_l/Mmult_n0010_Madd_162
+    SLICE_X4Y42.CLK      Tas                   0.476   maquina/el_saa/outmix_l/out<6>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_162_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+                                                       maquina/el_saa/outmix_l/out_6
+    -------------------------------------------------  ---------------------------
+    Total                                     15.169ns (5.814ns logic, 9.355ns route)
+                                                       (38.3% logic, 61.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.800ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/top/freq_gen2/out (FF)
+  Destination:          maquina/el_saa/outmix_l/out_6 (FF)
+  Requirement:          3.467ns
+  Data Path Delay:      15.120ns (Levels of Logic = 15)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.007ns (0.330 - 0.323)
+  Source Clock:         clk48 rising at 79.733ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/top/freq_gen2/out to maquina/el_saa/outmix_l/out_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y42.CQ      Tcko                  0.430   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B1      net (fanout=19)       0.771   maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Mmux_outmix11
+    SLICE_X11Y42.A5      net (fanout=18)       0.291   maquina/el_saa/top/amp2/outmix<0>
+    SLICE_X11Y42.A       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Sh51
+    SLICE_X13Y40.B5      net (fanout=5)        0.680   maquina/el_saa/top/amp2/Sh5
+    SLICE_X13Y40.B       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>1
+    SLICE_X13Y40.C4      net (fanout=3)        0.336   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>
+    SLICE_X13Y40.C       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_xor<4>11
+    SLICE_X14Y42.A4      net (fanout=1)        0.728   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_41
+    SLICE_X14Y42.AMUX    Tilo                  0.326   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.BX      net (fanout=2)        0.725   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.CMUX    Taxc                  0.376   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd2_cy<0>_6
+    SLICE_X12Y43.D3      net (fanout=1)        0.570   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_62
+    SLICE_X12Y43.DMUX    Tilo                  0.298   maquina/el_saa/top/out2<6>
+                                                       maquina/el_saa/top/amp2/out<12>1
+    SLICE_X8Y42.C3       net (fanout=1)        0.851   maquina/el_saa/top/out2<6>
+    SLICE_X8Y42.CMUX     Tilo                  0.298   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.D3       net (fanout=2)        0.373   maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.DQ       Tad_logic             0.920   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_lut<0>7
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_cy<0>_6
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_76_rt
+    SLICE_X2Y42.DX       net (fanout=2)        1.230   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+    SLICE_X2Y42.COUT     Tdxcy                 0.109   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.BMUX     Tcinb                 0.310   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+    SLICE_X0Y42.B3       net (fanout=5)        0.683   maquina/el_saa/ADDERTREE_INTERNAL_Madd_99
+    SLICE_X0Y42.CMUX     Topbc                 0.613   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_99_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+    SLICE_X6Y38.DX       net (fanout=2)        1.310   maquina/el_saa/outmix_l/Mmult_n0010_Madd_14
+    SLICE_X6Y38.COUT     Tdxcy                 0.109   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.BMUX     Tcinb                 0.310   maquina/el_saa/bottom/out1<17>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_xor<17>
+    SLICE_X4Y42.D5       net (fanout=1)        0.955   maquina/el_saa/outmix_l/Mmult_n0010_Madd_162
+    SLICE_X4Y42.CLK      Tas                   0.476   maquina/el_saa/outmix_l/out<6>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_162_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+                                                       maquina/el_saa/outmix_l/out_6
+    -------------------------------------------------  ---------------------------
+    Total                                     15.120ns (5.611ns logic, 9.509ns route)
+                                                       (37.1% logic, 62.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.796ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/top/freq_gen2/out (FF)
+  Destination:          maquina/el_saa/outmix_l/out_6 (FF)
+  Requirement:          3.467ns
+  Data Path Delay:      15.116ns (Levels of Logic = 15)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.007ns (0.330 - 0.323)
+  Source Clock:         clk48 rising at 79.733ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/top/freq_gen2/out to maquina/el_saa/outmix_l/out_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y42.CQ      Tcko                  0.430   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B1      net (fanout=19)       0.771   maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Mmux_outmix11
+    SLICE_X11Y42.A5      net (fanout=18)       0.291   maquina/el_saa/top/amp2/outmix<0>
+    SLICE_X11Y42.A       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Sh51
+    SLICE_X13Y40.B5      net (fanout=5)        0.680   maquina/el_saa/top/amp2/Sh5
+    SLICE_X13Y40.B       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>1
+    SLICE_X13Y40.C4      net (fanout=3)        0.336   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>
+    SLICE_X13Y40.C       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_xor<4>11
+    SLICE_X14Y42.A4      net (fanout=1)        0.728   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_41
+    SLICE_X14Y42.AMUX    Tilo                  0.326   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.BX      net (fanout=2)        0.725   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.CMUX    Taxc                  0.376   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd2_cy<0>_6
+    SLICE_X12Y43.D3      net (fanout=1)        0.570   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_62
+    SLICE_X12Y43.DMUX    Tilo                  0.298   maquina/el_saa/top/out2<6>
+                                                       maquina/el_saa/top/amp2/out<12>1
+    SLICE_X8Y42.C3       net (fanout=1)        0.851   maquina/el_saa/top/out2<6>
+    SLICE_X8Y42.CMUX     Tilo                  0.298   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.D3       net (fanout=2)        0.373   maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.DQ       Tad_logic             0.920   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_lut<0>7
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_cy<0>_6
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_76_rt
+    SLICE_X2Y42.DX       net (fanout=2)        1.230   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+    SLICE_X2Y42.COUT     Tdxcy                 0.109   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.BMUX     Tcinb                 0.310   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+    SLICE_X0Y42.A3       net (fanout=5)        0.607   maquina/el_saa/ADDERTREE_INTERNAL_Madd_99
+    SLICE_X0Y42.CMUX     Topac                 0.636   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_lut<12>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+    SLICE_X6Y38.D6       net (fanout=2)        1.156   maquina/el_saa/outmix_l/Mmult_n0010_Madd_14
+    SLICE_X6Y38.COUT     Topcyd                0.312   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_lut<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X6Y39.BMUX     Tcinb                 0.310   maquina/el_saa/bottom/out1<17>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_xor<17>
+    SLICE_X4Y42.D5       net (fanout=1)        0.955   maquina/el_saa/outmix_l/Mmult_n0010_Madd_162
+    SLICE_X4Y42.CLK      Tas                   0.476   maquina/el_saa/outmix_l/out<6>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_162_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+                                                       maquina/el_saa/outmix_l/out_6
+    -------------------------------------------------  ---------------------------
+    Total                                     15.116ns (5.837ns logic, 9.279ns route)
+                                                       (38.6% logic, 61.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/el_saa/outmix_l/out_6 (SLICE_X4Y42.B4), 3787398 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.720ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/top/freq_gen2/out (FF)
+  Destination:          maquina/el_saa/outmix_l/out_6 (FF)
+  Requirement:          3.467ns
+  Data Path Delay:      15.040ns (Levels of Logic = 14)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.007ns (0.330 - 0.323)
+  Source Clock:         clk48 rising at 79.733ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/top/freq_gen2/out to maquina/el_saa/outmix_l/out_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y42.CQ      Tcko                  0.430   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B1      net (fanout=19)       0.771   maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Mmux_outmix11
+    SLICE_X11Y42.A5      net (fanout=18)       0.291   maquina/el_saa/top/amp2/outmix<0>
+    SLICE_X11Y42.A       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Sh51
+    SLICE_X13Y40.B5      net (fanout=5)        0.680   maquina/el_saa/top/amp2/Sh5
+    SLICE_X13Y40.B       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>1
+    SLICE_X13Y40.C4      net (fanout=3)        0.336   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>
+    SLICE_X13Y40.C       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_xor<4>11
+    SLICE_X14Y42.A4      net (fanout=1)        0.728   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_41
+    SLICE_X14Y42.AMUX    Tilo                  0.326   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.BX      net (fanout=2)        0.725   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.CMUX    Taxc                  0.376   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd2_cy<0>_6
+    SLICE_X12Y43.D3      net (fanout=1)        0.570   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_62
+    SLICE_X12Y43.DMUX    Tilo                  0.298   maquina/el_saa/top/out2<6>
+                                                       maquina/el_saa/top/amp2/out<12>1
+    SLICE_X8Y42.C3       net (fanout=1)        0.851   maquina/el_saa/top/out2<6>
+    SLICE_X8Y42.CMUX     Tilo                  0.298   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.D3       net (fanout=2)        0.373   maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.DQ       Tad_logic             0.920   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_lut<0>7
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_cy<0>_6
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_76_rt
+    SLICE_X2Y42.DX       net (fanout=2)        1.230   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+    SLICE_X2Y42.COUT     Tdxcy                 0.109   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.BMUX     Tcinb                 0.310   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+    SLICE_X0Y42.B3       net (fanout=5)        0.683   maquina/el_saa/ADDERTREE_INTERNAL_Madd_99
+    SLICE_X0Y42.CMUX     Topbc                 0.613   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_99_rt
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+    SLICE_X6Y38.D6       net (fanout=2)        1.156   maquina/el_saa/outmix_l/Mmult_n0010_Madd_14
+    SLICE_X6Y38.DMUX     Topdd                 0.463   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_lut<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X4Y42.B4       net (fanout=2)        0.790   maquina/el_saa/outmix_l/Mmult_n0010_Madd_142
+    SLICE_X4Y42.CLK      Tas                   0.674   maquina/el_saa/outmix_l/out<6>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_lut<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+                                                       maquina/el_saa/outmix_l/out_6
+    -------------------------------------------------  ---------------------------
+    Total                                     15.040ns (5.853ns logic, 9.187ns route)
+                                                       (38.9% logic, 61.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.670ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/top/freq_gen2/out (FF)
+  Destination:          maquina/el_saa/outmix_l/out_6 (FF)
+  Requirement:          3.467ns
+  Data Path Delay:      14.990ns (Levels of Logic = 15)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.007ns (0.330 - 0.323)
+  Source Clock:         clk48 rising at 79.733ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/top/freq_gen2/out to maquina/el_saa/outmix_l/out_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y42.CQ      Tcko                  0.430   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B1      net (fanout=19)       0.771   maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Mmux_outmix11
+    SLICE_X11Y42.A5      net (fanout=18)       0.291   maquina/el_saa/top/amp2/outmix<0>
+    SLICE_X11Y42.A       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Sh51
+    SLICE_X13Y40.B5      net (fanout=5)        0.680   maquina/el_saa/top/amp2/Sh5
+    SLICE_X13Y40.B       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>1
+    SLICE_X13Y40.C4      net (fanout=3)        0.336   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>
+    SLICE_X13Y40.C       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_xor<4>11
+    SLICE_X14Y42.A4      net (fanout=1)        0.728   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_41
+    SLICE_X14Y42.AMUX    Tilo                  0.326   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.BX      net (fanout=2)        0.725   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.CMUX    Taxc                  0.376   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd2_cy<0>_6
+    SLICE_X12Y43.D3      net (fanout=1)        0.570   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_62
+    SLICE_X12Y43.DMUX    Tilo                  0.298   maquina/el_saa/top/out2<6>
+                                                       maquina/el_saa/top/amp2/out<12>1
+    SLICE_X8Y42.C3       net (fanout=1)        0.851   maquina/el_saa/top/out2<6>
+    SLICE_X8Y42.CMUX     Tilo                  0.298   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.D3       net (fanout=2)        0.373   maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.DQ       Tad_logic             0.920   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_lut<0>7
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_cy<0>_6
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_76_rt
+    SLICE_X2Y42.DX       net (fanout=2)        1.230   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+    SLICE_X2Y42.COUT     Tdxcy                 0.109   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.AMUX     Tcina                 0.220   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+    SLICE_X0Y41.D6       net (fanout=10)       0.694   maquina/el_saa/outmix_l/Mmult_n0010_Madd1_lut<11>
+    SLICE_X0Y41.COUT     Topcyd                0.290   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<11>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_lut<11>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<11>
+    SLICE_X0Y42.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<11>
+    SLICE_X0Y42.AMUX     Tcina                 0.210   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+    SLICE_X6Y38.BX       net (fanout=2)        1.355   maquina/el_saa/outmix_l/Mmult_n0010_Madd_12
+    SLICE_X6Y38.DMUX     Tbxd                  0.403   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X4Y42.B4       net (fanout=2)        0.790   maquina/el_saa/outmix_l/Mmult_n0010_Madd_142
+    SLICE_X4Y42.CLK      Tas                   0.674   maquina/el_saa/outmix_l/out<6>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_lut<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+                                                       maquina/el_saa/outmix_l/out_6
+    -------------------------------------------------  ---------------------------
+    Total                                     14.990ns (5.590ns logic, 9.400ns route)
+                                                       (37.3% logic, 62.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -11.669ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/top/freq_gen2/out (FF)
+  Destination:          maquina/el_saa/outmix_l/out_6 (FF)
+  Requirement:          3.467ns
+  Data Path Delay:      14.989ns (Levels of Logic = 15)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.007ns (0.330 - 0.323)
+  Source Clock:         clk48 rising at 79.733ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/top/freq_gen2/out to maquina/el_saa/outmix_l/out_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y42.CQ      Tcko                  0.430   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B1      net (fanout=19)       0.771   maquina/el_saa/top/freq_gen2/out
+    SLICE_X11Y42.B       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Mmux_outmix11
+    SLICE_X11Y42.A5      net (fanout=18)       0.291   maquina/el_saa/top/amp2/outmix<0>
+    SLICE_X11Y42.A       Tilo                  0.259   maquina/el_saa/top/freq_gen2/out
+                                                       maquina/el_saa/top/amp2/Sh51
+    SLICE_X13Y40.B5      net (fanout=5)        0.680   maquina/el_saa/top/amp2/Sh5
+    SLICE_X13Y40.B       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>1
+    SLICE_X13Y40.C4      net (fanout=3)        0.336   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_lut<4>
+    SLICE_X13Y40.C       Tilo                  0.259   maquina/el_saa/top/noise_gen/lfsr<7>
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd1_xor<4>11
+    SLICE_X14Y42.A4      net (fanout=1)        0.728   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_41
+    SLICE_X14Y42.AMUX    Tilo                  0.326   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.BX      net (fanout=2)        0.725   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd24
+    SLICE_X14Y42.CMUX    Taxc                  0.376   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_52
+                                                       maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd2_cy<0>_6
+    SLICE_X12Y43.D3      net (fanout=1)        0.570   maquina/el_saa/top/amp2/ADDERTREE_INTERNAL_Madd_62
+    SLICE_X12Y43.DMUX    Tilo                  0.298   maquina/el_saa/top/out2<6>
+                                                       maquina/el_saa/top/amp2/out<12>1
+    SLICE_X8Y42.C3       net (fanout=1)        0.851   maquina/el_saa/top/out2<6>
+    SLICE_X8Y42.CMUX     Tilo                  0.298   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.D3       net (fanout=2)        0.373   maquina/el_saa/ADDERTREE_INTERNAL_Madd66
+    SLICE_X8Y42.DQ       Tad_logic             0.920   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_lut<0>7
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd6_cy<0>_6
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd_76_rt
+    SLICE_X2Y42.DX       net (fanout=2)        1.230   maquina/el_saa/ADDERTREE_INTERNAL_Madd_76
+    SLICE_X2Y42.COUT     Tdxcy                 0.109   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.003   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<7>
+    SLICE_X2Y43.AMUX     Tcina                 0.220   maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+                                                       maquina/el_saa/ADDERTREE_INTERNAL_Madd9_cy<10>
+    SLICE_X0Y41.D6       net (fanout=10)       0.694   maquina/el_saa/outmix_l/Mmult_n0010_Madd1_lut<11>
+    SLICE_X0Y41.COUT     Topcyd                0.290   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<11>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_lut<11>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<11>
+    SLICE_X0Y42.CIN      net (fanout=1)        0.003   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<11>
+    SLICE_X0Y42.BMUX     Tcinb                 0.277   maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd_cy<15>
+    SLICE_X6Y38.CX       net (fanout=2)        1.357   maquina/el_saa/outmix_l/Mmult_n0010_Madd_13
+    SLICE_X6Y38.DMUX     Tcxd                  0.333   maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd2_cy<14>
+    SLICE_X4Y42.B4       net (fanout=2)        0.790   maquina/el_saa/outmix_l/Mmult_n0010_Madd_142
+    SLICE_X4Y42.CLK      Tas                   0.674   maquina/el_saa/outmix_l/out<6>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_lut<14>
+                                                       maquina/el_saa/outmix_l/Mmult_n0010_Madd3_cy<16>
+                                                       maquina/el_saa/outmix_l/out_6
+    -------------------------------------------------  ---------------------------
+    Total                                     14.989ns (5.587ns logic, 9.402ns route)
+                                                       (37.3% logic, 62.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_los_relojes_clkout0 = PERIOD TIMEGRP "los_relojes_clkout0" TS_clk50mhz /
+        0.961538462 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/el_saa/outmix_r/out_2 (SLICE_X6Y42.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.191ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               maquina/el_saa/outmix_r/ced (FF)
+  Destination:          maquina/el_saa/outmix_r/out_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.348ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.107 - 0.104)
+  Source Clock:         clk48 rising at 83.200ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: maquina/el_saa/outmix_r/ced to maquina/el_saa/outmix_r/out_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y41.AQ       Tcko                  0.198   maquina/el_saa/outmix_r/ced
+                                                       maquina/el_saa/outmix_r/ced
+    SLICE_X6Y42.CE       net (fanout=7)        0.258   maquina/el_saa/outmix_r/ced
+    SLICE_X6Y42.CLK      Tckce       (-Th)     0.108   maquina/el_saa/outmix_r/out<2>
+                                                       maquina/el_saa/outmix_r/out_2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.348ns (0.090ns logic, 0.258ns route)
+                                                       (25.9% logic, 74.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/el_saa/outmix_r/out_1 (SLICE_X6Y42.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.195ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               maquina/el_saa/outmix_r/ced (FF)
+  Destination:          maquina/el_saa/outmix_r/out_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.352ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.107 - 0.104)
+  Source Clock:         clk48 rising at 83.200ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: maquina/el_saa/outmix_r/ced to maquina/el_saa/outmix_r/out_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y41.AQ       Tcko                  0.198   maquina/el_saa/outmix_r/ced
+                                                       maquina/el_saa/outmix_r/ced
+    SLICE_X6Y42.CE       net (fanout=7)        0.258   maquina/el_saa/outmix_r/ced
+    SLICE_X6Y42.CLK      Tckce       (-Th)     0.104   maquina/el_saa/outmix_r/out<2>
+                                                       maquina/el_saa/outmix_r/out_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.352ns (0.094ns logic, 0.258ns route)
+                                                       (26.7% logic, 73.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/el_saa/outmix_r/out_0 (SLICE_X6Y42.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.197ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               maquina/el_saa/outmix_r/ced (FF)
+  Destination:          maquina/el_saa/outmix_r/out_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.354ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.107 - 0.104)
+  Source Clock:         clk48 rising at 83.200ns
+  Destination Clock:    clk48 rising at 83.200ns
+  Clock Uncertainty:    0.154ns
+
+  Clock Uncertainty:          0.154ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.000ns
+
+  Minimum Data Path at Fast Process Corner: maquina/el_saa/outmix_r/ced to maquina/el_saa/outmix_r/out_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y41.AQ       Tcko                  0.198   maquina/el_saa/outmix_r/ced
+                                                       maquina/el_saa/outmix_r/ced
+    SLICE_X6Y42.CE       net (fanout=7)        0.258   maquina/el_saa/outmix_r/ced
+    SLICE_X6Y42.CLK      Tckce       (-Th)     0.102   maquina/el_saa/outmix_r/out<2>
+                                                       maquina/el_saa/outmix_r/out_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.354ns (0.096ns logic, 0.258ns route)
+                                                       (27.1% logic, 72.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_los_relojes_clkout0 = PERIOD TIMEGRP "los_relojes_clkout0" TS_clk50mhz /
+        0.961538462 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.134ns (period - min period limit)
+  Period: 20.800ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: los_relojes/clkout1_buf/I0
+  Logical resource: los_relojes/clkout1_buf/I0
+  Location pin: BUFGMUX_X2Y12.I0
+  Clock network: los_relojes/clkout0
+--------------------------------------------------------------------------------
+Slack: 19.543ns (period - min period limit)
+  Period: 20.800ns
+  Min period limit: 1.257ns (795.545MHz) (Tcp)
+  Physical resource: MyCtrlModule/myosd/charram/Mram_mem22_RAMD_O/CLK
+  Logical resource: MyCtrlModule/myosd/charram/Mram_mem22_RAMA/CLK
+  Location pin: SLICE_X2Y61.CLK
+  Clock network: clk48
+--------------------------------------------------------------------------------
+Slack: 19.543ns (period - min period limit)
+  Period: 20.800ns
+  Min period limit: 1.257ns (795.545MHz) (Tcp)
+  Physical resource: MyCtrlModule/myosd/charram/Mram_mem22_RAMD_O/CLK
+  Logical resource: MyCtrlModule/myosd/charram/Mram_mem22_RAMB/CLK
+  Location pin: SLICE_X2Y61.CLK
+  Clock network: clk48
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_los_relojes_clk8 = PERIOD TIMEGRP "los_relojes/clk8" 
+TS_los_relojes_clkout0         / 6 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 12675 paths analyzed, 1000 endpoints analyzed, 406 failing endpoints
+ 406 timing errors detected. (406 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.891ns.
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/sam_audio_mixer/sample_l_8 (SLICE_X4Y46.CIN), 15 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.425ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/outmix_l/out_0 (FF)
+  Destination:          maquina/sam_audio_mixer/sample_l_8 (FF)
+  Requirement:          3.466ns
+  Data Path Delay:      2.107ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -3.403ns (2.864 - 6.267)
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    los_relojes/clk8_BUFG rising at 3.466ns
+  Clock Uncertainty:    0.381ns
+
+  Clock Uncertainty:          0.381ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.226ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/outmix_l/out_0 to maquina/sam_audio_mixer/sample_l_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X4Y41.BQ       Tcko                  0.476   maquina/el_saa/outmix_l/out<2>
+                                                       maquina/el_saa/outmix_l/out_0
+    SLICE_X4Y44.A6       net (fanout=2)        0.822   maquina/el_saa/outmix_l/out<0>
+    SLICE_X4Y44.COUT     Topcya                0.472   maquina/sam_audio_mixer/sample_l<3>
+                                                       maquina/sam_audio_mixer/Madd_n0027_lut<0>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.COUT     Tbyp                  0.091   maquina/sam_audio_mixer/sample_l<7>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<7>
+    SLICE_X4Y46.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<7>
+    SLICE_X4Y46.CLK      Tcinck                0.240   maquina/sam_audio_mixer/sample_l<8>
+                                                       PhysOnlyBuf
+                                                       maquina/sam_audio_mixer/sample_l_8
+    -------------------------------------------------  ---------------------------
+    Total                                      2.107ns (1.279ns logic, 0.828ns route)
+                                                       (60.7% logic, 39.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.282ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/outmix_l/out_0 (FF)
+  Destination:          maquina/sam_audio_mixer/sample_l_8 (FF)
+  Requirement:          3.466ns
+  Data Path Delay:      1.964ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -3.403ns (2.864 - 6.267)
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    los_relojes/clk8_BUFG rising at 3.466ns
+  Clock Uncertainty:    0.381ns
+
+  Clock Uncertainty:          0.381ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.226ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/outmix_l/out_0 to maquina/sam_audio_mixer/sample_l_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X4Y41.BQ       Tcko                  0.476   maquina/el_saa/outmix_l/out<2>
+                                                       maquina/el_saa/outmix_l/out_0
+    SLICE_X4Y44.AX       net (fanout=2)        0.870   maquina/el_saa/outmix_l/out<0>
+    SLICE_X4Y44.COUT     Taxcy                 0.281   maquina/sam_audio_mixer/sample_l<3>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.COUT     Tbyp                  0.091   maquina/sam_audio_mixer/sample_l<7>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<7>
+    SLICE_X4Y46.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<7>
+    SLICE_X4Y46.CLK      Tcinck                0.240   maquina/sam_audio_mixer/sample_l<8>
+                                                       PhysOnlyBuf
+                                                       maquina/sam_audio_mixer/sample_l_8
+    -------------------------------------------------  ---------------------------
+    Total                                      1.964ns (1.088ns logic, 0.876ns route)
+                                                       (55.4% logic, 44.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.244ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/outmix_l/out_5 (FF)
+  Destination:          maquina/sam_audio_mixer/sample_l_8 (FF)
+  Requirement:          3.466ns
+  Data Path Delay:      1.923ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -3.406ns (2.864 - 6.270)
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    los_relojes/clk8_BUFG rising at 3.466ns
+  Clock Uncertainty:    0.381ns
+
+  Clock Uncertainty:          0.381ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.226ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/outmix_l/out_5 to maquina/sam_audio_mixer/sample_l_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X4Y42.CQ       Tcko                  0.476   maquina/el_saa/outmix_l/out<6>
+                                                       maquina/el_saa/outmix_l/out_5
+    SLICE_X4Y45.B6       net (fanout=2)        0.756   maquina/el_saa/outmix_l/out<5>
+    SLICE_X4Y45.COUT     Topcyb                0.448   maquina/sam_audio_mixer/sample_l<7>
+                                                       maquina/sam_audio_mixer/Madd_n0027_lut<5>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<7>
+    SLICE_X4Y46.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<7>
+    SLICE_X4Y46.CLK      Tcinck                0.240   maquina/sam_audio_mixer/sample_l<8>
+                                                       PhysOnlyBuf
+                                                       maquina/sam_audio_mixer/sample_l_8
+    -------------------------------------------------  ---------------------------
+    Total                                      1.923ns (1.164ns logic, 0.759ns route)
+                                                       (60.5% logic, 39.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/sam_audio_mixer/sample_l_6 (SLICE_X4Y45.CIN), 8 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.411ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/outmix_l/out_0 (FF)
+  Destination:          maquina/sam_audio_mixer/sample_l_6 (FF)
+  Requirement:          3.466ns
+  Data Path Delay:      2.092ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -3.404ns (2.863 - 6.267)
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    los_relojes/clk8_BUFG rising at 3.466ns
+  Clock Uncertainty:    0.381ns
+
+  Clock Uncertainty:          0.381ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.226ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/outmix_l/out_0 to maquina/sam_audio_mixer/sample_l_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X4Y41.BQ       Tcko                  0.476   maquina/el_saa/outmix_l/out<2>
+                                                       maquina/el_saa/outmix_l/out_0
+    SLICE_X4Y44.A6       net (fanout=2)        0.822   maquina/el_saa/outmix_l/out<0>
+    SLICE_X4Y44.COUT     Topcya                0.472   maquina/sam_audio_mixer/sample_l<3>
+                                                       maquina/sam_audio_mixer/Madd_n0027_lut<0>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CLK      Tcinck                0.319   maquina/sam_audio_mixer/sample_l<7>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<7>
+                                                       maquina/sam_audio_mixer/sample_l_6
+    -------------------------------------------------  ---------------------------
+    Total                                      2.092ns (1.267ns logic, 0.825ns route)
+                                                       (60.6% logic, 39.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.268ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/outmix_l/out_0 (FF)
+  Destination:          maquina/sam_audio_mixer/sample_l_6 (FF)
+  Requirement:          3.466ns
+  Data Path Delay:      1.949ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -3.404ns (2.863 - 6.267)
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    los_relojes/clk8_BUFG rising at 3.466ns
+  Clock Uncertainty:    0.381ns
+
+  Clock Uncertainty:          0.381ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.226ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/outmix_l/out_0 to maquina/sam_audio_mixer/sample_l_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X4Y41.BQ       Tcko                  0.476   maquina/el_saa/outmix_l/out<2>
+                                                       maquina/el_saa/outmix_l/out_0
+    SLICE_X4Y44.AX       net (fanout=2)        0.870   maquina/el_saa/outmix_l/out<0>
+    SLICE_X4Y44.COUT     Taxcy                 0.281   maquina/sam_audio_mixer/sample_l<3>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CLK      Tcinck                0.319   maquina/sam_audio_mixer/sample_l<7>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<7>
+                                                       maquina/sam_audio_mixer/sample_l_6
+    -------------------------------------------------  ---------------------------
+    Total                                      1.949ns (1.076ns logic, 0.873ns route)
+                                                       (55.2% logic, 44.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.204ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/outmix_l/out_1 (FF)
+  Destination:          maquina/sam_audio_mixer/sample_l_6 (FF)
+  Requirement:          3.466ns
+  Data Path Delay:      1.885ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -3.404ns (2.863 - 6.267)
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    los_relojes/clk8_BUFG rising at 3.466ns
+  Clock Uncertainty:    0.381ns
+
+  Clock Uncertainty:          0.381ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.226ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/outmix_l/out_1 to maquina/sam_audio_mixer/sample_l_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X4Y41.CQ       Tcko                  0.476   maquina/el_saa/outmix_l/out<2>
+                                                       maquina/el_saa/outmix_l/out_1
+    SLICE_X4Y44.B6       net (fanout=2)        0.639   maquina/el_saa/outmix_l/out<1>
+    SLICE_X4Y44.COUT     Topcyb                0.448   maquina/sam_audio_mixer/sample_l<3>
+                                                       maquina/sam_audio_mixer/Madd_n0027_lut<1>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CLK      Tcinck                0.319   maquina/sam_audio_mixer/sample_l<7>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<7>
+                                                       maquina/sam_audio_mixer/sample_l_6
+    -------------------------------------------------  ---------------------------
+    Total                                      1.885ns (1.243ns logic, 0.642ns route)
+                                                       (65.9% logic, 34.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/sam_audio_mixer/sample_l_7 (SLICE_X4Y45.CIN), 8 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.411ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/outmix_l/out_0 (FF)
+  Destination:          maquina/sam_audio_mixer/sample_l_7 (FF)
+  Requirement:          3.466ns
+  Data Path Delay:      2.092ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -3.404ns (2.863 - 6.267)
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    los_relojes/clk8_BUFG rising at 3.466ns
+  Clock Uncertainty:    0.381ns
+
+  Clock Uncertainty:          0.381ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.226ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/outmix_l/out_0 to maquina/sam_audio_mixer/sample_l_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X4Y41.BQ       Tcko                  0.476   maquina/el_saa/outmix_l/out<2>
+                                                       maquina/el_saa/outmix_l/out_0
+    SLICE_X4Y44.A6       net (fanout=2)        0.822   maquina/el_saa/outmix_l/out<0>
+    SLICE_X4Y44.COUT     Topcya                0.472   maquina/sam_audio_mixer/sample_l<3>
+                                                       maquina/sam_audio_mixer/Madd_n0027_lut<0>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CLK      Tcinck                0.319   maquina/sam_audio_mixer/sample_l<7>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<7>
+                                                       maquina/sam_audio_mixer/sample_l_7
+    -------------------------------------------------  ---------------------------
+    Total                                      2.092ns (1.267ns logic, 0.825ns route)
+                                                       (60.6% logic, 39.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.268ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/outmix_l/out_0 (FF)
+  Destination:          maquina/sam_audio_mixer/sample_l_7 (FF)
+  Requirement:          3.466ns
+  Data Path Delay:      1.949ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -3.404ns (2.863 - 6.267)
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    los_relojes/clk8_BUFG rising at 3.466ns
+  Clock Uncertainty:    0.381ns
+
+  Clock Uncertainty:          0.381ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.226ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/outmix_l/out_0 to maquina/sam_audio_mixer/sample_l_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X4Y41.BQ       Tcko                  0.476   maquina/el_saa/outmix_l/out<2>
+                                                       maquina/el_saa/outmix_l/out_0
+    SLICE_X4Y44.AX       net (fanout=2)        0.870   maquina/el_saa/outmix_l/out<0>
+    SLICE_X4Y44.COUT     Taxcy                 0.281   maquina/sam_audio_mixer/sample_l<3>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CLK      Tcinck                0.319   maquina/sam_audio_mixer/sample_l<7>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<7>
+                                                       maquina/sam_audio_mixer/sample_l_7
+    -------------------------------------------------  ---------------------------
+    Total                                      1.949ns (1.076ns logic, 0.873ns route)
+                                                       (55.2% logic, 44.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.204ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               maquina/el_saa/outmix_l/out_1 (FF)
+  Destination:          maquina/sam_audio_mixer/sample_l_7 (FF)
+  Requirement:          3.466ns
+  Data Path Delay:      1.885ns (Levels of Logic = 2)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -3.404ns (2.863 - 6.267)
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    los_relojes/clk8_BUFG rising at 3.466ns
+  Clock Uncertainty:    0.381ns
+
+  Clock Uncertainty:          0.381ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.300ns
+    Phase Error (PE):           0.226ns
+
+  Maximum Data Path at Slow Process Corner: maquina/el_saa/outmix_l/out_1 to maquina/sam_audio_mixer/sample_l_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X4Y41.CQ       Tcko                  0.476   maquina/el_saa/outmix_l/out<2>
+                                                       maquina/el_saa/outmix_l/out_1
+    SLICE_X4Y44.B6       net (fanout=2)        0.639   maquina/el_saa/outmix_l/out<1>
+    SLICE_X4Y44.COUT     Topcyb                0.448   maquina/sam_audio_mixer/sample_l<3>
+                                                       maquina/sam_audio_mixer/Madd_n0027_lut<1>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CIN      net (fanout=1)        0.003   maquina/sam_audio_mixer/Madd_n0027_cy<3>
+    SLICE_X4Y45.CLK      Tcinck                0.319   maquina/sam_audio_mixer/sample_l<7>
+                                                       maquina/sam_audio_mixer/Madd_n0027_cy<7>
+                                                       maquina/sam_audio_mixer/sample_l_7
+    -------------------------------------------------  ---------------------------
+    Total                                      1.885ns (1.243ns logic, 0.642ns route)
+                                                       (65.9% logic, 34.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_los_relojes_clk8 = PERIOD TIMEGRP "los_relojes/clk8" TS_los_relojes_clkout0
+        / 6 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/el_saa/top/noise_gen/count_4 (SLICE_X12Y37.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.414ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               maquina/el_saa/top/noise_gen/count_4 (FF)
+  Destination:          maquina/el_saa/top/noise_gen/count_4 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.414ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    clk48 rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: maquina/el_saa/top/noise_gen/count_4 to maquina/el_saa/top/noise_gen/count_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y37.DQ      Tcko                  0.200   maquina/el_saa/top/noise_gen/count<4>
+                                                       maquina/el_saa/top/noise_gen/count_4
+    SLICE_X12Y37.D6      net (fanout=3)        0.024   maquina/el_saa/top/noise_gen/count<4>
+    SLICE_X12Y37.CLK     Tah         (-Th)    -0.190   maquina/el_saa/top/noise_gen/count<4>
+                                                       maquina/el_saa/top/noise_gen/Mmux_count[10]_fcount[10]_mux_14_OUT61
+                                                       maquina/el_saa/top/noise_gen/count_4
+    -------------------------------------------------  ---------------------------
+    Total                                      0.414ns (0.390ns logic, 0.024ns route)
+                                                       (94.2% logic, 5.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/sam_audio_mixer/audio_dac_right/DACout (SLICE_X5Y51.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.423ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_10 (FF)
+  Destination:          maquina/sam_audio_mixer/audio_dac_right/DACout (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.425ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.041 - 0.039)
+  Source Clock:         los_relojes/clk8_BUFG rising at 0.000ns
+  Destination Clock:    los_relojes/clk8_BUFG rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_10 to maquina/sam_audio_mixer/audio_dac_right/DACout
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X4Y51.CQ       Tcko                  0.200   maquina/sam_audio_mixer/audio_dac_right/SigmaLatch<10>
+                                                       maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_10
+    SLICE_X5Y51.DX       net (fanout=2)        0.166   maquina/sam_audio_mixer/audio_dac_right/SigmaLatch<10>
+    SLICE_X5Y51.CLK      Tckdi       (-Th)    -0.059   maquina/sam_audio_mixer/audio_dac_right/DACout
+                                                       maquina/sam_audio_mixer/audio_dac_right/DACout
+    -------------------------------------------------  ---------------------------
+    Total                                      0.425ns (0.259ns logic, 0.166ns route)
+                                                       (60.9% logic, 39.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maquina/el_saa/top/noise_gen/count_1 (SLICE_X12Y37.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.435ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               maquina/el_saa/top/noise_gen/count_1 (FF)
+  Destination:          maquina/el_saa/top/noise_gen/count_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.435ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk48 rising at 0.000ns
+  Destination Clock:    clk48 rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: maquina/el_saa/top/noise_gen/count_1 to maquina/el_saa/top/noise_gen/count_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y37.AQ      Tcko                  0.200   maquina/el_saa/top/noise_gen/count<4>
+                                                       maquina/el_saa/top/noise_gen/count_1
+    SLICE_X12Y37.A6      net (fanout=6)        0.045   maquina/el_saa/top/noise_gen/count<1>
+    SLICE_X12Y37.CLK     Tah         (-Th)    -0.190   maquina/el_saa/top/noise_gen/count<4>
+                                                       maquina/el_saa/top/noise_gen/Mmux_count[10]_fcount[10]_mux_14_OUT31
+                                                       maquina/el_saa/top/noise_gen/count_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.435ns (0.390ns logic, 0.045ns route)
+                                                       (89.7% logic, 10.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_los_relojes_clk8 = PERIOD TIMEGRP "los_relojes/clk8" TS_los_relojes_clkout0
+        / 6 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.800ns (period - min period limit)
+  Period: 3.466ns
+  Min period limit: 2.666ns (375.094MHz) (Tbcper_I)
+  Physical resource: los_relojes/clk8_BUFG/I0
+  Logical resource: los_relojes/clk8_BUFG/I0
+  Location pin: BUFGMUX_X2Y10.I0
+  Clock network: los_relojes/clk8
+--------------------------------------------------------------------------------
+Slack: 2.986ns (period - min period limit)
+  Period: 3.466ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: maquina/sam_audio_mixer/sample_r<3>/CLK
+  Logical resource: maquina/sam_audio_mixer/sample_r_0/CK
+  Location pin: SLICE_X6Y45.CLK
+  Clock network: los_relojes/clk8_BUFG
+--------------------------------------------------------------------------------
+Slack: 2.986ns (period - min period limit)
+  Period: 3.466ns
+  Min period limit: 0.480ns (2083.333MHz) (Tcp)
+  Physical resource: maquina/sam_audio_mixer/sample_r<3>/CLK
+  Logical resource: maquina/sam_audio_mixer/sample_r_1/CK
+  Location pin: SLICE_X6Y45.CLK
+  Clock network: los_relojes/clk8_BUFG
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_clk50mhz
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk50mhz                    |     20.000ns|      5.000ns|     88.691ns|            0|          523|            0|    318266082|
+| TS_los_relojes_clkout0        |     20.800ns|     92.239ns|     35.346ns|          117|          406|    318253407|        12675|
+|  TS_los_relojes_clk8          |      3.467ns|      5.891ns|          N/A|          406|            0|        12675|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+2 constraints not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk50mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk50mhz       |   16.573|         |         |    3.584|
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 523  Score: 1579966  (Setup/Max: 1579966, Hold: 0)
+
+Constraints cover 318266082 paths, 0 nets, and 5828 connections
+
+Design statistics:
+   Minimum period:  92.239ns{1}   (Maximum frequency:  10.841MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Feb 19 20:51:59 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 464 MB
+
+
+

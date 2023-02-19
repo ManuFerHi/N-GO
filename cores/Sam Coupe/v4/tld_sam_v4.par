@@ -1,0 +1,481 @@
+Release 14.7 par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+localhost.localdomain::  Sun Feb 19 20:51:14 2023
+
+par -filter /home/ise/Sources/sam-coupe/v4/iseconfig/filter.filter -w -intstyle
+ise -ol high -xe n -mt 4 tld_sam_v4_map.ncd tld_sam_v4.ncd tld_sam_v4.pcf 
+
+
+Constraints file: tld_sam_v4.pcf.
+Loading device for application Rf_Device from file '6slx16.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+   "tld_sam_v4" is an NCD, version 3.2, device xc6slx16, package ftg256, speed -2
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 2,096 out of  18,224   11%
+    Number used as Flip Flops:               2,043
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               53
+  Number of Slice LUTs:                      5,232 out of   9,112   57%
+    Number used as logic:                    4,411 out of   9,112   48%
+      Number using O6 output only:           3,352
+      Number using O5 output only:             264
+      Number using O5 and O6:                  795
+      Number used as ROM:                        0
+    Number used as Memory:                     783 out of   2,176   35%
+      Number used as Dual Port RAM:            776
+        Number using O6 output only:           748
+        Number using O5 output only:             0
+        Number using O5 and O6:                 28
+      Number used as Single Port RAM:            4
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+      Number used as Shift Register:             3
+        Number using O6 output only:             3
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     38
+      Number with same-slice register load:      9
+      Number with same-slice carry load:        29
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,869 out of   2,278   82%
+  Number of MUXCYs used:                     1,064 out of   4,556   23%
+  Number of LUT Flip Flop pairs used:        5,600
+    Number with an unused Flip Flop:         3,588 out of   5,600   64%
+    Number with an unused LUT:                 368 out of   5,600    6%
+    Number of fully used LUT-FF pairs:       1,644 out of   5,600   29%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        62 out of     186   33%
+    Number of LOCed IOBs:                       62 out of      62  100%
+    IOB Flip Flops:                              1
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        32 out of      32  100%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       8 out of      16   50%
+    Number used as BUFGs:                        8
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   1 out of     248    1%
+    Number used as OLOGIC2s:                     1
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            3 out of      32    9%
+  Number of ICAPs:                               1 out of       1  100%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            1 out of       2   50%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+PAR will use up to 4 processors
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
+   Command Line Tools User Guide for information on generating a TSI report.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem16_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan26_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan7_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan16_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan10_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan58_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan59_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan57_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan46_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan47_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan45_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan44_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan42_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan38_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan37_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem22_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem10_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem15_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan28_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal maquina/la_ula_del_sam/Mram_clut1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan25_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan27_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan1_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan29_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan15_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan9_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan36_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan49_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan48_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan34_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan41_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan43_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan40_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan39_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem24_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem14_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem11_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem9_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem13_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan17_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan18_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan30_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan32_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan5_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan6_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan13_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan11_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan91_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan50_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem12_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem8_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan22_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan23_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan4_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan20_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan19_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan2_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan31_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan8_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan95_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan93_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan12_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan89_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan92_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan78_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan63_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan60_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan52_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan35_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan51_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan33_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem5_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem6_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem3_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem2_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan21_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan24_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan3_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan65_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan67_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan90_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan77_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan80_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan61_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan62_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem116_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem8_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem25_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem23_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem5_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem1_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem4_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem8_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan69_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan82_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan81_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan68_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan85_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan94_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan96_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan79_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan64_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan56_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem3_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem9_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem10_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem20_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem7_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem5_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem2_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem6_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem3_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem13_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan70_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan71_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan83_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan87_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan88_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan55_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan54_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan53_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem111_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem13_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem18_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem2_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem4_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem21_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem4_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/el_z80/i_tv80_core/i_reg/Mram_RegsL11_RAMD_D1_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_in/Mram_mem1_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem7_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem10_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem15_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan72_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan66_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan84_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan86_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan75_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan76_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan74_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem114_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem16_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem6_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem125_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal maquina/el_z80/i_tv80_core/i_reg/Mram_RegsH11_RAMD_D1_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem12_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem11_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem9_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem16_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal maquina/diskdrives_inst/wd1770_inst/fifo_out/Mram_mem14_RAMD_O has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal salida_vga/memscan/Mram_scan73_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/UART.uartrxfifo/Mram_mem32_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem113_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem112_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem115_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem19_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem110_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem11_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem15_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem12_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem17_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal MyCtrlModule/myosd/charram/Mram_mem7_RAMD_O has no load.  PAR will not attempt to route this signal.
+Starting Multi-threaded Router
+
+
+Phase  1  : 32492 unrouted;      REAL time: 4 secs 
+
+Phase  2  : 29485 unrouted;      REAL time: 5 secs 
+
+Phase  3  : 14109 unrouted;      REAL time: 13 secs 
+
+Phase  4  : 14398 unrouted; (Setup:1650527, Hold:8, Component Switching Limit:0)     REAL time: 14 secs 
+
+Updating file: tld_sam_v4.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:1696185, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  6  : 0 unrouted; (Setup:1696185, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
+
+Phase  7  : 0 unrouted; (Setup:1696185, Hold:0, Component Switching Limit:0)     REAL time: 35 secs 
+
+Phase  8  : 0 unrouted; (Setup:1696185, Hold:0, Component Switching Limit:0)     REAL time: 35 secs 
+
+Phase  9  : 0 unrouted; (Setup:1696185, Hold:0, Component Switching Limit:0)     REAL time: 35 secs 
+
+Phase 10  : 0 unrouted; (Setup:1696185, Hold:0, Component Switching Limit:0)     REAL time: 35 secs 
+
+Phase 11  : 0 unrouted; (Setup:1579966, Hold:0, Component Switching Limit:0)     REAL time: 36 secs 
+Total REAL time to Router completion: 36 secs 
+Total CPU time to Router completion (all processors): 35 secs 
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|        count_6_BUFG | BUFGMUX_X3Y13| No   |   28 |  0.583     |  1.699      |
++---------------------+--------------+------+------+------------+-------------+
+|               clk48 | BUFGMUX_X2Y12| No   |  249 |  0.065     |  1.138      |
++---------------------+--------------+------+------+------------+-------------+
+|los_relojes/clkcount |              |      |      |            |             |
+|           er_2_BUFG |  BUFGMUX_X2Y2| No   |  324 |  0.065     |  1.137      |
++---------------------+--------------+------+------+------------+-------------+
+|los_relojes/clkcount |              |      |      |            |             |
+|           er_1_BUFG |  BUFGMUX_X2Y4| No   |  219 |  0.065     |  1.137      |
++---------------------+--------------+------+------+------------+-------------+
+|maquina/ps2_keyb/val |              |      |      |            |             |
+|             id_BUFG |  BUFGMUX_X2Y3| No   |   76 |  0.054     |  1.140      |
++---------------------+--------------+------+------+------------+-------------+
+|maquina/el_raton/pue |              |      |      |            |             |
+|rto_del_raton/rkb_in |              |      |      |            |             |
+|        terrupt_BUFG | BUFGMUX_X3Y14| No   |    8 |  0.013     |  1.112      |
++---------------------+--------------+------+------+------------+-------------+
+|los_relojes/clkcount |              |      |      |            |             |
+|           er_0_BUFG |  BUFGMUX_X2Y1| No   |  142 |  0.120     |  1.192      |
++---------------------+--------------+------+------+------------+-------------+
+|los_relojes/clk8_BUF |              |      |      |            |             |
+|                   G | BUFGMUX_X2Y10| No   |   14 |  0.028     |  1.123      |
++---------------------+--------------+------+------+------------+-------------+
+|maquina/scan_inst/ks |              |      |      |            |             |
+|                 clk |         Local|      |    1 |  0.000     |  0.844      |
++---------------------+--------------+------+------+------------+-------------+
+|maquina/scan_inst/kf |              |      |      |            |             |
+|                   1 |         Local|      |    1 |  0.000     |  0.943      |
++---------------------+--------------+------+------+------------+-------------+
+|maquina/ps2_keyb/kbd |              |      |      |            |             |
+|      _clk_debounced |         Local|      |    6 |  0.855     |  1.530      |
++---------------------+--------------+------+------+------------+-------------+
+|maquina/scan_inst/km |              |      |      |            |             |
+|                inus |         Local|      |    1 |  0.000     |  0.807      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 1579966 (Setup: 1579966, Hold: 0, Component Switching Limit: 0)
+
+WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
+
+   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
+   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
+
+   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to ensure the best options
+   are set in the tools for timing closure.
+
+   Use the Xilinx "SmartXplorer" script to try special combinations of
+   options known to produce very good results.
+
+   Visit the Xilinx technical support web at http://support.xilinx.com and go to
+   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
+   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
+   in your design.
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+Number of Timing Constraints that were not applied: 1
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_los_relojes_clkout0 = PERIOD TIMEGRP " | SETUP       |   -11.905ns|    92.239ns|     117|     1198543
+  los_relojes_clkout0" TS_clk50mhz /        | HOLD        |     0.191ns|            |       0|           0
+    0.961538462 HIGH 50%                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* TS_los_relojes_clk8 = PERIOD TIMEGRP "los | SETUP       |    -2.425ns|     5.891ns|     406|      381423
+  _relojes/clk8" TS_los_relojes_clkout0     | HOLD        |     0.414ns|            |       0|           0
+       / 6 HIGH 50%                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk50mhz = PERIOD TIMEGRP "clk50mhz" 2 | MINLOWPULSE |    15.000ns|     5.000ns|       0|           0
+  0 ns HIGH 50%                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_clk50mhz
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk50mhz                    |     20.000ns|      5.000ns|     88.691ns|            0|          523|            0|    318266082|
+| TS_los_relojes_clkout0        |     20.800ns|     92.239ns|     35.346ns|          117|          406|    318253407|        12675|
+|  TS_los_relojes_clk8          |      3.467ns|      5.891ns|          N/A|          406|            0|        12675|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+2 constraints not met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 164 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 37 secs 
+Total CPU time to PAR completion (all processors): 36 secs 
+
+Peak Memory Usage:  755 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - 523 errors found.
+
+Number of error messages: 0
+Number of warning messages: 167
+Number of info messages: 1
+
+Writing design to file tld_sam_v4.ncd
+
+
+
+PAR done!

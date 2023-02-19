@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/rodriguj/Documents/zxuno/cores/sam_coupe_spartan6/test5/tb_scandoubler_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_scandoubler" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/tb_scandoubler/clk24" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk24</obj_property>
+      <obj_property name="ObjectShortName">clk24</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/clk12" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk12</obj_property>
+      <obj_property name="ObjectShortName">clk12</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/vramaddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vramaddr[18:0]</obj_property>
+      <obj_property name="ObjectShortName">vramaddr[18:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/cpuramaddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cpuramaddr[18:0]</obj_property>
+      <obj_property name="ObjectShortName">cpuramaddr[18:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider19" type="divider">
+      <obj_property name="label">Video IN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/sam_r" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sam_r[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sam_r[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/sam_g" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sam_g[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sam_g[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/sam_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sam_b[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sam_b[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/sam_bright" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sam_bright</obj_property>
+      <obj_property name="ObjectShortName">sam_bright</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/hsync_pal" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hsync_pal</obj_property>
+      <obj_property name="ObjectShortName">hsync_pal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/vsync_pal" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync_pal</obj_property>
+      <obj_property name="ObjectShortName">vsync_pal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/ri" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ri[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ri[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/gi" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">gi[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gi[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/bi" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bi[2:0]</obj_property>
+      <obj_property name="ObjectShortName">bi[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider20" type="divider">
+      <obj_property name="label">Video OUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/r" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/g" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">g[2:0]</obj_property>
+      <obj_property name="ObjectShortName">g[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b[2:0]</obj_property>
+      <obj_property name="ObjectShortName">b[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/hsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hsync</obj_property>
+      <obj_property name="ObjectShortName">hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/vsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync</obj_property>
+      <obj_property name="ObjectShortName">vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider21" type="divider">
+      <obj_property name="label">Scandoubler</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/salida_vga/HSYNC_COUNT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">HSYNC_COUNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HSYNC_COUNT[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/salida_vga/VSYNC_COUNT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">VSYNC_COUNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">VSYNC_COUNT[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/salida_vga/addrvideo" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addrvideo[10:0]</obj_property>
+      <obj_property name="ObjectShortName">addrvideo[10:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addrvga[10:0]</obj_property>
+      <obj_property name="ObjectShortName">addrvga[10:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus39" type="vbus" db_ref_id="1">
+      <obj_property name="label">addvga</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga[9]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">addrvga[9]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga[8]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">addrvga[8]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga[7]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">addrvga[7]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga[6]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">addrvga[6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga[5]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">addrvga[5]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga[4]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">addrvga[4]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga[3]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">addrvga[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga[2]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">addrvga[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga[1]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">addrvga[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_scandoubler/salida_vga/addrvga[0]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">addrvga[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/salida_vga/totalhor" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">totalhor[9:0]</obj_property>
+      <obj_property name="ObjectShortName">totalhor[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/salida_vga/scaneffect" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">scaneffect</obj_property>
+      <obj_property name="ObjectShortName">scaneffect</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_scandoubler/salida_vga/cntvsync" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cntvsync[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cntvsync[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

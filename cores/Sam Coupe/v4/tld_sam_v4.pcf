@@ -1,0 +1,1460 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Feb 19 20:51:09 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "ear" LOCATE = SITE "A3" LEVEL 1;
+COMP "b<0>" LOCATE = SITE "B1" LEVEL 1;
+COMP "b<1>" LOCATE = SITE "C2" LEVEL 1;
+COMP "b<2>" LOCATE = SITE "H1" LEVEL 1;
+COMP "g<0>" LOCATE = SITE "F4" LEVEL 1;
+COMP "g<1>" LOCATE = SITE "F3" LEVEL 1;
+COMP "g<2>" LOCATE = SITE "G3" LEVEL 1;
+COMP "r<0>" LOCATE = SITE "H4" LEVEL 1;
+COMP "r<1>" LOCATE = SITE "H3" LEVEL 1;
+COMP "r<2>" LOCATE = SITE "H5" LEVEL 1;
+COMP "led" LOCATE = SITE "H14" LEVEL 1;
+COMP "dataps2" LOCATE = SITE "J3" LEVEL 1;
+COMP "hsync" LOCATE = SITE "B10" LEVEL 1;
+COMP "joyup" LOCATE = SITE "R14" LEVEL 1;
+COMP "vsync" LOCATE = SITE "A11" LEVEL 1;
+COMP "sd_cs_n" LOCATE = SITE "L1" LEVEL 1;
+COMP "sd_miso" LOCATE = SITE "J1" LEVEL 1;
+COMP "sd_mosi" LOCATE = SITE "K2" LEVEL 1;
+COMP "joyfire" LOCATE = SITE "P11" LEVEL 1;
+COMP "joyleft" LOCATE = SITE "R15" LEVEL 1;
+COMP "joydown" LOCATE = SITE "T14" LEVEL 1;
+COMP "sram_addr<0>" LOCATE = SITE "M2" LEVEL 1;
+COMP "sram_addr<1>" LOCATE = SITE "M1" LEVEL 1;
+COMP "sram_addr<2>" LOCATE = SITE "N1" LEVEL 1;
+COMP "sram_addr<3>" LOCATE = SITE "P2" LEVEL 1;
+COMP "sram_addr<4>" LOCATE = SITE "P1" LEVEL 1;
+COMP "sram_addr<5>" LOCATE = SITE "L3" LEVEL 1;
+COMP "sram_addr<6>" LOCATE = SITE "M4" LEVEL 1;
+COMP "sram_addr<7>" LOCATE = SITE "M3" LEVEL 1;
+COMP "sram_addr<8>" LOCATE = SITE "N4" LEVEL 1;
+COMP "sram_addr<9>" LOCATE = SITE "N3" LEVEL 1;
+COMP "sram_data<0>" LOCATE = SITE "J6" LEVEL 1;
+COMP "sram_data<1>" LOCATE = SITE "L5" LEVEL 1;
+COMP "sram_data<2>" LOCATE = SITE "K5" LEVEL 1;
+COMP "sram_data<3>" LOCATE = SITE "M6" LEVEL 1;
+COMP "sram_data<4>" LOCATE = SITE "P4" LEVEL 1;
+COMP "sram_data<5>" LOCATE = SITE "R3" LEVEL 1;
+COMP "sram_data<6>" LOCATE = SITE "T4" LEVEL 1;
+COMP "sram_data<7>" LOCATE = SITE "N6" LEVEL 1;
+COMP "audio_out_left" LOCATE = SITE "B2" LEVEL 1;
+COMP "clk50mhz" LOCATE = SITE "T8" LEVEL 1;
+COMP "mousedata" LOCATE = SITE "J4" LEVEL 1;
+COMP "clkps2" LOCATE = SITE "K3" LEVEL 1;
+COMP "sd_clk" LOCATE = SITE "K1" LEVEL 1;
+COMP "sram_we_n" LOCATE = SITE "M5" LEVEL 1;
+COMP "ram_oe_n" LOCATE = SITE "E1" LEVEL 1;
+COMP "joyright" LOCATE = SITE "P16" LEVEL 1;
+COMP "sram_addr<10>" LOCATE = SITE "C4" LEVEL 1;
+COMP "sram_addr<11>" LOCATE = SITE "C3" LEVEL 1;
+COMP "sram_addr<12>" LOCATE = SITE "D3" LEVEL 1;
+COMP "sram_addr<13>" LOCATE = SITE "E4" LEVEL 1;
+COMP "sram_addr<14>" LOCATE = SITE "E3" LEVEL 1;
+COMP "sram_addr<15>" LOCATE = SITE "F2" LEVEL 1;
+COMP "sram_addr<16>" LOCATE = SITE "F1" LEVEL 1;
+COMP "sram_addr<17>" LOCATE = SITE "G1" LEVEL 1;
+COMP "sram_addr<18>" LOCATE = SITE "H2" LEVEL 1;
+COMP "mouseclk" LOCATE = SITE "K6" LEVEL 1;
+COMP "ram_ce_n_o0" LOCATE = SITE "R2" LEVEL 1;
+COMP "ram_ce_n_o1" LOCATE = SITE "R1" LEVEL 1;
+COMP "ram_ce_n_o2" LOCATE = SITE "M10" LEVEL 1;
+COMP "ram_ce_n_o3" LOCATE = SITE "B3" LEVEL 1;
+COMP "audio_out_right" LOCATE = SITE "A2" LEVEL 1;
+TIMEGRP CLK48 = BEL "los_relojes/clk8" BEL "los_relojes/clkcounter_0" BEL
+        "los_relojes/clkcounter_1" BEL "los_relojes/clkcounter_2" BEL
+        "count_0" BEL "count_1" BEL "count_2" BEL "count_3" BEL "count_4" BEL
+        "count_5" BEL "count_6" BEL "los_relojes/clk8ct_1" BEL
+        "los_relojes/clk8ct_2" BEL "los_relojes/clkout1_buf" BEL
+        "MyCtrlModule/myosd/pixelcounter_3" BEL
+        "MyCtrlModule/myosd/pixelcounter_2" BEL
+        "MyCtrlModule/myosd/pixelcounter_1" BEL
+        "MyCtrlModule/myosd/pixelcounter_0" BEL
+        "MyCtrlModule/myosd/hcounter_13" BEL "MyCtrlModule/myosd/hcounter_12"
+        BEL "MyCtrlModule/myosd/hcounter_11" BEL
+        "MyCtrlModule/myosd/hcounter_10" BEL "MyCtrlModule/myosd/hcounter_9"
+        BEL "MyCtrlModule/myosd/hcounter_8" BEL
+        "MyCtrlModule/myosd/hcounter_7" BEL "MyCtrlModule/myosd/hcounter_6"
+        BEL "MyCtrlModule/myosd/hcounter_5" BEL
+        "MyCtrlModule/myosd/hcounter_4" BEL "MyCtrlModule/myosd/hcounter_3"
+        BEL "MyCtrlModule/myosd/hcounter_2" BEL
+        "MyCtrlModule/myosd/hcounter_1" BEL "MyCtrlModule/myosd/hcounter_0"
+        BEL "MyCtrlModule/myosd/vcounter_10" BEL
+        "MyCtrlModule/myosd/vcounter_9" BEL "MyCtrlModule/myosd/vcounter_8"
+        BEL "MyCtrlModule/myosd/vcounter_7" BEL
+        "MyCtrlModule/myosd/vcounter_6" BEL "MyCtrlModule/myosd/vcounter_5"
+        BEL "MyCtrlModule/myosd/vcounter_4" BEL
+        "MyCtrlModule/myosd/vcounter_3" BEL "MyCtrlModule/myosd/vcounter_2"
+        BEL "MyCtrlModule/myosd/vcounter_1" BEL
+        "MyCtrlModule/myosd/vcounter_0" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_11" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_10" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_9" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_8" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_7" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_6" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_5" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_4" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_3" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_2" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_1" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_0" BEL
+        "MyCtrlModule/myosd/xpixelpos_11" BEL
+        "MyCtrlModule/myosd/xpixelpos_10" BEL "MyCtrlModule/myosd/xpixelpos_9"
+        BEL "MyCtrlModule/myosd/xpixelpos_8" BEL
+        "MyCtrlModule/myosd/xpixelpos_7" BEL "MyCtrlModule/myosd/xpixelpos_6"
+        BEL "MyCtrlModule/myosd/xpixelpos_5" BEL
+        "MyCtrlModule/myosd/xpixelpos_4" BEL "MyCtrlModule/myosd/xpixelpos_3"
+        BEL "MyCtrlModule/myosd/xpixelpos_2" BEL
+        "MyCtrlModule/myosd/xpixelpos_1" BEL "MyCtrlModule/myosd/xpixelpos_0"
+        BEL "MyCtrlModule/myosd/charrom/q" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_8" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_7" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_6" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_5" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_4" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_3" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_2" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_1" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_0" BEL
+        "MyCtrlModule/myosd/newframe" BEL "MyCtrlModule/myosd/vframe_15" BEL
+        "MyCtrlModule/myosd/vframe_14" BEL "MyCtrlModule/myosd/vframe_13" BEL
+        "MyCtrlModule/myosd/vframe_12" BEL "MyCtrlModule/myosd/vframe_11" BEL
+        "MyCtrlModule/myosd/vframe_10" BEL "MyCtrlModule/myosd/vframe_9" BEL
+        "MyCtrlModule/myosd/vframe_8" BEL "MyCtrlModule/myosd/vframe_7" BEL
+        "MyCtrlModule/myosd/vframe_6" BEL "MyCtrlModule/myosd/vframe_5" BEL
+        "MyCtrlModule/myosd/vframe_4" BEL "MyCtrlModule/myosd/vframe_3" BEL
+        "MyCtrlModule/myosd/vframe_2" BEL "MyCtrlModule/myosd/vframe_1" BEL
+        "MyCtrlModule/myosd/vframe_0" BEL "MyCtrlModule/myosd/vsync_p" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_8" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_7" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_6" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_5" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_4" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_3" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_2" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_1" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_0" BEL
+        "MyCtrlModule/myosd/pix" BEL "MyCtrlModule/myosd/newline" BEL
+        "MyCtrlModule/myosd/xpos_11" BEL "MyCtrlModule/myosd/xpos_10" BEL
+        "MyCtrlModule/myosd/xpos_9" BEL "MyCtrlModule/myosd/xpos_8" BEL
+        "MyCtrlModule/myosd/xpos_7" BEL "MyCtrlModule/myosd/xpos_6" BEL
+        "MyCtrlModule/myosd/xpos_5" BEL "MyCtrlModule/myosd/xpos_4" BEL
+        "MyCtrlModule/myosd/xpos_3" BEL "MyCtrlModule/myosd/xpos_2" BEL
+        "MyCtrlModule/myosd/xpos_1" BEL "MyCtrlModule/myosd/xpos_0" BEL
+        "MyCtrlModule/myosd/ypos_11" BEL "MyCtrlModule/myosd/ypos_10" BEL
+        "MyCtrlModule/myosd/ypos_9" BEL "MyCtrlModule/myosd/ypos_8" BEL
+        "MyCtrlModule/myosd/ypos_7" BEL "MyCtrlModule/myosd/ypos_6" BEL
+        "MyCtrlModule/myosd/ypos_5" BEL "MyCtrlModule/myosd/ypos_4" BEL
+        "MyCtrlModule/myosd/ypos_3" BEL "MyCtrlModule/myosd/ypos_2" BEL
+        "MyCtrlModule/myosd/ypos_1" BEL "MyCtrlModule/myosd/ypos_0" BEL
+        "MyCtrlModule/myosd/osd_enable" BEL "MyCtrlModule/myosd/pixelclock_3"
+        BEL "MyCtrlModule/myosd/pixelclock_2" BEL
+        "MyCtrlModule/myosd/pixelclock_1" BEL
+        "MyCtrlModule/myosd/pixelclock_0" BEL "MyCtrlModule/myosd/vsync_pol"
+        BEL "MyCtrlModule/myosd/hsync_pol" BEL "MyCtrlModule/myosd/hframe_15"
+        BEL "MyCtrlModule/myosd/hframe_14" BEL "MyCtrlModule/myosd/hframe_13"
+        BEL "MyCtrlModule/myosd/hframe_12" BEL "MyCtrlModule/myosd/hframe_11"
+        BEL "MyCtrlModule/myosd/hframe_10" BEL "MyCtrlModule/myosd/hframe_9"
+        BEL "MyCtrlModule/myosd/hframe_8" BEL "MyCtrlModule/myosd/hframe_7"
+        BEL "MyCtrlModule/myosd/hframe_6" BEL "MyCtrlModule/myosd/hframe_5"
+        BEL "MyCtrlModule/myosd/hframe_4" BEL "MyCtrlModule/myosd/hframe_3"
+        BEL "MyCtrlModule/myosd/hframe_2" BEL "MyCtrlModule/myosd/hframe_1"
+        BEL "MyCtrlModule/myosd/hframe_0" BEL "MyCtrlModule/myosd/hsync_p" BEL
+        "MyCtrlModule/UART.uart/txcounter_8" BEL
+        "MyCtrlModule/UART.uart/txcounter_7" BEL
+        "MyCtrlModule/UART.uart/txcounter_6" BEL
+        "MyCtrlModule/UART.uart/txcounter_5" BEL
+        "MyCtrlModule/UART.uart/txcounter_4" BEL
+        "MyCtrlModule/UART.uart/txcounter_3" BEL
+        "MyCtrlModule/UART.uart/txcounter_2" BEL
+        "MyCtrlModule/UART.uart/txcounter_1" BEL
+        "MyCtrlModule/UART.uart/txcounter_0" BEL
+        "MyCtrlModule/UART.uart/txbuffer_16" BEL
+        "MyCtrlModule/UART.uart/txbuffer_15" BEL
+        "MyCtrlModule/UART.uart/txbuffer_14" BEL
+        "MyCtrlModule/UART.uart/txbuffer_13" BEL
+        "MyCtrlModule/UART.uart/txbuffer_12" BEL
+        "MyCtrlModule/UART.uart/txbuffer_11" BEL
+        "MyCtrlModule/UART.uart/txbuffer_10" BEL
+        "MyCtrlModule/UART.uart/txbuffer_9" BEL
+        "MyCtrlModule/UART.uart/txbuffer_8" BEL
+        "MyCtrlModule/UART.uart/txclock" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/prev_demand" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_dend" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_7" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_6" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_5" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_4" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_3" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_2" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_1" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_0" BEL
+        "MyCtrlModule/intcontroller/status_1" BEL
+        "MyCtrlModule/intcontroller/status_0" BEL
+        "MyCtrlModule/intcontroller/int" BEL
+        "MyCtrlModule/intcontroller/pending_2" BEL
+        "MyCtrlModule/intcontroller/pending_1" BEL
+        "MyCtrlModule/intcontroller/pending_0" BEL
+        "maquina/ps2_keyb/debounce_count_9" BEL
+        "maquina/ps2_keyb/debounce_count_8" BEL
+        "maquina/ps2_keyb/debounce_count_7" BEL
+        "maquina/ps2_keyb/debounce_count_6" BEL
+        "maquina/ps2_keyb/debounce_count_5" BEL
+        "maquina/ps2_keyb/debounce_count_4" BEL
+        "maquina/ps2_keyb/debounce_count_3" BEL
+        "maquina/ps2_keyb/debounce_count_2" BEL
+        "maquina/ps2_keyb/debounce_count_1" BEL
+        "maquina/ps2_keyb/debounce_count_0" BEL
+        "maquina/ps2_keyb/kbd_clk_last" BEL
+        "maquina/ps2_keyb/kbd_clk_debounced" BEL
+        "maquina/el_saa/outmix_l/out_7" BEL "maquina/el_saa/outmix_l/out_6"
+        BEL "maquina/el_saa/outmix_l/out_5" BEL
+        "maquina/el_saa/outmix_l/out_4" BEL "maquina/el_saa/outmix_l/out_3"
+        BEL "maquina/el_saa/outmix_l/out_2" BEL
+        "maquina/el_saa/outmix_l/out_1" BEL "maquina/el_saa/outmix_l/out_0"
+        BEL "maquina/el_saa/outmix_r/out_7" BEL
+        "maquina/el_saa/outmix_r/out_6" BEL "maquina/el_saa/outmix_r/out_5"
+        BEL "maquina/el_saa/outmix_r/out_4" BEL
+        "maquina/el_saa/outmix_r/out_3" BEL "maquina/el_saa/outmix_r/out_2"
+        BEL "maquina/el_saa/outmix_r/out_1" BEL
+        "maquina/el_saa/outmix_r/out_0" BEL "maquina/el_saa/outmix_r/ced" BEL
+        "maquina/el_saa/addr_4" BEL "maquina/el_saa/addr_3" BEL
+        "maquina/el_saa/addr_2" BEL "maquina/el_saa/addr_1" BEL
+        "maquina/el_saa/addr_0" BEL "maquina/el_saa/wr" BEL
+        "maquina/el_saa/old_wr" BEL "maquina/el_saa/envelope0_7" BEL
+        "maquina/el_saa/envelope0_5" BEL "maquina/el_saa/envelope0_4" BEL
+        "maquina/el_saa/envelope0_3" BEL "maquina/el_saa/envelope0_2" BEL
+        "maquina/el_saa/envelope0_1" BEL "maquina/el_saa/envelope0_0" BEL
+        "maquina/el_saa/envelope1_7" BEL "maquina/el_saa/envelope1_5" BEL
+        "maquina/el_saa/envelope1_4" BEL "maquina/el_saa/envelope1_3" BEL
+        "maquina/el_saa/envelope1_2" BEL "maquina/el_saa/envelope1_1" BEL
+        "maquina/el_saa/envelope1_0" BEL "maquina/el_saa/ctrl_1" BEL
+        "maquina/el_saa/ctrl_0" BEL "maquina/el_saa/noiseenable_5" BEL
+        "maquina/el_saa/noiseenable_4" BEL "maquina/el_saa/noiseenable_3" BEL
+        "maquina/el_saa/noiseenable_2" BEL "maquina/el_saa/noiseenable_1" BEL
+        "maquina/el_saa/noiseenable_0" BEL "maquina/el_saa/noisegen_5" BEL
+        "maquina/el_saa/noisegen_4" BEL "maquina/el_saa/noisegen_1" BEL
+        "maquina/el_saa/noisegen_0" BEL "maquina/el_saa/freqenable_5" BEL
+        "maquina/el_saa/freqenable_4" BEL "maquina/el_saa/freqenable_3" BEL
+        "maquina/el_saa/freqenable_2" BEL "maquina/el_saa/freqenable_1" BEL
+        "maquina/el_saa/freqenable_0" BEL "maquina/el_saa/oct32_6" BEL
+        "maquina/el_saa/oct32_5" BEL "maquina/el_saa/oct32_4" BEL
+        "maquina/el_saa/oct32_2" BEL "maquina/el_saa/oct32_1" BEL
+        "maquina/el_saa/oct32_0" BEL "maquina/el_saa/oct54_6" BEL
+        "maquina/el_saa/oct54_5" BEL "maquina/el_saa/oct54_4" BEL
+        "maquina/el_saa/oct54_2" BEL "maquina/el_saa/oct54_1" BEL
+        "maquina/el_saa/oct54_0" BEL "maquina/el_saa/oct10_6" BEL
+        "maquina/el_saa/oct10_5" BEL "maquina/el_saa/oct10_4" BEL
+        "maquina/el_saa/oct10_2" BEL "maquina/el_saa/oct10_1" BEL
+        "maquina/el_saa/oct10_0" BEL "maquina/el_saa/freq1_7" BEL
+        "maquina/el_saa/freq1_6" BEL "maquina/el_saa/freq1_5" BEL
+        "maquina/el_saa/freq1_4" BEL "maquina/el_saa/freq1_3" BEL
+        "maquina/el_saa/freq1_2" BEL "maquina/el_saa/freq1_1" BEL
+        "maquina/el_saa/freq1_0" BEL "maquina/el_saa/freq2_7" BEL
+        "maquina/el_saa/freq2_6" BEL "maquina/el_saa/freq2_5" BEL
+        "maquina/el_saa/freq2_4" BEL "maquina/el_saa/freq2_3" BEL
+        "maquina/el_saa/freq2_2" BEL "maquina/el_saa/freq2_1" BEL
+        "maquina/el_saa/freq2_0" BEL "maquina/el_saa/freq0_7" BEL
+        "maquina/el_saa/freq0_6" BEL "maquina/el_saa/freq0_5" BEL
+        "maquina/el_saa/freq0_4" BEL "maquina/el_saa/freq0_3" BEL
+        "maquina/el_saa/freq0_2" BEL "maquina/el_saa/freq0_1" BEL
+        "maquina/el_saa/freq0_0" BEL "maquina/el_saa/freq4_7" BEL
+        "maquina/el_saa/freq4_6" BEL "maquina/el_saa/freq4_5" BEL
+        "maquina/el_saa/freq4_4" BEL "maquina/el_saa/freq4_3" BEL
+        "maquina/el_saa/freq4_2" BEL "maquina/el_saa/freq4_1" BEL
+        "maquina/el_saa/freq4_0" BEL "maquina/el_saa/freq5_7" BEL
+        "maquina/el_saa/freq5_6" BEL "maquina/el_saa/freq5_5" BEL
+        "maquina/el_saa/freq5_4" BEL "maquina/el_saa/freq5_3" BEL
+        "maquina/el_saa/freq5_2" BEL "maquina/el_saa/freq5_1" BEL
+        "maquina/el_saa/freq5_0" BEL "maquina/el_saa/freq3_7" BEL
+        "maquina/el_saa/freq3_6" BEL "maquina/el_saa/freq3_5" BEL
+        "maquina/el_saa/freq3_4" BEL "maquina/el_saa/freq3_3" BEL
+        "maquina/el_saa/freq3_2" BEL "maquina/el_saa/freq3_1" BEL
+        "maquina/el_saa/freq3_0" BEL "maquina/el_saa/amplit1_7" BEL
+        "maquina/el_saa/amplit1_6" BEL "maquina/el_saa/amplit1_5" BEL
+        "maquina/el_saa/amplit1_4" BEL "maquina/el_saa/amplit1_3" BEL
+        "maquina/el_saa/amplit1_2" BEL "maquina/el_saa/amplit1_1" BEL
+        "maquina/el_saa/amplit1_0" BEL "maquina/el_saa/amplit2_7" BEL
+        "maquina/el_saa/amplit2_6" BEL "maquina/el_saa/amplit2_5" BEL
+        "maquina/el_saa/amplit2_4" BEL "maquina/el_saa/amplit2_3" BEL
+        "maquina/el_saa/amplit2_2" BEL "maquina/el_saa/amplit2_1" BEL
+        "maquina/el_saa/amplit2_0" BEL "maquina/el_saa/amplit0_7" BEL
+        "maquina/el_saa/amplit0_6" BEL "maquina/el_saa/amplit0_5" BEL
+        "maquina/el_saa/amplit0_4" BEL "maquina/el_saa/amplit0_3" BEL
+        "maquina/el_saa/amplit0_2" BEL "maquina/el_saa/amplit0_1" BEL
+        "maquina/el_saa/amplit0_0" BEL "maquina/el_saa/amplit4_7" BEL
+        "maquina/el_saa/amplit4_6" BEL "maquina/el_saa/amplit4_5" BEL
+        "maquina/el_saa/amplit4_4" BEL "maquina/el_saa/amplit4_3" BEL
+        "maquina/el_saa/amplit4_2" BEL "maquina/el_saa/amplit4_1" BEL
+        "maquina/el_saa/amplit4_0" BEL "maquina/el_saa/amplit5_7" BEL
+        "maquina/el_saa/amplit5_6" BEL "maquina/el_saa/amplit5_5" BEL
+        "maquina/el_saa/amplit5_4" BEL "maquina/el_saa/amplit5_3" BEL
+        "maquina/el_saa/amplit5_2" BEL "maquina/el_saa/amplit5_1" BEL
+        "maquina/el_saa/amplit5_0" BEL "maquina/el_saa/amplit3_7" BEL
+        "maquina/el_saa/amplit3_6" BEL "maquina/el_saa/amplit3_5" BEL
+        "maquina/el_saa/amplit3_4" BEL "maquina/el_saa/amplit3_3" BEL
+        "maquina/el_saa/amplit3_2" BEL "maquina/el_saa/amplit3_1" BEL
+        "maquina/el_saa/amplit3_0" BEL "maquina/el_saa/top/amp2/counter_3" BEL
+        "maquina/el_saa/top/amp2/counter_2" BEL
+        "maquina/el_saa/top/amp2/counter_1" BEL
+        "maquina/el_saa/top/amp2/counter_0" BEL
+        "maquina/el_saa/top/amp2/new_data" BEL "maquina/el_saa/top/amp2/clock"
+        BEL "maquina/el_saa/top/amp2/shape_2" BEL
+        "maquina/el_saa/top/amp2/shape_1" BEL
+        "maquina/el_saa/top/amp2/shape_0" BEL "maquina/el_saa/top/amp2/stereo"
+        BEL "maquina/el_saa/bottom/amp2/counter_3" BEL
+        "maquina/el_saa/bottom/amp2/counter_2" BEL
+        "maquina/el_saa/bottom/amp2/counter_1" BEL
+        "maquina/el_saa/bottom/amp2/counter_0" BEL
+        "maquina/el_saa/bottom/amp2/new_data" BEL
+        "maquina/el_saa/bottom/amp2/clock" BEL
+        "maquina/el_saa/bottom/amp2/shape_2" BEL
+        "maquina/el_saa/bottom/amp2/shape_1" BEL
+        "maquina/el_saa/bottom/amp2/shape_0" BEL
+        "maquina/el_saa/bottom/amp2/stereo" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_16" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_15" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_14" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_13" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_12" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_11" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_10" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_9" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_8" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_7" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_6" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_5" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_4" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_3" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_2" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_1" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_0" BEL
+        "maquina/el_saa/top/noise_gen/count_10" BEL
+        "maquina/el_saa/top/noise_gen/count_9" BEL
+        "maquina/el_saa/top/noise_gen/count_8" BEL
+        "maquina/el_saa/top/noise_gen/count_7" BEL
+        "maquina/el_saa/top/noise_gen/count_6" BEL
+        "maquina/el_saa/top/noise_gen/count_5" BEL
+        "maquina/el_saa/top/noise_gen/count_4" BEL
+        "maquina/el_saa/top/noise_gen/count_3" BEL
+        "maquina/el_saa/top/noise_gen/count_2" BEL
+        "maquina/el_saa/top/noise_gen/count_1" BEL
+        "maquina/el_saa/top/noise_gen/count_0" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_16" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_15" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_14" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_13" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_12" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_11" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_10" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_9" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_8" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_7" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_6" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_5" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_4" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_3" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_2" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_1" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_0" BEL
+        "maquina/el_saa/bottom/noise_gen/count_10" BEL
+        "maquina/el_saa/bottom/noise_gen/count_9" BEL
+        "maquina/el_saa/bottom/noise_gen/count_8" BEL
+        "maquina/el_saa/bottom/noise_gen/count_7" BEL
+        "maquina/el_saa/bottom/noise_gen/count_6" BEL
+        "maquina/el_saa/bottom/noise_gen/count_5" BEL
+        "maquina/el_saa/bottom/noise_gen/count_4" BEL
+        "maquina/el_saa/bottom/noise_gen/count_3" BEL
+        "maquina/el_saa/bottom/noise_gen/count_2" BEL
+        "maquina/el_saa/bottom/noise_gen/count_1" BEL
+        "maquina/el_saa/bottom/noise_gen/count_0" BEL
+        "maquina/el_saa/top/freq_gen0/pulse" BEL
+        "maquina/el_saa/top/freq_gen0/out" BEL
+        "maquina/el_saa/top/freq_gen0/count_16" BEL
+        "maquina/el_saa/top/freq_gen0/count_15" BEL
+        "maquina/el_saa/top/freq_gen0/count_14" BEL
+        "maquina/el_saa/top/freq_gen0/count_13" BEL
+        "maquina/el_saa/top/freq_gen0/count_12" BEL
+        "maquina/el_saa/top/freq_gen0/count_11" BEL
+        "maquina/el_saa/top/freq_gen0/count_10" BEL
+        "maquina/el_saa/top/freq_gen0/count_9" BEL
+        "maquina/el_saa/top/freq_gen0/count_8" BEL
+        "maquina/el_saa/top/freq_gen0/count_7" BEL
+        "maquina/el_saa/top/freq_gen0/count_6" BEL
+        "maquina/el_saa/top/freq_gen0/count_5" BEL
+        "maquina/el_saa/top/freq_gen0/count_4" BEL
+        "maquina/el_saa/top/freq_gen0/count_3" BEL
+        "maquina/el_saa/top/freq_gen0/count_2" BEL
+        "maquina/el_saa/top/freq_gen0/count_1" BEL
+        "maquina/el_saa/top/freq_gen0/count_0" BEL
+        "maquina/el_saa/top/freq_gen1/pulse" BEL
+        "maquina/el_saa/top/freq_gen1/out" BEL
+        "maquina/el_saa/top/freq_gen1/count_16" BEL
+        "maquina/el_saa/top/freq_gen1/count_15" BEL
+        "maquina/el_saa/top/freq_gen1/count_14" BEL
+        "maquina/el_saa/top/freq_gen1/count_13" BEL
+        "maquina/el_saa/top/freq_gen1/count_12" BEL
+        "maquina/el_saa/top/freq_gen1/count_11" BEL
+        "maquina/el_saa/top/freq_gen1/count_10" BEL
+        "maquina/el_saa/top/freq_gen1/count_9" BEL
+        "maquina/el_saa/top/freq_gen1/count_8" BEL
+        "maquina/el_saa/top/freq_gen1/count_7" BEL
+        "maquina/el_saa/top/freq_gen1/count_6" BEL
+        "maquina/el_saa/top/freq_gen1/count_5" BEL
+        "maquina/el_saa/top/freq_gen1/count_4" BEL
+        "maquina/el_saa/top/freq_gen1/count_3" BEL
+        "maquina/el_saa/top/freq_gen1/count_2" BEL
+        "maquina/el_saa/top/freq_gen1/count_1" BEL
+        "maquina/el_saa/top/freq_gen2/out" BEL
+        "maquina/el_saa/top/freq_gen2/count_16" BEL
+        "maquina/el_saa/top/freq_gen2/count_15" BEL
+        "maquina/el_saa/top/freq_gen2/count_14" BEL
+        "maquina/el_saa/top/freq_gen2/count_13" BEL
+        "maquina/el_saa/top/freq_gen2/count_12" BEL
+        "maquina/el_saa/top/freq_gen2/count_11" BEL
+        "maquina/el_saa/top/freq_gen2/count_10" BEL
+        "maquina/el_saa/top/freq_gen2/count_9" BEL
+        "maquina/el_saa/top/freq_gen2/count_8" BEL
+        "maquina/el_saa/top/freq_gen2/count_7" BEL
+        "maquina/el_saa/top/freq_gen2/count_6" BEL
+        "maquina/el_saa/top/freq_gen2/count_5" BEL
+        "maquina/el_saa/top/freq_gen2/count_4" BEL
+        "maquina/el_saa/top/freq_gen2/count_3" BEL
+        "maquina/el_saa/top/freq_gen2/count_2" BEL
+        "maquina/el_saa/top/freq_gen2/count_1" BEL
+        "maquina/el_saa/bottom/freq_gen0/pulse" BEL
+        "maquina/el_saa/bottom/freq_gen0/out" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_16" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_15" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_14" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_13" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_12" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_11" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_10" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_9" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_8" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_7" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_6" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_5" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_4" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_3" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_2" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_1" BEL
+        "maquina/el_saa/bottom/freq_gen1/pulse" BEL
+        "maquina/el_saa/bottom/freq_gen1/out" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_16" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_15" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_14" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_13" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_12" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_11" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_10" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_9" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_8" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_7" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_6" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_5" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_4" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_3" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_2" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_1" BEL
+        "maquina/el_saa/bottom/freq_gen2/out" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_16" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_15" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_14" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_13" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_12" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_11" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_10" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_9" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_8" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_7" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_6" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_5" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_4" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_3" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_2" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_1" BEL
+        "MyCtrlModule/myosd/vwindowactive" BEL
+        "MyCtrlModule/myosd/hwindowactive" BEL
+        "MyCtrlModule/UART.uart/txready" BEL "MyCtrlModule/UART.uart/txstate"
+        BEL "MyCtrlModule/TAPE2.taploader_inst/ack" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/data_req" BEL
+        "maquina/el_saa/top/amp2/phase" BEL "maquina/el_saa/bottom/amp2/phase"
+        BEL "MyCtrlModule/myosd/charram/Mram_mem33/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem33/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem32/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem32/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem30/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem30/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem29/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem29/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem31/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem31/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem27/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem27/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem26/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem26/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem28/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem28/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem124/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem124/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem122/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem122/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem121/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem121/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem123/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem123/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem119/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem119/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem118/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem118/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem120/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem120/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem117/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem117/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem10_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem10_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem10_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem10_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem11_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem11_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem11_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem11_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem110_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem110_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem110_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem110_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem111_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem111_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem111_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem111_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem112_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem112_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem112_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem112_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem113_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem113_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem113_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem113_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem114_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem114_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem114_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem114_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem115_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem115_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem115_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem115_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem116_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem116_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem116_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem116_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem12_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem12_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem12_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem12_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem125_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem125_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem125_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem125_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem13_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem13_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem13_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem13_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem14_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem14_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem14_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem14_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem15_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem15_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem15_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem15_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem16_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem16_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem16_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem16_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem17_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem17_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem17_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem17_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem18_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem18_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem18_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem18_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem19_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem19_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem19_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem19_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem2_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem2_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem2_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem2_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem20_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem20_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem20_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem20_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem21_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem21_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem21_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem21_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem22_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem22_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem22_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem22_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem23_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem23_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem23_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem23_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem24_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem24_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem24_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem24_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem25_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem25_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem25_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem25_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem3_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem3_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem3_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem3_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem4_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem4_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem4_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem4_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem5_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem5_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem5_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem5_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem6_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem6_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem6_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem6_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem7_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem7_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem7_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem7_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem8_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem8_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem8_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem8_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem9_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem9_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem9_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem9_RAMD" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem482/DP" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem482/SP" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem32_RAMA" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem32_RAMB" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem32_RAMC" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem32_RAMD";
+TIMEGRP los_relojes_clkout0 = BEL "los_relojes/clk8" BEL
+        "los_relojes/clkcounter_0" BEL "los_relojes/clkcounter_1" BEL
+        "los_relojes/clkcounter_2" BEL "count_0" BEL "count_1" BEL "count_2"
+        BEL "count_3" BEL "count_4" BEL "count_5" BEL "count_6" BEL
+        "los_relojes/clk8ct_1" BEL "los_relojes/clk8ct_2" BEL
+        "los_relojes/clkout1_buf" BEL "MyCtrlModule/myosd/pixelcounter_3" BEL
+        "MyCtrlModule/myosd/pixelcounter_2" BEL
+        "MyCtrlModule/myosd/pixelcounter_1" BEL
+        "MyCtrlModule/myosd/pixelcounter_0" BEL
+        "MyCtrlModule/myosd/hcounter_13" BEL "MyCtrlModule/myosd/hcounter_12"
+        BEL "MyCtrlModule/myosd/hcounter_11" BEL
+        "MyCtrlModule/myosd/hcounter_10" BEL "MyCtrlModule/myosd/hcounter_9"
+        BEL "MyCtrlModule/myosd/hcounter_8" BEL
+        "MyCtrlModule/myosd/hcounter_7" BEL "MyCtrlModule/myosd/hcounter_6"
+        BEL "MyCtrlModule/myosd/hcounter_5" BEL
+        "MyCtrlModule/myosd/hcounter_4" BEL "MyCtrlModule/myosd/hcounter_3"
+        BEL "MyCtrlModule/myosd/hcounter_2" BEL
+        "MyCtrlModule/myosd/hcounter_1" BEL "MyCtrlModule/myosd/hcounter_0"
+        BEL "MyCtrlModule/myosd/vcounter_10" BEL
+        "MyCtrlModule/myosd/vcounter_9" BEL "MyCtrlModule/myosd/vcounter_8"
+        BEL "MyCtrlModule/myosd/vcounter_7" BEL
+        "MyCtrlModule/myosd/vcounter_6" BEL "MyCtrlModule/myosd/vcounter_5"
+        BEL "MyCtrlModule/myosd/vcounter_4" BEL
+        "MyCtrlModule/myosd/vcounter_3" BEL "MyCtrlModule/myosd/vcounter_2"
+        BEL "MyCtrlModule/myosd/vcounter_1" BEL
+        "MyCtrlModule/myosd/vcounter_0" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_11" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_10" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_9" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_8" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_7" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_6" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_5" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_4" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_3" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_2" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_1" BEL
+        "MyCtrlModule/myosd/ypixelpostmp_0" BEL
+        "MyCtrlModule/myosd/xpixelpos_11" BEL
+        "MyCtrlModule/myosd/xpixelpos_10" BEL "MyCtrlModule/myosd/xpixelpos_9"
+        BEL "MyCtrlModule/myosd/xpixelpos_8" BEL
+        "MyCtrlModule/myosd/xpixelpos_7" BEL "MyCtrlModule/myosd/xpixelpos_6"
+        BEL "MyCtrlModule/myosd/xpixelpos_5" BEL
+        "MyCtrlModule/myosd/xpixelpos_4" BEL "MyCtrlModule/myosd/xpixelpos_3"
+        BEL "MyCtrlModule/myosd/xpixelpos_2" BEL
+        "MyCtrlModule/myosd/xpixelpos_1" BEL "MyCtrlModule/myosd/xpixelpos_0"
+        BEL "MyCtrlModule/myosd/charrom/q" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_8" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_7" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_6" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_5" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_4" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_3" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_2" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_1" BEL
+        "MyCtrlModule/myosd/charram/address_latched1_0" BEL
+        "MyCtrlModule/myosd/newframe" BEL "MyCtrlModule/myosd/vframe_15" BEL
+        "MyCtrlModule/myosd/vframe_14" BEL "MyCtrlModule/myosd/vframe_13" BEL
+        "MyCtrlModule/myosd/vframe_12" BEL "MyCtrlModule/myosd/vframe_11" BEL
+        "MyCtrlModule/myosd/vframe_10" BEL "MyCtrlModule/myosd/vframe_9" BEL
+        "MyCtrlModule/myosd/vframe_8" BEL "MyCtrlModule/myosd/vframe_7" BEL
+        "MyCtrlModule/myosd/vframe_6" BEL "MyCtrlModule/myosd/vframe_5" BEL
+        "MyCtrlModule/myosd/vframe_4" BEL "MyCtrlModule/myosd/vframe_3" BEL
+        "MyCtrlModule/myosd/vframe_2" BEL "MyCtrlModule/myosd/vframe_1" BEL
+        "MyCtrlModule/myosd/vframe_0" BEL "MyCtrlModule/myosd/vsync_p" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_8" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_7" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_6" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_5" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_4" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_3" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_2" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_1" BEL
+        "MyCtrlModule/myosd/charram/address_latched2_0" BEL
+        "MyCtrlModule/myosd/pix" BEL "MyCtrlModule/myosd/newline" BEL
+        "MyCtrlModule/myosd/xpos_11" BEL "MyCtrlModule/myosd/xpos_10" BEL
+        "MyCtrlModule/myosd/xpos_9" BEL "MyCtrlModule/myosd/xpos_8" BEL
+        "MyCtrlModule/myosd/xpos_7" BEL "MyCtrlModule/myosd/xpos_6" BEL
+        "MyCtrlModule/myosd/xpos_5" BEL "MyCtrlModule/myosd/xpos_4" BEL
+        "MyCtrlModule/myosd/xpos_3" BEL "MyCtrlModule/myosd/xpos_2" BEL
+        "MyCtrlModule/myosd/xpos_1" BEL "MyCtrlModule/myosd/xpos_0" BEL
+        "MyCtrlModule/myosd/ypos_11" BEL "MyCtrlModule/myosd/ypos_10" BEL
+        "MyCtrlModule/myosd/ypos_9" BEL "MyCtrlModule/myosd/ypos_8" BEL
+        "MyCtrlModule/myosd/ypos_7" BEL "MyCtrlModule/myosd/ypos_6" BEL
+        "MyCtrlModule/myosd/ypos_5" BEL "MyCtrlModule/myosd/ypos_4" BEL
+        "MyCtrlModule/myosd/ypos_3" BEL "MyCtrlModule/myosd/ypos_2" BEL
+        "MyCtrlModule/myosd/ypos_1" BEL "MyCtrlModule/myosd/ypos_0" BEL
+        "MyCtrlModule/myosd/osd_enable" BEL "MyCtrlModule/myosd/pixelclock_3"
+        BEL "MyCtrlModule/myosd/pixelclock_2" BEL
+        "MyCtrlModule/myosd/pixelclock_1" BEL
+        "MyCtrlModule/myosd/pixelclock_0" BEL "MyCtrlModule/myosd/vsync_pol"
+        BEL "MyCtrlModule/myosd/hsync_pol" BEL "MyCtrlModule/myosd/hframe_15"
+        BEL "MyCtrlModule/myosd/hframe_14" BEL "MyCtrlModule/myosd/hframe_13"
+        BEL "MyCtrlModule/myosd/hframe_12" BEL "MyCtrlModule/myosd/hframe_11"
+        BEL "MyCtrlModule/myosd/hframe_10" BEL "MyCtrlModule/myosd/hframe_9"
+        BEL "MyCtrlModule/myosd/hframe_8" BEL "MyCtrlModule/myosd/hframe_7"
+        BEL "MyCtrlModule/myosd/hframe_6" BEL "MyCtrlModule/myosd/hframe_5"
+        BEL "MyCtrlModule/myosd/hframe_4" BEL "MyCtrlModule/myosd/hframe_3"
+        BEL "MyCtrlModule/myosd/hframe_2" BEL "MyCtrlModule/myosd/hframe_1"
+        BEL "MyCtrlModule/myosd/hframe_0" BEL "MyCtrlModule/myosd/hsync_p" BEL
+        "MyCtrlModule/UART.uart/txcounter_8" BEL
+        "MyCtrlModule/UART.uart/txcounter_7" BEL
+        "MyCtrlModule/UART.uart/txcounter_6" BEL
+        "MyCtrlModule/UART.uart/txcounter_5" BEL
+        "MyCtrlModule/UART.uart/txcounter_4" BEL
+        "MyCtrlModule/UART.uart/txcounter_3" BEL
+        "MyCtrlModule/UART.uart/txcounter_2" BEL
+        "MyCtrlModule/UART.uart/txcounter_1" BEL
+        "MyCtrlModule/UART.uart/txcounter_0" BEL
+        "MyCtrlModule/UART.uart/txbuffer_16" BEL
+        "MyCtrlModule/UART.uart/txbuffer_15" BEL
+        "MyCtrlModule/UART.uart/txbuffer_14" BEL
+        "MyCtrlModule/UART.uart/txbuffer_13" BEL
+        "MyCtrlModule/UART.uart/txbuffer_12" BEL
+        "MyCtrlModule/UART.uart/txbuffer_11" BEL
+        "MyCtrlModule/UART.uart/txbuffer_10" BEL
+        "MyCtrlModule/UART.uart/txbuffer_9" BEL
+        "MyCtrlModule/UART.uart/txbuffer_8" BEL
+        "MyCtrlModule/UART.uart/txclock" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/prev_demand" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_dend" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_7" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_6" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_5" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_4" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_3" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_2" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_1" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/tap_data_0" BEL
+        "MyCtrlModule/intcontroller/status_1" BEL
+        "MyCtrlModule/intcontroller/status_0" BEL
+        "MyCtrlModule/intcontroller/int" BEL
+        "MyCtrlModule/intcontroller/pending_2" BEL
+        "MyCtrlModule/intcontroller/pending_1" BEL
+        "MyCtrlModule/intcontroller/pending_0" BEL
+        "maquina/ps2_keyb/debounce_count_9" BEL
+        "maquina/ps2_keyb/debounce_count_8" BEL
+        "maquina/ps2_keyb/debounce_count_7" BEL
+        "maquina/ps2_keyb/debounce_count_6" BEL
+        "maquina/ps2_keyb/debounce_count_5" BEL
+        "maquina/ps2_keyb/debounce_count_4" BEL
+        "maquina/ps2_keyb/debounce_count_3" BEL
+        "maquina/ps2_keyb/debounce_count_2" BEL
+        "maquina/ps2_keyb/debounce_count_1" BEL
+        "maquina/ps2_keyb/debounce_count_0" BEL
+        "maquina/ps2_keyb/kbd_clk_last" BEL
+        "maquina/ps2_keyb/kbd_clk_debounced" BEL
+        "maquina/el_saa/outmix_l/out_7" BEL "maquina/el_saa/outmix_l/out_6"
+        BEL "maquina/el_saa/outmix_l/out_5" BEL
+        "maquina/el_saa/outmix_l/out_4" BEL "maquina/el_saa/outmix_l/out_3"
+        BEL "maquina/el_saa/outmix_l/out_2" BEL
+        "maquina/el_saa/outmix_l/out_1" BEL "maquina/el_saa/outmix_l/out_0"
+        BEL "maquina/el_saa/outmix_r/out_7" BEL
+        "maquina/el_saa/outmix_r/out_6" BEL "maquina/el_saa/outmix_r/out_5"
+        BEL "maquina/el_saa/outmix_r/out_4" BEL
+        "maquina/el_saa/outmix_r/out_3" BEL "maquina/el_saa/outmix_r/out_2"
+        BEL "maquina/el_saa/outmix_r/out_1" BEL
+        "maquina/el_saa/outmix_r/out_0" BEL "maquina/el_saa/outmix_r/ced" BEL
+        "maquina/el_saa/addr_4" BEL "maquina/el_saa/addr_3" BEL
+        "maquina/el_saa/addr_2" BEL "maquina/el_saa/addr_1" BEL
+        "maquina/el_saa/addr_0" BEL "maquina/el_saa/wr" BEL
+        "maquina/el_saa/old_wr" BEL "maquina/el_saa/envelope0_7" BEL
+        "maquina/el_saa/envelope0_5" BEL "maquina/el_saa/envelope0_4" BEL
+        "maquina/el_saa/envelope0_3" BEL "maquina/el_saa/envelope0_2" BEL
+        "maquina/el_saa/envelope0_1" BEL "maquina/el_saa/envelope0_0" BEL
+        "maquina/el_saa/envelope1_7" BEL "maquina/el_saa/envelope1_5" BEL
+        "maquina/el_saa/envelope1_4" BEL "maquina/el_saa/envelope1_3" BEL
+        "maquina/el_saa/envelope1_2" BEL "maquina/el_saa/envelope1_1" BEL
+        "maquina/el_saa/envelope1_0" BEL "maquina/el_saa/ctrl_1" BEL
+        "maquina/el_saa/ctrl_0" BEL "maquina/el_saa/noiseenable_5" BEL
+        "maquina/el_saa/noiseenable_4" BEL "maquina/el_saa/noiseenable_3" BEL
+        "maquina/el_saa/noiseenable_2" BEL "maquina/el_saa/noiseenable_1" BEL
+        "maquina/el_saa/noiseenable_0" BEL "maquina/el_saa/noisegen_5" BEL
+        "maquina/el_saa/noisegen_4" BEL "maquina/el_saa/noisegen_1" BEL
+        "maquina/el_saa/noisegen_0" BEL "maquina/el_saa/freqenable_5" BEL
+        "maquina/el_saa/freqenable_4" BEL "maquina/el_saa/freqenable_3" BEL
+        "maquina/el_saa/freqenable_2" BEL "maquina/el_saa/freqenable_1" BEL
+        "maquina/el_saa/freqenable_0" BEL "maquina/el_saa/oct32_6" BEL
+        "maquina/el_saa/oct32_5" BEL "maquina/el_saa/oct32_4" BEL
+        "maquina/el_saa/oct32_2" BEL "maquina/el_saa/oct32_1" BEL
+        "maquina/el_saa/oct32_0" BEL "maquina/el_saa/oct54_6" BEL
+        "maquina/el_saa/oct54_5" BEL "maquina/el_saa/oct54_4" BEL
+        "maquina/el_saa/oct54_2" BEL "maquina/el_saa/oct54_1" BEL
+        "maquina/el_saa/oct54_0" BEL "maquina/el_saa/oct10_6" BEL
+        "maquina/el_saa/oct10_5" BEL "maquina/el_saa/oct10_4" BEL
+        "maquina/el_saa/oct10_2" BEL "maquina/el_saa/oct10_1" BEL
+        "maquina/el_saa/oct10_0" BEL "maquina/el_saa/freq1_7" BEL
+        "maquina/el_saa/freq1_6" BEL "maquina/el_saa/freq1_5" BEL
+        "maquina/el_saa/freq1_4" BEL "maquina/el_saa/freq1_3" BEL
+        "maquina/el_saa/freq1_2" BEL "maquina/el_saa/freq1_1" BEL
+        "maquina/el_saa/freq1_0" BEL "maquina/el_saa/freq2_7" BEL
+        "maquina/el_saa/freq2_6" BEL "maquina/el_saa/freq2_5" BEL
+        "maquina/el_saa/freq2_4" BEL "maquina/el_saa/freq2_3" BEL
+        "maquina/el_saa/freq2_2" BEL "maquina/el_saa/freq2_1" BEL
+        "maquina/el_saa/freq2_0" BEL "maquina/el_saa/freq0_7" BEL
+        "maquina/el_saa/freq0_6" BEL "maquina/el_saa/freq0_5" BEL
+        "maquina/el_saa/freq0_4" BEL "maquina/el_saa/freq0_3" BEL
+        "maquina/el_saa/freq0_2" BEL "maquina/el_saa/freq0_1" BEL
+        "maquina/el_saa/freq0_0" BEL "maquina/el_saa/freq4_7" BEL
+        "maquina/el_saa/freq4_6" BEL "maquina/el_saa/freq4_5" BEL
+        "maquina/el_saa/freq4_4" BEL "maquina/el_saa/freq4_3" BEL
+        "maquina/el_saa/freq4_2" BEL "maquina/el_saa/freq4_1" BEL
+        "maquina/el_saa/freq4_0" BEL "maquina/el_saa/freq5_7" BEL
+        "maquina/el_saa/freq5_6" BEL "maquina/el_saa/freq5_5" BEL
+        "maquina/el_saa/freq5_4" BEL "maquina/el_saa/freq5_3" BEL
+        "maquina/el_saa/freq5_2" BEL "maquina/el_saa/freq5_1" BEL
+        "maquina/el_saa/freq5_0" BEL "maquina/el_saa/freq3_7" BEL
+        "maquina/el_saa/freq3_6" BEL "maquina/el_saa/freq3_5" BEL
+        "maquina/el_saa/freq3_4" BEL "maquina/el_saa/freq3_3" BEL
+        "maquina/el_saa/freq3_2" BEL "maquina/el_saa/freq3_1" BEL
+        "maquina/el_saa/freq3_0" BEL "maquina/el_saa/amplit1_7" BEL
+        "maquina/el_saa/amplit1_6" BEL "maquina/el_saa/amplit1_5" BEL
+        "maquina/el_saa/amplit1_4" BEL "maquina/el_saa/amplit1_3" BEL
+        "maquina/el_saa/amplit1_2" BEL "maquina/el_saa/amplit1_1" BEL
+        "maquina/el_saa/amplit1_0" BEL "maquina/el_saa/amplit2_7" BEL
+        "maquina/el_saa/amplit2_6" BEL "maquina/el_saa/amplit2_5" BEL
+        "maquina/el_saa/amplit2_4" BEL "maquina/el_saa/amplit2_3" BEL
+        "maquina/el_saa/amplit2_2" BEL "maquina/el_saa/amplit2_1" BEL
+        "maquina/el_saa/amplit2_0" BEL "maquina/el_saa/amplit0_7" BEL
+        "maquina/el_saa/amplit0_6" BEL "maquina/el_saa/amplit0_5" BEL
+        "maquina/el_saa/amplit0_4" BEL "maquina/el_saa/amplit0_3" BEL
+        "maquina/el_saa/amplit0_2" BEL "maquina/el_saa/amplit0_1" BEL
+        "maquina/el_saa/amplit0_0" BEL "maquina/el_saa/amplit4_7" BEL
+        "maquina/el_saa/amplit4_6" BEL "maquina/el_saa/amplit4_5" BEL
+        "maquina/el_saa/amplit4_4" BEL "maquina/el_saa/amplit4_3" BEL
+        "maquina/el_saa/amplit4_2" BEL "maquina/el_saa/amplit4_1" BEL
+        "maquina/el_saa/amplit4_0" BEL "maquina/el_saa/amplit5_7" BEL
+        "maquina/el_saa/amplit5_6" BEL "maquina/el_saa/amplit5_5" BEL
+        "maquina/el_saa/amplit5_4" BEL "maquina/el_saa/amplit5_3" BEL
+        "maquina/el_saa/amplit5_2" BEL "maquina/el_saa/amplit5_1" BEL
+        "maquina/el_saa/amplit5_0" BEL "maquina/el_saa/amplit3_7" BEL
+        "maquina/el_saa/amplit3_6" BEL "maquina/el_saa/amplit3_5" BEL
+        "maquina/el_saa/amplit3_4" BEL "maquina/el_saa/amplit3_3" BEL
+        "maquina/el_saa/amplit3_2" BEL "maquina/el_saa/amplit3_1" BEL
+        "maquina/el_saa/amplit3_0" BEL "maquina/el_saa/top/amp2/counter_3" BEL
+        "maquina/el_saa/top/amp2/counter_2" BEL
+        "maquina/el_saa/top/amp2/counter_1" BEL
+        "maquina/el_saa/top/amp2/counter_0" BEL
+        "maquina/el_saa/top/amp2/new_data" BEL "maquina/el_saa/top/amp2/clock"
+        BEL "maquina/el_saa/top/amp2/shape_2" BEL
+        "maquina/el_saa/top/amp2/shape_1" BEL
+        "maquina/el_saa/top/amp2/shape_0" BEL "maquina/el_saa/top/amp2/stereo"
+        BEL "maquina/el_saa/bottom/amp2/counter_3" BEL
+        "maquina/el_saa/bottom/amp2/counter_2" BEL
+        "maquina/el_saa/bottom/amp2/counter_1" BEL
+        "maquina/el_saa/bottom/amp2/counter_0" BEL
+        "maquina/el_saa/bottom/amp2/new_data" BEL
+        "maquina/el_saa/bottom/amp2/clock" BEL
+        "maquina/el_saa/bottom/amp2/shape_2" BEL
+        "maquina/el_saa/bottom/amp2/shape_1" BEL
+        "maquina/el_saa/bottom/amp2/shape_0" BEL
+        "maquina/el_saa/bottom/amp2/stereo" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_16" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_15" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_14" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_13" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_12" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_11" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_10" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_9" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_8" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_7" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_6" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_5" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_4" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_3" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_2" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_1" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_0" BEL
+        "maquina/el_saa/top/noise_gen/count_10" BEL
+        "maquina/el_saa/top/noise_gen/count_9" BEL
+        "maquina/el_saa/top/noise_gen/count_8" BEL
+        "maquina/el_saa/top/noise_gen/count_7" BEL
+        "maquina/el_saa/top/noise_gen/count_6" BEL
+        "maquina/el_saa/top/noise_gen/count_5" BEL
+        "maquina/el_saa/top/noise_gen/count_4" BEL
+        "maquina/el_saa/top/noise_gen/count_3" BEL
+        "maquina/el_saa/top/noise_gen/count_2" BEL
+        "maquina/el_saa/top/noise_gen/count_1" BEL
+        "maquina/el_saa/top/noise_gen/count_0" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_16" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_15" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_14" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_13" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_12" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_11" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_10" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_9" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_8" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_7" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_6" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_5" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_4" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_3" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_2" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_1" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_0" BEL
+        "maquina/el_saa/bottom/noise_gen/count_10" BEL
+        "maquina/el_saa/bottom/noise_gen/count_9" BEL
+        "maquina/el_saa/bottom/noise_gen/count_8" BEL
+        "maquina/el_saa/bottom/noise_gen/count_7" BEL
+        "maquina/el_saa/bottom/noise_gen/count_6" BEL
+        "maquina/el_saa/bottom/noise_gen/count_5" BEL
+        "maquina/el_saa/bottom/noise_gen/count_4" BEL
+        "maquina/el_saa/bottom/noise_gen/count_3" BEL
+        "maquina/el_saa/bottom/noise_gen/count_2" BEL
+        "maquina/el_saa/bottom/noise_gen/count_1" BEL
+        "maquina/el_saa/bottom/noise_gen/count_0" BEL
+        "maquina/el_saa/top/freq_gen0/pulse" BEL
+        "maquina/el_saa/top/freq_gen0/out" BEL
+        "maquina/el_saa/top/freq_gen0/count_16" BEL
+        "maquina/el_saa/top/freq_gen0/count_15" BEL
+        "maquina/el_saa/top/freq_gen0/count_14" BEL
+        "maquina/el_saa/top/freq_gen0/count_13" BEL
+        "maquina/el_saa/top/freq_gen0/count_12" BEL
+        "maquina/el_saa/top/freq_gen0/count_11" BEL
+        "maquina/el_saa/top/freq_gen0/count_10" BEL
+        "maquina/el_saa/top/freq_gen0/count_9" BEL
+        "maquina/el_saa/top/freq_gen0/count_8" BEL
+        "maquina/el_saa/top/freq_gen0/count_7" BEL
+        "maquina/el_saa/top/freq_gen0/count_6" BEL
+        "maquina/el_saa/top/freq_gen0/count_5" BEL
+        "maquina/el_saa/top/freq_gen0/count_4" BEL
+        "maquina/el_saa/top/freq_gen0/count_3" BEL
+        "maquina/el_saa/top/freq_gen0/count_2" BEL
+        "maquina/el_saa/top/freq_gen0/count_1" BEL
+        "maquina/el_saa/top/freq_gen0/count_0" BEL
+        "maquina/el_saa/top/freq_gen1/pulse" BEL
+        "maquina/el_saa/top/freq_gen1/out" BEL
+        "maquina/el_saa/top/freq_gen1/count_16" BEL
+        "maquina/el_saa/top/freq_gen1/count_15" BEL
+        "maquina/el_saa/top/freq_gen1/count_14" BEL
+        "maquina/el_saa/top/freq_gen1/count_13" BEL
+        "maquina/el_saa/top/freq_gen1/count_12" BEL
+        "maquina/el_saa/top/freq_gen1/count_11" BEL
+        "maquina/el_saa/top/freq_gen1/count_10" BEL
+        "maquina/el_saa/top/freq_gen1/count_9" BEL
+        "maquina/el_saa/top/freq_gen1/count_8" BEL
+        "maquina/el_saa/top/freq_gen1/count_7" BEL
+        "maquina/el_saa/top/freq_gen1/count_6" BEL
+        "maquina/el_saa/top/freq_gen1/count_5" BEL
+        "maquina/el_saa/top/freq_gen1/count_4" BEL
+        "maquina/el_saa/top/freq_gen1/count_3" BEL
+        "maquina/el_saa/top/freq_gen1/count_2" BEL
+        "maquina/el_saa/top/freq_gen1/count_1" BEL
+        "maquina/el_saa/top/freq_gen2/out" BEL
+        "maquina/el_saa/top/freq_gen2/count_16" BEL
+        "maquina/el_saa/top/freq_gen2/count_15" BEL
+        "maquina/el_saa/top/freq_gen2/count_14" BEL
+        "maquina/el_saa/top/freq_gen2/count_13" BEL
+        "maquina/el_saa/top/freq_gen2/count_12" BEL
+        "maquina/el_saa/top/freq_gen2/count_11" BEL
+        "maquina/el_saa/top/freq_gen2/count_10" BEL
+        "maquina/el_saa/top/freq_gen2/count_9" BEL
+        "maquina/el_saa/top/freq_gen2/count_8" BEL
+        "maquina/el_saa/top/freq_gen2/count_7" BEL
+        "maquina/el_saa/top/freq_gen2/count_6" BEL
+        "maquina/el_saa/top/freq_gen2/count_5" BEL
+        "maquina/el_saa/top/freq_gen2/count_4" BEL
+        "maquina/el_saa/top/freq_gen2/count_3" BEL
+        "maquina/el_saa/top/freq_gen2/count_2" BEL
+        "maquina/el_saa/top/freq_gen2/count_1" BEL
+        "maquina/el_saa/bottom/freq_gen0/pulse" BEL
+        "maquina/el_saa/bottom/freq_gen0/out" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_16" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_15" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_14" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_13" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_12" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_11" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_10" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_9" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_8" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_7" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_6" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_5" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_4" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_3" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_2" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_1" BEL
+        "maquina/el_saa/bottom/freq_gen1/pulse" BEL
+        "maquina/el_saa/bottom/freq_gen1/out" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_16" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_15" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_14" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_13" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_12" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_11" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_10" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_9" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_8" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_7" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_6" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_5" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_4" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_3" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_2" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_1" BEL
+        "maquina/el_saa/bottom/freq_gen2/out" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_16" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_15" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_14" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_13" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_12" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_11" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_10" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_9" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_8" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_7" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_6" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_5" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_4" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_3" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_2" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_1" BEL
+        "MyCtrlModule/myosd/vwindowactive" BEL
+        "MyCtrlModule/myosd/hwindowactive" BEL
+        "MyCtrlModule/UART.uart/txready" BEL "MyCtrlModule/UART.uart/txstate"
+        BEL "MyCtrlModule/TAPE2.taploader_inst/ack" BEL
+        "MyCtrlModule/TAPE2.taploader_inst/data_req" BEL
+        "maquina/el_saa/top/amp2/phase" BEL "maquina/el_saa/bottom/amp2/phase"
+        BEL "MyCtrlModule/myosd/charram/Mram_mem33/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem33/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem32/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem32/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem30/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem30/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem29/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem29/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem31/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem31/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem27/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem27/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem26/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem26/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem28/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem28/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem124/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem124/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem122/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem122/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem121/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem121/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem123/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem123/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem119/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem119/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem118/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem118/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem120/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem120/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem117/SP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem117/DP" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem10_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem10_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem10_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem10_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem11_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem11_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem11_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem11_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem110_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem110_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem110_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem110_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem111_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem111_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem111_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem111_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem112_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem112_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem112_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem112_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem113_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem113_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem113_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem113_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem114_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem114_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem114_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem114_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem115_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem115_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem115_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem115_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem116_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem116_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem116_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem116_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem12_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem12_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem12_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem12_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem125_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem125_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem125_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem125_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem13_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem13_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem13_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem13_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem14_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem14_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem14_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem14_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem15_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem15_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem15_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem15_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem16_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem16_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem16_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem16_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem17_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem17_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem17_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem17_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem18_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem18_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem18_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem18_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem19_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem19_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem19_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem19_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem2_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem2_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem2_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem2_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem20_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem20_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem20_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem20_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem21_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem21_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem21_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem21_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem22_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem22_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem22_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem22_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem23_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem23_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem23_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem23_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem24_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem24_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem24_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem24_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem25_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem25_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem25_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem25_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem3_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem3_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem3_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem3_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem4_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem4_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem4_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem4_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem5_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem5_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem5_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem5_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem6_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem6_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem6_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem6_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem7_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem7_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem7_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem7_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem8_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem8_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem8_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem8_RAMD" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem9_RAMA" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem9_RAMB" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem9_RAMC" BEL
+        "MyCtrlModule/myosd/charram/Mram_mem9_RAMD" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem482/DP" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem482/SP" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem32_RAMA" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem32_RAMB" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem32_RAMC" BEL
+        "MyCtrlModule/UART.uartrxfifo/Mram_mem32_RAMD";
+TIMEGRP los_relojes/clk8 = BEL "maquina/el_saa/outmix_r/ced" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_16" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_15" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_14" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_13" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_12" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_11" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_10" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_9" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_8" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_7" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_6" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_5" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_4" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_3" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_2" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_1" BEL
+        "maquina/el_saa/top/noise_gen/lfsr_0" BEL
+        "maquina/el_saa/top/noise_gen/count_10" BEL
+        "maquina/el_saa/top/noise_gen/count_9" BEL
+        "maquina/el_saa/top/noise_gen/count_8" BEL
+        "maquina/el_saa/top/noise_gen/count_7" BEL
+        "maquina/el_saa/top/noise_gen/count_6" BEL
+        "maquina/el_saa/top/noise_gen/count_5" BEL
+        "maquina/el_saa/top/noise_gen/count_4" BEL
+        "maquina/el_saa/top/noise_gen/count_3" BEL
+        "maquina/el_saa/top/noise_gen/count_2" BEL
+        "maquina/el_saa/top/noise_gen/count_1" BEL
+        "maquina/el_saa/top/noise_gen/count_0" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_16" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_15" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_14" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_13" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_12" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_11" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_10" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_9" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_8" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_7" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_6" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_5" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_4" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_3" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_2" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_1" BEL
+        "maquina/el_saa/bottom/noise_gen/lfsr_0" BEL
+        "maquina/el_saa/bottom/noise_gen/count_10" BEL
+        "maquina/el_saa/bottom/noise_gen/count_9" BEL
+        "maquina/el_saa/bottom/noise_gen/count_8" BEL
+        "maquina/el_saa/bottom/noise_gen/count_7" BEL
+        "maquina/el_saa/bottom/noise_gen/count_6" BEL
+        "maquina/el_saa/bottom/noise_gen/count_5" BEL
+        "maquina/el_saa/bottom/noise_gen/count_4" BEL
+        "maquina/el_saa/bottom/noise_gen/count_3" BEL
+        "maquina/el_saa/bottom/noise_gen/count_2" BEL
+        "maquina/el_saa/bottom/noise_gen/count_1" BEL
+        "maquina/el_saa/bottom/noise_gen/count_0" BEL
+        "maquina/el_saa/top/freq_gen0/pulse" BEL
+        "maquina/el_saa/top/freq_gen0/out" BEL
+        "maquina/el_saa/top/freq_gen0/count_16" BEL
+        "maquina/el_saa/top/freq_gen0/count_15" BEL
+        "maquina/el_saa/top/freq_gen0/count_14" BEL
+        "maquina/el_saa/top/freq_gen0/count_13" BEL
+        "maquina/el_saa/top/freq_gen0/count_12" BEL
+        "maquina/el_saa/top/freq_gen0/count_11" BEL
+        "maquina/el_saa/top/freq_gen0/count_10" BEL
+        "maquina/el_saa/top/freq_gen0/count_9" BEL
+        "maquina/el_saa/top/freq_gen0/count_8" BEL
+        "maquina/el_saa/top/freq_gen0/count_7" BEL
+        "maquina/el_saa/top/freq_gen0/count_6" BEL
+        "maquina/el_saa/top/freq_gen0/count_5" BEL
+        "maquina/el_saa/top/freq_gen0/count_4" BEL
+        "maquina/el_saa/top/freq_gen0/count_3" BEL
+        "maquina/el_saa/top/freq_gen0/count_2" BEL
+        "maquina/el_saa/top/freq_gen0/count_1" BEL
+        "maquina/el_saa/top/freq_gen0/count_0" BEL
+        "maquina/el_saa/top/freq_gen1/pulse" BEL
+        "maquina/el_saa/top/freq_gen1/out" BEL
+        "maquina/el_saa/top/freq_gen1/count_16" BEL
+        "maquina/el_saa/top/freq_gen1/count_15" BEL
+        "maquina/el_saa/top/freq_gen1/count_14" BEL
+        "maquina/el_saa/top/freq_gen1/count_13" BEL
+        "maquina/el_saa/top/freq_gen1/count_12" BEL
+        "maquina/el_saa/top/freq_gen1/count_11" BEL
+        "maquina/el_saa/top/freq_gen1/count_10" BEL
+        "maquina/el_saa/top/freq_gen1/count_9" BEL
+        "maquina/el_saa/top/freq_gen1/count_8" BEL
+        "maquina/el_saa/top/freq_gen1/count_7" BEL
+        "maquina/el_saa/top/freq_gen1/count_6" BEL
+        "maquina/el_saa/top/freq_gen1/count_5" BEL
+        "maquina/el_saa/top/freq_gen1/count_4" BEL
+        "maquina/el_saa/top/freq_gen1/count_3" BEL
+        "maquina/el_saa/top/freq_gen1/count_2" BEL
+        "maquina/el_saa/top/freq_gen1/count_1" BEL
+        "maquina/el_saa/top/freq_gen2/out" BEL
+        "maquina/el_saa/top/freq_gen2/count_16" BEL
+        "maquina/el_saa/top/freq_gen2/count_15" BEL
+        "maquina/el_saa/top/freq_gen2/count_14" BEL
+        "maquina/el_saa/top/freq_gen2/count_13" BEL
+        "maquina/el_saa/top/freq_gen2/count_12" BEL
+        "maquina/el_saa/top/freq_gen2/count_11" BEL
+        "maquina/el_saa/top/freq_gen2/count_10" BEL
+        "maquina/el_saa/top/freq_gen2/count_9" BEL
+        "maquina/el_saa/top/freq_gen2/count_8" BEL
+        "maquina/el_saa/top/freq_gen2/count_7" BEL
+        "maquina/el_saa/top/freq_gen2/count_6" BEL
+        "maquina/el_saa/top/freq_gen2/count_5" BEL
+        "maquina/el_saa/top/freq_gen2/count_4" BEL
+        "maquina/el_saa/top/freq_gen2/count_3" BEL
+        "maquina/el_saa/top/freq_gen2/count_2" BEL
+        "maquina/el_saa/top/freq_gen2/count_1" BEL
+        "maquina/el_saa/bottom/freq_gen0/pulse" BEL
+        "maquina/el_saa/bottom/freq_gen0/out" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_16" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_15" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_14" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_13" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_12" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_11" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_10" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_9" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_8" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_7" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_6" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_5" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_4" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_3" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_2" BEL
+        "maquina/el_saa/bottom/freq_gen0/count_1" BEL
+        "maquina/el_saa/bottom/freq_gen1/pulse" BEL
+        "maquina/el_saa/bottom/freq_gen1/out" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_16" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_15" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_14" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_13" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_12" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_11" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_10" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_9" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_8" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_7" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_6" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_5" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_4" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_3" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_2" BEL
+        "maquina/el_saa/bottom/freq_gen1/count_1" BEL
+        "maquina/el_saa/bottom/freq_gen2/out" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_16" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_15" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_14" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_13" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_12" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_11" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_10" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_9" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_8" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_7" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_6" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_5" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_4" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_3" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_2" BEL
+        "maquina/el_saa/bottom/freq_gen2/count_1" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_10" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_9" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_8" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_7" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_6" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_5" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_4" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_3" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_2" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_1" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/SigmaLatch_0" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_10" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_9" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_8" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_7" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_6" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_5" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_4" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_3" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_2" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_1" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/SigmaLatch_0" BEL
+        "maquina/sam_audio_mixer/audio_dac_left/DACout" BEL
+        "maquina/sam_audio_mixer/audio_dac_right/DACout" BEL
+        "maquina/sam_audio_mixer/sample_l_8" BEL
+        "maquina/sam_audio_mixer/sample_l_7" BEL
+        "maquina/sam_audio_mixer/sample_l_6" BEL
+        "maquina/sam_audio_mixer/sample_l_5" BEL
+        "maquina/sam_audio_mixer/sample_l_4" BEL
+        "maquina/sam_audio_mixer/sample_l_3" BEL
+        "maquina/sam_audio_mixer/sample_l_2" BEL
+        "maquina/sam_audio_mixer/sample_l_1" BEL
+        "maquina/sam_audio_mixer/sample_l_0" BEL
+        "maquina/sam_audio_mixer/sample_r_8" BEL
+        "maquina/sam_audio_mixer/sample_r_7" BEL
+        "maquina/sam_audio_mixer/sample_r_6" BEL
+        "maquina/sam_audio_mixer/sample_r_5" BEL
+        "maquina/sam_audio_mixer/sample_r_4" BEL
+        "maquina/sam_audio_mixer/sample_r_3" BEL
+        "maquina/sam_audio_mixer/sample_r_2" BEL
+        "maquina/sam_audio_mixer/sample_r_1" BEL
+        "maquina/sam_audio_mixer/sample_r_0" BEL "los_relojes/clk8_BUFG";
+PIN SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0> = BEL
+        "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0" PINNAME DIVCLK;
+PIN los_relojes/pll_base_inst/PLL_ADV_pins<2> = BEL
+        "los_relojes/pll_base_inst/PLL_ADV" PINNAME CLKIN1;
+TIMEGRP clk50mhz = PIN "SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0>" PIN
+        "los_relojes/pll_base_inst/PLL_ADV_pins<2>";
+TS_clk50mhz = PERIOD TIMEGRP "clk50mhz" 20 ns HIGH 50%;
+TS_los_relojes_clkout0 = PERIOD TIMEGRP "los_relojes_clkout0" TS_clk50mhz /
+        0.961538462 HIGH 50%;
+TS_los_relojes_clk8 = PERIOD TIMEGRP "los_relojes/clk8" TS_los_relojes_clkout0
+        / 6 HIGH 50%;
+SCHEMATIC END;
+
